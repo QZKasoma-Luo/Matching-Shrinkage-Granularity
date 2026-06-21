@@ -22,8 +22,8 @@ import json
 import os
 import numpy as np
 
-from hierarchy_data_generator import create_balanced_tree            
-from hierarchy_data_generator import SYNTHETIC_SPECS
+from hierarchy_data_generator import create_balanced_tree, create_unbalanced_tree           
+from hierarchy_data_generator import SYNTHETIC_SPECS, UNBALANCED_SPECS    # reuse the spec list
 from signal_generator import (generate_signal, SIGNAL_TYPES, LEAF_MEANS,
                               SIGNAL_SEED)
 
@@ -32,6 +32,7 @@ __all__ = ["noise_scale", "noise_variance", "add_laplace_noise"]
 EPSILONS = [0.01, 0.1, 0.5, 1.0, 2.0, 5.0, 10.0]   # 0.01 & 10: envelope figure only
 NUM_TRIALS = 50
 DP_DIR = "../synthetic_data/dp_balanced_tree"
+DP_UNBAL_DIR = "../synthetic_data/dp_unbalanced_tree"
 _RTOL, _ATOL = 1e-9, 1e-9
 
 
@@ -107,9 +108,57 @@ def generate_or_check_dp(out_dir: str = DP_DIR) -> None:
                             json.dump(rec, f)
                         n_written += 1
     total = len(SYNTHETIC_SPECS) * len(SIGNAL_TYPES) * len(LEAF_MEANS) * len(EPSILONS)
-    print(f"  wrote {n_written}, checked {n_checked} "
+    print(f"  balanced: wrote {n_written}, checked {n_checked} "
           f"({len(SYNTHETIC_SPECS)}x{len(SIGNAL_TYPES)}x{len(LEAF_MEANS)}x{len(EPSILONS)} "
           f"= {total} files, {NUM_TRIALS} trials each)")
+    
+    # ---- unbalanced trees ----
+    if UNBALANCED_SPECS:
+        os.makedirs(DP_UNBAL_DIR, exist_ok=True)
+        print(f"DP releases (unbalanced) -> {DP_UNBAL_DIR}")
+        uw = uc = 0
+        for ui, (uname, edges) in enumerate(UNBALANCED_SPECS):
+            h = create_unbalanced_tree(edges, root=0)
+            for ti, st in enumerate(SIGNAL_TYPES):
+                for mi, lm in enumerate(LEAF_MEANS):
+                    x = generate_signal(h, signal_type=st, leaf_mean=lm, seed=SIGNAL_SEED)
+                    for ei, eps in enumerate(EPSILONS):
+                        Z = np.empty((NUM_TRIALS, h.num_nodes))
+                        for trial in range(NUM_TRIALS):
+                            # offset seeds by 500000 to avoid collision with balanced
+                            rng = np.random.default_rng(
+                                500000 + _noise_seed(ui, ti, mi, ei, trial))
+                            Z[trial] = add_laplace_noise(x, h, eps, rng)
+                        rec = {
+                            "spec": {"kind": "unbalanced", "name": uname},
+                            "signal_type": st, "leaf_mean": lm, "epsilon": eps,
+                            "num_trials": NUM_TRIALS, "num_nodes": int(h.num_nodes),
+                            "sensitivity": int(h.sensitivity),
+                            "sigma2": float(noise_variance(h, eps)),
+                            "signal_seed": SIGNAL_SEED, "z": Z.tolist(),
+                        }
+                        e = str(eps).replace(".", "p")
+                        fn = f"dp_{uname[len('tree_'):]}_{st}_mean{lm}_eps{e}.json"
+                        path = os.path.join(DP_UNBAL_DIR, fn)
+                        if os.path.exists(path):
+                            with open(path) as f:
+                                saved = json.load(f)
+                            mk = ["spec","signal_type","leaf_mean","epsilon",
+                                  "num_trials","num_nodes","sensitivity"]
+                            if any(saved.get(k) != rec[k] for k in mk):
+                                raise AssertionError(f"REFERENCE MISMATCH (meta) {path}.")
+                            if not np.allclose(saved["z"], rec["z"], rtol=_RTOL, atol=_ATOL):
+                                raise AssertionError(f"REFERENCE MISMATCH (z) {path}.")
+                            uc += 1
+                        else:
+                            with open(path, "w") as f:
+                                json.dump(rec, f)
+                            uw += 1
+                            
+    ut = len(UNBALANCED_SPECS)*len(SIGNAL_TYPES)*len(LEAF_MEANS)*len(EPSILONS)
+    print(f"  unbalanced: wrote {uw}, checked {uc} "
+        f"({len(UNBALANCED_SPECS)}x{len(SIGNAL_TYPES)}x{len(LEAF_MEANS)}x{len(EPSILONS)} "
+        f"= {ut} files, {NUM_TRIALS} trials each)")
 
 
 if __name__ == "__main__":
