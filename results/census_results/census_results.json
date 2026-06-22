@@ -1,0 +1,484 @@
+{
+ "config": {
+  "methods": [
+   "Laplace",
+   "Zero",
+   "Hay",
+   "Ours",
+   "Scalar",
+   "NoProject",
+   "NoRootProtect",
+   "PerNode",
+   "Spectral(SURE)",
+   "Spectral(oracle)"
+  ],
+  "epsilons": [
+   0.01,
+   0.1,
+   0.5,
+   1.0,
+   2.0,
+   5.0,
+   10.0
+  ],
+  "num_trials": 50,
+  "source": "2020 PL94-171 P1, county level, proxy GT"
+ },
+ "results": [
+  {
+   "spec": {
+    "kind": "census",
+    "name": "us_county_2020"
+   },
+   "spec_name": "census_county",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.01,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 180000.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 181483.19632146184,
+     "mse_std": 6744.565700419385,
+     "improve_over_hay_pct": -1.641210045582645
+    },
+    "Zero": {
+     "mse_mean": 35841761553152.68,
+     "mse_std": 0.0078125,
+     "improve_over_hay_pct": -20073483772.164234
+    },
+    "Hay": {
+     "mse_mean": 178552.77031833128,
+     "mse_std": 6641.260427425011,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 178551.62911375985,
+     "mse_std": 6640.626324611887,
+     "improve_over_hay_pct": 0.000639141341466802
+    },
+    "Scalar": {
+     "mse_mean": 178552.72668105946,
+     "mse_std": 6641.252461318558,
+     "improve_over_hay_pct": 2.4439425805151603e-05
+    },
+    "NoProject": {
+     "mse_mean": 181482.04982200434,
+     "mse_std": 6743.873121049409,
+     "improve_over_hay_pct": -1.6405679387951315
+    },
+    "NoRootProtect": {
+     "mse_mean": 178551.62910166758,
+     "mse_std": 6640.626319776731,
+     "improve_over_hay_pct": 0.0006391481138418166
+    },
+    "PerNode": {
+     "mse_mean": 180609.05093590135,
+     "mse_std": 6661.622806374248,
+     "improve_over_hay_pct": -1.1516374760828665
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 33027376.29633258,
+     "mse_std": 84357.23630670963,
+     "improve_over_hay_pct": -18397.2634350338
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 33027376.29633258,
+     "mse_std": 84357.23630670963,
+     "improve_over_hay_pct": -18397.2634350338
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census",
+    "name": "us_county_2020"
+   },
+   "spec_name": "census_county",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.1,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 1800.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 1814.8319632147475,
+     "mse_std": 67.44565700413027,
+     "improve_over_hay_pct": -1.6412100455747993
+    },
+    "Zero": {
+     "mse_mean": 35841761553152.68,
+     "mse_std": 0.0078125,
+     "improve_over_hay_pct": -2007348387116.1257
+    },
+    "Hay": {
+     "mse_mean": 1785.5277031835776,
+     "mse_std": 66.41260427420835,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 1785.5268422799243,
+     "mse_std": 66.41198549148278,
+     "improve_over_hay_pct": 4.8215642457528954e-05
+    },
+    "Scalar": {
+     "mse_mean": 1785.5276603455773,
+     "mse_std": 66.41259635490788,
+     "improve_over_hay_pct": 2.3991787009361667e-06
+    },
+    "NoProject": {
+     "mse_mean": 1814.83105793218,
+     "mse_std": 67.4449795538353,
+     "improve_over_hay_pct": -1.641159344453458
+    },
+    "NoRootProtect": {
+     "mse_mean": 1785.5268422679094,
+     "mse_std": 66.41198548672573,
+     "improve_over_hay_pct": 4.821631536110454e-05
+    },
+    "PerNode": {
+     "mse_mean": 1786.2479939261912,
+     "mse_std": 66.30218952329103,
+     "improve_over_hay_pct": -0.04034049661224923
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 32858717.984693427,
+     "mse_std": 8416.881129228126,
+     "improve_over_hay_pct": -1840180.4910899263
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 32858717.984693427,
+     "mse_std": 8416.881129228126,
+     "improve_over_hay_pct": -1840180.4910899263
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census",
+    "name": "us_county_2020"
+   },
+   "spec_name": "census_county",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.5,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 72.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 72.59327852863244,
+     "mse_std": 2.697826280151493,
+     "improve_over_hay_pct": -1.6412100455872414
+    },
+    "Zero": {
+     "mse_mean": 35841761553152.68,
+     "mse_std": 0.0078125,
+     "improve_over_hay_pct": -50183709680279.88
+    },
+    "Hay": {
+     "mse_mean": 71.42110812737621,
+     "mse_std": 2.6565041709273043,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 71.42110143947204,
+     "mse_std": 2.6564992315588385,
+     "improve_over_hay_pct": 9.36404425904924e-06
+    },
+    "Scalar": {
+     "mse_mean": 71.42110778525166,
+     "mse_std": 2.656504107659273,
+     "improve_over_hay_pct": 4.790244227259617e-07
+    },
+    "NoProject": {
+     "mse_mean": 72.5932714579016,
+     "mse_std": 2.697820871313389,
+     "improve_over_hay_pct": -1.6412001455296386
+    },
+    "NoRootProtect": {
+     "mse_mean": 71.42110143936192,
+     "mse_std": 2.6564992315536826,
+     "improve_over_hay_pct": 9.364198443037805e-06
+    },
+    "PerNode": {
+     "mse_mean": 71.42601074889824,
+     "mse_std": 2.6564221119933076,
+     "improve_over_hay_pct": -0.006864387364695218
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 32857696.861910615,
+     "mse_std": 1683.450087165264,
+     "improve_over_hay_pct": -46005482.55594473
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 32857696.861910615,
+     "mse_std": 1683.450087165264,
+     "improve_over_hay_pct": -46005482.55594473
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census",
+    "name": "us_county_2020"
+   },
+   "spec_name": "census_county",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 1.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 18.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 18.14831963214211,
+     "mse_std": 0.6744565700484608,
+     "improve_over_hay_pct": -1.6412100455488308
+    },
+    "Zero": {
+     "mse_mean": 35841761553152.68,
+     "mse_std": 0.0078125,
+     "improve_over_hay_pct": -200734838721520.7
+    },
+    "Hay": {
+     "mse_mean": 17.855277031835058,
+     "mse_std": 0.6641260427378327,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 17.85527619896295,
+     "mse_std": 0.6641254255038599,
+     "improve_over_hay_pct": 4.664571184174163e-06
+    },
+    "Scalar": {
+     "mse_mean": 17.855276989080547,
+     "mse_std": 0.6641260348305699,
+     "improve_over_hay_pct": 2.3945028109282036e-07
+    },
+    "NoProject": {
+     "mse_mean": 18.148318750981623,
+     "mse_std": 0.674455894110424,
+     "improve_over_hay_pct": -1.6412051105344738
+    },
+    "NoRootProtect": {
+     "mse_mean": 17.855276198940114,
+     "mse_std": 0.6641254255002585,
+     "improve_over_hay_pct": 4.664699083861671e-06
+    },
+    "PerNode": {
+     "mse_mean": 17.855635994549356,
+     "mse_std": 0.6640764683005513,
+     "improve_over_hay_pct": -0.0020104012592910454
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 32857729.59976156,
+     "mse_std": 841.7319999268867,
+     "improve_over_hay_pct": -184022413.5749946
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 32857729.59976156,
+     "mse_std": 841.7319999268867,
+     "improve_over_hay_pct": -184022413.5749946
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census",
+    "name": "us_county_2020"
+   },
+   "spec_name": "census_county",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 2.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 4.5,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 4.537079908039046,
+     "mse_std": 0.16861414251070572,
+     "improve_over_hay_pct": -1.6412100455348162
+    },
+    "Zero": {
+     "mse_mean": 35841761553152.68,
+     "mse_std": 0.0078125,
+     "improve_over_hay_pct": -802939354885649.2
+    },
+    "Hay": {
+     "mse_mean": 4.463819257962842,
+     "mse_std": 0.16603151068214975,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 4.463819154047087,
+     "mse_std": 0.16603143352840644,
+     "improve_over_hay_pct": 2.327956153837455e-06
+    },
+    "Scalar": {
+     "mse_mean": 4.463819252622933,
+     "mse_std": 0.16603150968837577,
+     "improve_over_hay_pct": 1.1962646000800067e-07
+    },
+    "NoProject": {
+     "mse_mean": 4.537079798060413,
+     "mse_std": 0.16861405802971158,
+     "improve_over_hay_pct": -1.6412075817559992
+    },
+    "NoRootProtect": {
+     "mse_mean": 4.463819154047087,
+     "mse_std": 0.16603143352840644,
+     "improve_over_hay_pct": 2.327956153837455e-06
+    },
+    "PerNode": {
+     "mse_mean": 4.463851596679688,
+     "mse_std": 0.16602337442120815,
+     "improve_over_hay_pct": -0.0007244629537369082
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 32857759.33353305,
+     "mse_std": 420.86780362157083,
+     "improve_over_hay_pct": -736090620.4053862
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 32857759.33353305,
+     "mse_std": 420.86780362157083,
+     "improve_over_hay_pct": -736090620.4053862
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census",
+    "name": "us_county_2020"
+   },
+   "spec_name": "census_county",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 5.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.72,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.7259327852849996,
+     "mse_std": 0.02697826280137119,
+     "improve_over_hay_pct": -1.6412100455890988
+    },
+    "Zero": {
+     "mse_mean": 35841761553152.68,
+     "mse_std": 0.0078125,
+     "improve_over_hay_pct": -5018370968047139.0
+    },
+    "Hay": {
+     "mse_mean": 0.7142110812724457,
+     "mse_std": 0.026565041709203027,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.7142110746313415,
+     "mse_std": 0.02656503677253687,
+     "improve_over_hay_pct": 9.298517477876407e-07
+    },
+    "Scalar": {
+     "mse_mean": 0.7142110809270232,
+     "mse_std": 0.026565041645677776,
+     "improve_over_hay_pct": 4.8364198969146444e-08
+    },
+    "NoProject": {
+     "mse_mean": 0.7259327782524703,
+     "mse_std": 0.026978257395595815,
+     "improve_over_hay_pct": -1.6412090609321086
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.7142110746313415,
+     "mse_std": 0.02656503677253687,
+     "improve_over_hay_pct": 9.298517477876407e-07
+    },
+    "PerNode": {
+     "mse_mean": 0.7142127030575732,
+     "mse_std": 0.026564447848156977,
+     "improve_over_hay_pct": -0.0002270736439199971
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 32857781.450606212,
+     "mse_std": 168.3475993265518,
+     "improve_over_hay_pct": -4600569999.257835
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 32857781.450606212,
+     "mse_std": 168.3475993265518,
+     "improve_over_hay_pct": -4600569999.257835
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census",
+    "name": "us_county_2020"
+   },
+   "spec_name": "census_county",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 10.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.18,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.18148319632213,
+     "mse_std": 0.006744565700533143,
+     "improve_over_hay_pct": -1.641210045037636
+    },
+    "Zero": {
+     "mse_mean": 35841761553152.68,
+     "mse_std": 0.0078125,
+     "improve_over_hay_pct": -2.0073483871982596e+16
+    },
+    "Hay": {
+     "mse_mean": 0.17855277031994607,
+     "mse_std": 0.0066412604257509765,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.178552769489776,
+     "mse_std": 0.00664125980954534,
+     "improve_over_hay_pct": 4.649438202989425e-07
+    },
+    "Scalar": {
+     "mse_mean": 0.17855277027621638,
+     "mse_std": 0.006641260419901032,
+     "improve_over_hay_pct": 2.4491183452478508e-08
+    },
+    "NoProject": {
+     "mse_mean": 0.18148319544346161,
+     "mse_std": 0.0067445650247994786,
+     "improve_over_hay_pct": -1.6412095529319204
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.178552769489776,
+     "mse_std": 0.00664125980954534,
+     "improve_over_hay_pct": 4.649438202989425e-07
+    },
+    "PerNode": {
+     "mse_mean": 0.17855295487914932,
+     "mse_std": 0.006641183121782678,
+     "improve_over_hay_pct": -0.00010336395392954909
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 32857789.53574712,
+     "mse_std": 84.17386730326035,
+     "improve_over_hay_pct": -18402284824.994293
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 32857789.53574712,
+     "mse_std": 84.17386730326035,
+     "improve_over_hay_pct": -18402284824.994293
+    }
+   }
+  }
+ ]
+}
