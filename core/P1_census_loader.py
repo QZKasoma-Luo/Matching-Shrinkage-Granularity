@@ -28,9 +28,9 @@ import baseline, ablations, spectral          # registers all methods
 from baseline import METHODS
 from spectral import make_spectral_oracle_method
 
-CENSUS_RESULTS_DIR = "../results/census_results"
-CENSUS_HIER_DIR = "../census_data/hierarchy_format"
-CENSUS_CSV = "../census_data/original_data/DECENNIALPL2020.P1-Data.csv"
+CENSUS_RESULTS_DIR = "../results/P1_census_results"
+CENSUS_HIER_DIR = "../census_data/census_hierarchy_format"
+CENSUS_CSV = "../census_data/original_data/P1/DECENNIALPL2020.P1-Data.csv"
 
 
 def load_census(csv_path: str, keep_puerto_rico: bool = True):
@@ -124,7 +124,7 @@ def save_hierarchy(h, x, meta, out_dir: str = CENSUS_HIER_DIR) -> str:
         "x": [float(v) for v in x],
         "node_info": {str(k): v for k, v in meta["node_info"].items()},
     }
-    path = os.path.join(out_dir, "census_county_2020.json")
+    path = os.path.join(out_dir, "P1_census_county_2020.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(record, f, ensure_ascii=False, indent=1)
     return path
@@ -191,7 +191,7 @@ def run_census(csv_path: str, with_spectral: bool = True) -> None:
               f"Hay={hay_mean:.1f}, Ours={methods_block['Ours']['mse_mean']:.1f} "
               f"(improve {methods_block['Ours']['improve_over_hay_pct']:+.1f}%)")
 
-    out = os.path.join(CENSUS_RESULTS_DIR, "census_results.json")
+    out = os.path.join(CENSUS_RESULTS_DIR, "P1_census_results.json")
     with open(out, "w") as f:
         json.dump({"config": {"methods": list(methods_with_oracle),
                               "epsilons": EPSILONS, "num_trials": NUM_TRIALS,

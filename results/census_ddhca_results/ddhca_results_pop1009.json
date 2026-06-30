@@ -1,0 +1,500 @@
+{
+ "config": {
+  "methods": [
+   "Laplace",
+   "Zero",
+   "Hay",
+   "Ours",
+   "Scalar",
+   "NoProject",
+   "NoRootProtect",
+   "PerNode",
+   "Spectral(SURE)",
+   "Spectral(oracle)"
+  ],
+  "epsilons": [
+   0.01,
+   0.1,
+   0.5,
+   1.0,
+   2.0,
+   5.0,
+   10.0
+  ],
+  "num_trials": 50,
+  "source": "2020 Detailed DHC-A T01001, county, proxy GT",
+  "popgroup": "1009",
+  "popgroup_label": "Basque alone"
+ },
+ "results": [
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1009"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.01,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 180000.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 179937.32886250396,
+     "mse_std": 6174.502248421214,
+     "improve_over_hay_pct": -1.6502618201484236
+    },
+    "Zero": {
+     "mse_mean": 81723.89859499084,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": 53.83250523024088
+    },
+    "Hay": {
+     "mse_mean": 177016.09975276818,
+     "mse_std": 6052.456530627351,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 3655.6648357617605,
+     "mse_std": 567.1818809826024,
+     "improve_over_hay_pct": 97.9348404801216
+    },
+    "Scalar": {
+     "mse_mean": 56039.09047714001,
+     "mse_std": 1209.1661701817725,
+     "improve_over_hay_pct": 68.34237645309791
+    },
+    "NoProject": {
+     "mse_mean": 3991.9618348319145,
+     "mse_std": 566.6102621945483,
+     "improve_over_hay_pct": 97.74485945605663
+    },
+    "NoRootProtect": {
+     "mse_mean": 3656.0868018131996,
+     "mse_std": 567.4002046355242,
+     "improve_over_hay_pct": 97.93460210290505
+    },
+    "PerNode": {
+     "mse_mean": 82396.2759859495,
+     "mse_std": 5175.028585779061,
+     "improve_over_hay_pct": 53.45266554791947
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 48998.167999731166,
+     "mse_std": 1200.8261396081723,
+     "improve_over_hay_pct": 72.31993696157292
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 48823.95961271133,
+     "mse_std": 1211.0830801650538,
+     "improve_over_hay_pct": 72.418350827466
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1009"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.1,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 1800.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 1795.8004353991907,
+     "mse_std": 72.08687749859743,
+     "improve_over_hay_pct": -1.6950180966122215
+    },
+    "Zero": {
+     "mse_mean": 81723.89859499084,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -4527.971562272091
+    },
+    "Hay": {
+     "mse_mean": 1765.868642348975,
+     "mse_std": 70.8693360746812,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 823.5314512233344,
+     "mse_std": 25.229169872468425,
+     "improve_over_hay_pct": 53.36394613543479
+    },
+    "Scalar": {
+     "mse_mean": 1729.425561124512,
+     "mse_std": 69.76178110346596,
+     "improve_over_hay_pct": 2.0637481379128095
+    },
+    "NoProject": {
+     "mse_mean": 903.6940292231891,
+     "mse_std": 23.078985512723786,
+     "improve_over_hay_pct": 48.82439114944095
+    },
+    "NoRootProtect": {
+     "mse_mean": 823.5322198976844,
+     "mse_std": 25.229188051970045,
+     "improve_over_hay_pct": 53.36390260590312
+    },
+    "PerNode": {
+     "mse_mean": 862.7997762685941,
+     "mse_std": 62.897677961155715,
+     "improve_over_hay_pct": 51.14020626580187
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 1725.7719398654547,
+     "mse_std": 69.60890389819708,
+     "improve_over_hay_pct": 2.270650348611627
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 1723.3876331999404,
+     "mse_std": 69.6561124026137,
+     "improve_over_hay_pct": 2.405672094189635
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1009"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.5,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 72.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 71.98725885512255,
+     "mse_std": 2.9090807323368573,
+     "improve_over_hay_pct": -1.5349598304898477
+    },
+    "Zero": {
+     "mse_mean": 81723.89859499084,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -115168.07511497509
+    },
+    "Hay": {
+     "mse_mean": 70.89898787107764,
+     "mse_std": 2.8998273837409307,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 67.632005185909,
+     "mse_std": 2.6875928167527388,
+     "improve_over_hay_pct": 4.607939807419124
+    },
+    "Scalar": {
+     "mse_mean": 70.8275166276461,
+     "mse_std": 2.8903297726298613,
+     "improve_over_hay_pct": 0.1008071420730217
+    },
+    "NoProject": {
+     "mse_mean": 69.11078165579846,
+     "mse_std": 2.6984394179869655,
+     "improve_over_hay_pct": 2.5221886362198003
+    },
+    "NoRootProtect": {
+     "mse_mean": 67.63200284759296,
+     "mse_std": 2.687590602568973,
+     "improve_over_hay_pct": 4.607943105514211
+    },
+    "PerNode": {
+     "mse_mean": 35.14219278575382,
+     "mse_std": 2.3406015240337976,
+     "improve_over_hay_pct": 50.43343517166111
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 70.81726799800967,
+     "mse_std": 2.889900950356339,
+     "improve_over_hay_pct": 0.1152623972807155
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 70.80014094810831,
+     "mse_std": 2.893825457720809,
+     "improve_over_hay_pct": 0.139419371048106
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1009"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 1.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 18.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 17.985880830847872,
+     "mse_std": 0.6813882184150781,
+     "improve_over_hay_pct": -1.6636634162023238
+    },
+    "Zero": {
+     "mse_mean": 81723.89859499084,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -461837.3940013665
+    },
+    "Hay": {
+     "mse_mean": 17.69155293687895,
+     "mse_std": 0.6790740849577912,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 17.49889345139007,
+     "mse_std": 0.6587108923543679,
+     "improve_over_hay_pct": 1.0889913744500619
+    },
+    "Scalar": {
+     "mse_mean": 17.687926325333663,
+     "mse_std": 0.6761530565376864,
+     "improve_over_hay_pct": 0.020499113663030893
+    },
+    "NoProject": {
+     "mse_mean": 17.814984053927034,
+     "mse_std": 0.6579715613647991,
+     "improve_over_hay_pct": -0.697683903094717
+    },
+    "NoRootProtect": {
+     "mse_mean": 17.498893719607292,
+     "mse_std": 0.6587098271164047,
+     "improve_over_hay_pct": 1.088989858375007
+    },
+    "PerNode": {
+     "mse_mean": 8.685589020226779,
+     "mse_std": 0.570446176544891,
+     "improve_over_hay_pct": 50.9054459423897
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 17.728323528871247,
+     "mse_std": 0.6676011525288283,
+     "improve_over_hay_pct": -0.20784264741196015
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 17.72776306333448,
+     "mse_std": 0.6666958550321755,
+     "improve_over_hay_pct": -0.20467466357940445
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1009"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 2.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 4.5,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 4.518213143817292,
+     "mse_std": 0.140315643610029,
+     "improve_over_hay_pct": -1.680560769313107
+    },
+    "Zero": {
+     "mse_mean": 81723.89859499084,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -1839063.309230809
+    },
+    "Hay": {
+     "mse_mean": 4.443536807461112,
+     "mse_std": 0.13843686233932975,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 4.431445825697784,
+     "mse_std": 0.13810789880148042,
+     "improve_over_hay_pct": 0.27210265802291184
+    },
+    "Scalar": {
+     "mse_mean": 4.4435845109246,
+     "mse_std": 0.13848560917108033,
+     "improve_over_hay_pct": -0.0010735471664759292
+    },
+    "NoProject": {
+     "mse_mean": 4.507883306198998,
+     "mse_std": 0.13987540777052468,
+     "improve_over_hay_pct": -1.4480919485091774
+    },
+    "NoRootProtect": {
+     "mse_mean": 4.431445905433586,
+     "mse_std": 0.1381079140228836,
+     "improve_over_hay_pct": 0.27210086360091384
+    },
+    "PerNode": {
+     "mse_mean": 2.181791463637514,
+     "mse_std": 0.11632688316698041,
+     "improve_over_hay_pct": 50.89966488014495
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 4.508971400153004,
+     "mse_std": 0.14045021991547935,
+     "improve_over_hay_pct": -1.4725790631917577
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 4.508971400153004,
+     "mse_std": 0.14045021991547935,
+     "improve_over_hay_pct": -1.4725790631917577
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1009"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 5.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.72,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.7198662432998421,
+     "mse_std": 0.028313147919859456,
+     "improve_over_hay_pct": -1.653613279973682
+    },
+    "Zero": {
+     "mse_mean": 81723.89859499084,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -11540279.42580215
+    },
+    "Hay": {
+     "mse_mean": 0.7081560803128477,
+     "mse_std": 0.02792533435146394,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.7078959935096372,
+     "mse_std": 0.02791983476374207,
+     "improve_over_hay_pct": 0.036727327554067705
+    },
+    "Scalar": {
+     "mse_mean": 0.7081536593231847,
+     "mse_std": 0.027922882105518347,
+     "improve_over_hay_pct": 0.0003418723259279405
+    },
+    "NoProject": {
+     "mse_mean": 0.7196280655095789,
+     "mse_std": 0.028328705186758472,
+     "improve_over_hay_pct": -1.6199797637355786
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.7078959944911718,
+     "mse_std": 0.027919833072424283,
+     "improve_over_hay_pct": 0.036727188949788415
+    },
+    "PerNode": {
+     "mse_mean": 0.34750460659336047,
+     "mse_std": 0.022341443926816546,
+     "improve_over_hay_pct": 50.92824643405722
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.7771201326964952,
+     "mse_std": 0.02816833425852249,
+     "improve_over_hay_pct": -9.7385384805537
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.7771201326964952,
+     "mse_std": 0.02816833425852249,
+     "improve_over_hay_pct": -9.7385384805537
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1009"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 10.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.18,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.1795264217520219,
+     "mse_std": 0.0079134432568922,
+     "improve_over_hay_pct": -1.6669789089704483
+    },
+    "Zero": {
+     "mse_mean": 81723.89859499084,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -46280674.683363274
+    },
+    "Hay": {
+     "mse_mean": 0.17658282333024222,
+     "mse_std": 0.00770195223058378,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.17656558186177024,
+     "mse_std": 0.007711551464048052,
+     "improve_over_hay_pct": 0.009763955602714482
+    },
+    "Scalar": {
+     "mse_mean": 0.17658043320320518,
+     "mse_std": 0.0077026843770534896,
+     "improve_over_hay_pct": 0.0013535444682343668
+    },
+    "NoProject": {
+     "mse_mean": 0.17951405153235567,
+     "mse_std": 0.007923161574192795,
+     "improve_over_hay_pct": -1.659973573211881
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.1765655813411725,
+     "mse_std": 0.00771155177136407,
+     "improve_over_hay_pct": 0.00976425042059188
+    },
+    "PerNode": {
+     "mse_mean": 0.0863637582320149,
+     "mse_std": 0.006337097218659678,
+     "improve_over_hay_pct": 51.09164266192592
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.24542605709471577,
+     "mse_std": 0.008719026921224577,
+     "improve_over_hay_pct": -38.98637051222365
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.24542605709471577,
+     "mse_std": 0.008719026921224577,
+     "improve_over_hay_pct": -38.98637051222365
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,500 @@
+{
+ "config": {
+  "methods": [
+   "Laplace",
+   "Zero",
+   "Hay",
+   "Ours",
+   "Scalar",
+   "NoProject",
+   "NoRootProtect",
+   "PerNode",
+   "Spectral(SURE)",
+   "Spectral(oracle)"
+  ],
+  "epsilons": [
+   0.01,
+   0.1,
+   0.5,
+   1.0,
+   2.0,
+   5.0,
+   10.0
+  ],
+  "num_trials": 50,
+  "source": "2020 Detailed DHC-A T01001, county, proxy GT",
+  "popgroup": "3657",
+  "popgroup_label": "Guatemalan Indian alone or in any combination"
+ },
+ "results": [
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop3657"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.01,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 180000.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 179937.32886250396,
+     "mse_std": 6174.502248421214,
+     "improve_over_hay_pct": -1.6502618201484236
+    },
+    "Zero": {
+     "mse_mean": 17022.980452046424,
+     "mse_std": 3.637978807091713e-12,
+     "improve_over_hay_pct": 90.38337163917757
+    },
+    "Hay": {
+     "mse_mean": 177016.09975276818,
+     "mse_std": 6052.456530627351,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 1426.1693365393903,
+     "mse_std": 296.9593025978771,
+     "improve_over_hay_pct": 99.19432789529806
+    },
+    "Scalar": {
+     "mse_mean": 15710.85511779895,
+     "mse_std": 263.5475255595352,
+     "improve_over_hay_pct": 91.12461796427459
+    },
+    "NoProject": {
+     "mse_mean": 1608.1666514640785,
+     "mse_std": 315.5512757794299,
+     "improve_over_hay_pct": 99.0915139053961
+    },
+    "NoRootProtect": {
+     "mse_mean": 1428.0984544038165,
+     "mse_std": 299.5138215376505,
+     "improve_over_hay_pct": 99.19323809732653
+    },
+    "PerNode": {
+     "mse_mean": 82069.98491079477,
+     "mse_std": 5170.872538407727,
+     "improve_over_hay_pct": 53.636994021776054
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 15132.837380736919,
+     "mse_std": 657.8458569335418,
+     "improve_over_hay_pct": 91.45115195630657
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 14564.629455694954,
+     "mse_std": 526.7580409669342,
+     "improve_over_hay_pct": 91.77214418573405
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop3657"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.1,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 1800.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 1795.8004353991907,
+     "mse_std": 72.0868774985974,
+     "improve_over_hay_pct": -1.6950180966122215
+    },
+    "Zero": {
+     "mse_mean": 17022.980452046424,
+     "mse_std": 3.637978807091713e-12,
+     "improve_over_hay_pct": -864.0003816706488
+    },
+    "Hay": {
+     "mse_mean": 1765.868642348975,
+     "mse_std": 70.86933607468121,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 291.9688643273867,
+     "mse_std": 9.571719652590556,
+     "improve_over_hay_pct": 83.46599190192272
+    },
+    "Scalar": {
+     "mse_mean": 1602.2659370799995,
+     "mse_std": 62.79935354956965,
+     "improve_over_hay_pct": 9.264715468946191
+    },
+    "NoProject": {
+     "mse_mean": 312.5297309763863,
+     "mse_std": 10.29918965893085,
+     "improve_over_hay_pct": 82.30164331132488
+    },
+    "NoRootProtect": {
+     "mse_mean": 291.97065740229914,
+     "mse_std": 9.572035146797369,
+     "improve_over_hay_pct": 83.46589036124924
+    },
+    "PerNode": {
+     "mse_mean": 854.1347313771882,
+     "mse_std": 63.935577255797945,
+     "improve_over_hay_pct": 51.63090215810106
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 1586.9585872616433,
+     "mse_std": 62.6197889117328,
+     "improve_over_hay_pct": 10.1315607965802
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 1585.4863013445733,
+     "mse_std": 61.93538691415383,
+     "improve_over_hay_pct": 10.21493539657941
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop3657"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.5,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 72.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 71.98725885512256,
+     "mse_std": 2.909080732336857,
+     "improve_over_hay_pct": -1.5349598304898677
+    },
+    "Zero": {
+     "mse_mean": 17022.980452046424,
+     "mse_std": 3.637978807091713e-12,
+     "improve_over_hay_pct": -23910.188245565547
+    },
+    "Hay": {
+     "mse_mean": 70.89898787107764,
+     "mse_std": 2.8998273837409307,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 58.20118177956742,
+     "mse_std": 2.1188190089402923,
+     "improve_over_hay_pct": 17.909714190278486
+    },
+    "Scalar": {
+     "mse_mean": 70.58535375666577,
+     "mse_std": 2.87462263618644,
+     "improve_over_hay_pct": 0.442367548295865
+    },
+    "NoProject": {
+     "mse_mean": 59.7675191171496,
+     "mse_std": 2.1232527023306456,
+     "improve_over_hay_pct": 15.700462147879245
+    },
+    "NoRootProtect": {
+     "mse_mean": 58.20117944194459,
+     "mse_std": 2.1188132496185275,
+     "improve_over_hay_pct": 17.90971748739584
+    },
+    "PerNode": {
+     "mse_mean": 34.54348649247976,
+     "mse_std": 2.330592944770012,
+     "improve_over_hay_pct": 51.27788487574257
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 70.55840221355952,
+     "mse_std": 2.8744098661269666,
+     "improve_over_hay_pct": 0.48038155091499785
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 70.53349568313334,
+     "mse_std": 2.8824767870104244,
+     "improve_over_hay_pct": 0.5155111503268668
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop3657"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 1.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 18.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 17.98588083084787,
+     "mse_std": 0.6813882184150774,
+     "improve_over_hay_pct": -1.6636634162023038
+    },
+    "Zero": {
+     "mse_mean": 17022.980452046424,
+     "mse_std": 3.637978807091713e-12,
+     "improve_over_hay_pct": -96120.95082767522
+    },
+    "Hay": {
+     "mse_mean": 17.69155293687895,
+     "mse_std": 0.6790740849577909,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 16.78053389812692,
+     "mse_std": 0.6246522300845357,
+     "improve_over_hay_pct": 5.149457721447192
+    },
+    "Scalar": {
+     "mse_mean": 17.674298017922936,
+     "mse_std": 0.6720713414097935,
+     "improve_over_hay_pct": 0.09753196351714372
+    },
+    "NoProject": {
+     "mse_mean": 17.112153227605678,
+     "mse_std": 0.6271706328942459,
+     "improve_over_hay_pct": 3.275007634097984
+    },
+    "NoRootProtect": {
+     "mse_mean": 16.780534654674565,
+     "mse_std": 0.6246503073012137,
+     "improve_over_hay_pct": 5.1494534451258955
+    },
+    "PerNode": {
+     "mse_mean": 8.54666258646826,
+     "mse_std": 0.5749744354373995,
+     "improve_over_hay_pct": 51.690715806794415
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 17.673103889146656,
+     "mse_std": 0.6727011774723312,
+     "improve_over_hay_pct": 0.10428167497854403
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 17.666931123612727,
+     "mse_std": 0.665714610673865,
+     "improve_over_hay_pct": 0.1391727077553306
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop3657"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 2.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 4.5,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 4.518213143817292,
+     "mse_std": 0.14031564361002888,
+     "improve_over_hay_pct": -1.680560769313107
+    },
+    "Zero": {
+     "mse_mean": 17022.980452046424,
+     "mse_std": 3.637978807091713e-12,
+     "improve_over_hay_pct": -382995.29524911894
+    },
+    "Hay": {
+     "mse_mean": 4.443536807461112,
+     "mse_std": 0.1384368623393295,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 4.386137847623318,
+     "mse_std": 0.13381656425740843,
+     "improve_over_hay_pct": 1.2917403934050011
+    },
+    "Scalar": {
+     "mse_mean": 4.44295033408008,
+     "mse_std": 0.13844850984771392,
+     "improve_over_hay_pct": 0.013198346417376473
+    },
+    "NoProject": {
+     "mse_mean": 4.46341184613998,
+     "mse_std": 0.13685672137080251,
+     "improve_over_hay_pct": -0.4472797129866446
+    },
+    "NoRootProtect": {
+     "mse_mean": 4.386138027742694,
+     "mse_std": 0.1338166056011495,
+     "improve_over_hay_pct": 1.2917363398912325
+    },
+    "PerNode": {
+     "mse_mean": 2.1484934015665744,
+     "mse_std": 0.11735917831782752,
+     "improve_over_hay_pct": 51.649024309665805
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 4.451797428448342,
+     "mse_std": 0.13862972274545526,
+     "improve_over_hay_pct": -0.18590193679411454
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 4.451797428448342,
+     "mse_std": 0.13862972274545526,
+     "improve_over_hay_pct": -0.18590193679411454
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop3657"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 5.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.72,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.7198662432998421,
+     "mse_std": 0.028313147919859498,
+     "improve_over_hay_pct": -1.6536132799736663
+    },
+    "Zero": {
+     "mse_mean": 17022.980452046424,
+     "mse_std": 3.637978807091713e-12,
+     "improve_over_hay_pct": -2403745.836432845
+    },
+    "Hay": {
+     "mse_mean": 0.7081560803128478,
+     "mse_std": 0.02792533435146385,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.7067045353698288,
+     "mse_std": 0.027933817931808057,
+     "improve_over_hay_pct": 0.20497528488038433
+    },
+    "Scalar": {
+     "mse_mean": 0.7081377255191685,
+     "mse_std": 0.027913443481879893,
+     "improve_over_hay_pct": 0.002591913589328841
+    },
+    "NoProject": {
+     "mse_mean": 0.718471800299608,
+     "mse_std": 0.028408357188092617,
+     "improve_over_hay_pct": -1.4567014636382019
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.7067045377571222,
+     "mse_std": 0.027933814704224753,
+     "improve_over_hay_pct": 0.20497494776637382
+    },
+    "PerNode": {
+     "mse_mean": 0.34254881666903164,
+     "mse_std": 0.021977739891446545,
+     "improve_over_hay_pct": 51.62806248621051
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.7222565432758776,
+     "mse_std": 0.02778350188501232,
+     "improve_over_hay_pct": -1.991151859742633
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.7222565432758776,
+     "mse_std": 0.02778350188501232,
+     "improve_over_hay_pct": -1.991151859742633
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop3657"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 10.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.18,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.1795264217520219,
+     "mse_std": 0.007913443256892184,
+     "improve_over_hay_pct": -1.6669789089704803
+    },
+    "Zero": {
+     "mse_mean": 17022.980452046424,
+     "mse_std": 3.637978807091713e-12,
+     "improve_over_hay_pct": -9640124.417643577
+    },
+    "Hay": {
+     "mse_mean": 0.17658282333024217,
+     "mse_std": 0.007701952230583729,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.17652280247086968,
+     "mse_std": 0.0076903055477275896,
+     "improve_over_hay_pct": 0.03399020258059518
+    },
+    "Scalar": {
+     "mse_mean": 0.17657872277159714,
+     "mse_std": 0.0077025658958089225,
+     "improve_over_hay_pct": 0.0023221729994412957
+    },
+    "NoProject": {
+     "mse_mean": 0.17947989625086613,
+     "mse_std": 0.007910711469654835,
+     "improve_over_hay_pct": -1.640631215418903
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.17652280139653867,
+     "mse_std": 0.0076903061898083505,
+     "improve_over_hay_pct": 0.033990810981227124
+    },
+    "PerNode": {
+     "mse_mean": 0.08516736452827445,
+     "mse_std": 0.00640223831894856,
+     "improve_over_hay_pct": 51.76916818857522
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.19131898218865553,
+     "mse_std": 0.007916764959965074,
+     "improve_over_hay_pct": -8.345182493120555
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.19131898218865553,
+     "mse_std": 0.007916764959965074,
+     "improve_over_hay_pct": -8.345182493120555
+    }
+   }
+  }
+ ]
+}

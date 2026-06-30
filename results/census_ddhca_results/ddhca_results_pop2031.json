@@ -1,0 +1,500 @@
+{
+ "config": {
+  "methods": [
+   "Laplace",
+   "Zero",
+   "Hay",
+   "Ours",
+   "Scalar",
+   "NoProject",
+   "NoRootProtect",
+   "PerNode",
+   "Spectral(SURE)",
+   "Spectral(oracle)"
+  ],
+  "epsilons": [
+   0.01,
+   0.1,
+   0.5,
+   1.0,
+   2.0,
+   5.0,
+   10.0
+  ],
+  "num_trials": 50,
+  "source": "2020 Detailed DHC-A T01001, county, proxy GT",
+  "popgroup": "2031",
+  "popgroup_label": "Pueblo alone"
+ },
+ "results": [
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop2031"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.01,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 180000.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 179937.32886250396,
+     "mse_std": 6174.502248421214,
+     "improve_over_hay_pct": -1.6502618201484236
+    },
+    "Zero": {
+     "mse_mean": 3267.5268784361633,
+     "mse_std": 4.547473508864641e-13,
+     "improve_over_hay_pct": 98.15410751733894
+    },
+    "Hay": {
+     "mse_mean": 177016.09975276818,
+     "mse_std": 6052.456530627351,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 814.1134861068299,
+     "mse_std": 252.44811491177256,
+     "improve_over_hay_pct": 99.54009071082017
+    },
+    "Scalar": {
+     "mse_mean": 3312.5523503925033,
+     "mse_std": 155.8389731675633,
+     "improve_over_hay_pct": 98.12867171120648
+    },
+    "NoProject": {
+     "mse_mean": 860.0396559709377,
+     "mse_std": 255.78731555756406,
+     "improve_over_hay_pct": 99.51414608209528
+    },
+    "NoRootProtect": {
+     "mse_mean": 820.4273378755682,
+     "mse_std": 264.02764337622125,
+     "improve_over_hay_pct": 99.53652388736312
+    },
+    "PerNode": {
+     "mse_mean": 81833.40342297111,
+     "mse_std": 5149.834611769553,
+     "improve_over_hay_pct": 53.77064372265303
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 3070.1595422673286,
+     "mse_std": 143.48683929968965,
+     "improve_over_hay_pct": 98.26560434527971
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 2997.605346588196,
+     "mse_std": 169.84726900474476,
+     "improve_over_hay_pct": 98.30659168811492
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop2031"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.1,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 1800.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 1795.8004353991907,
+     "mse_std": 72.08687749859743,
+     "improve_over_hay_pct": -1.6950180966122215
+    },
+    "Zero": {
+     "mse_mean": 3267.5268784361633,
+     "mse_std": 4.547473508864641e-13,
+     "improve_over_hay_pct": -85.03793544290295
+    },
+    "Hay": {
+     "mse_mean": 1765.868642348975,
+     "mse_std": 70.8693360746812,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 115.1815036562995,
+     "mse_std": 7.321687837249204,
+     "improve_over_hay_pct": 93.47734588553064
+    },
+    "Scalar": {
+     "mse_mean": 1148.5136855859628,
+     "mse_std": 39.88707364843531,
+     "improve_over_hay_pct": 34.96041222759361
+    },
+    "NoProject": {
+     "mse_mean": 129.06567905720394,
+     "mse_std": 7.562451794772214,
+     "improve_over_hay_pct": 92.69109400541144
+    },
+    "NoRootProtect": {
+     "mse_mean": 115.18546195249452,
+     "mse_std": 7.32265545991294,
+     "improve_over_hay_pct": 93.47712172977523
+    },
+    "PerNode": {
+     "mse_mean": 829.1382153273003,
+     "mse_std": 63.223139670242276,
+     "improve_over_hay_pct": 53.04643870767348
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 1066.023150959115,
+     "mse_std": 38.93257235744427,
+     "improve_over_hay_pct": 39.63179789290097
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 1060.7829023985823,
+     "mse_std": 35.73988712892688,
+     "improve_over_hay_pct": 39.928549782303236
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop2031"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.5,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 72.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 71.98725885512256,
+     "mse_std": 2.909080732336857,
+     "improve_over_hay_pct": -1.5349598304898677
+    },
+    "Zero": {
+     "mse_mean": 3267.5268784361633,
+     "mse_std": 4.547473508864641e-13,
+     "improve_over_hay_pct": -4508.707368824246
+    },
+    "Hay": {
+     "mse_mean": 70.89898787107764,
+     "mse_std": 2.8998273837409316,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 40.72587990075532,
+     "mse_std": 1.3233564749346483,
+     "improve_over_hay_pct": 42.55788252603683
+    },
+    "Scalar": {
+     "mse_mean": 69.34311373603738,
+     "mse_std": 2.7541912380805758,
+     "improve_over_hay_pct": 2.1944941412555132
+    },
+    "NoProject": {
+     "mse_mean": 43.534529359424816,
+     "mse_std": 1.2874123874760803,
+     "improve_over_hay_pct": 38.596402196054214
+    },
+    "NoRootProtect": {
+     "mse_mean": 40.725873600827505,
+     "mse_std": 1.3233408814675358,
+     "improve_over_hay_pct": 42.55789141181644
+    },
+    "PerNode": {
+     "mse_mean": 33.40531837293569,
+     "mse_std": 2.344631938392053,
+     "improve_over_hay_pct": 52.883222488761405
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 69.18804627135856,
+     "mse_std": 2.7779710079067157,
+     "improve_over_hay_pct": 2.4132101897283014
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 69.05945075306732,
+     "mse_std": 2.7566476444089836,
+     "improve_over_hay_pct": 2.594588686308636
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop2031"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 1.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 18.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 17.98588083084787,
+     "mse_std": 0.6813882184150775,
+     "improve_over_hay_pct": -1.6636634162023038
+    },
+    "Zero": {
+     "mse_mean": 3267.5268784361633,
+     "mse_std": 4.547473508864641e-13,
+     "improve_over_hay_pct": -18369.418089493072
+    },
+    "Hay": {
+     "mse_mean": 17.69155293687895,
+     "mse_std": 0.6790740849577904,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 14.931673641682346,
+     "mse_std": 0.5592350156597032,
+     "improve_over_hay_pct": 15.599983252140024
+    },
+    "Scalar": {
+     "mse_mean": 17.600623310699934,
+     "mse_std": 0.6637944317317642,
+     "improve_over_hay_pct": 0.5139719871027708
+    },
+    "NoProject": {
+     "mse_mean": 15.448781740904096,
+     "mse_std": 0.547952029796937,
+     "improve_over_hay_pct": 12.677073651910353
+    },
+    "NoRootProtect": {
+     "mse_mean": 14.931675589335294,
+     "mse_std": 0.5592292122263551,
+     "improve_over_hay_pct": 15.5999722431972
+    },
+    "PerNode": {
+     "mse_mean": 8.30536623730405,
+     "mse_std": 0.5645171852296755,
+     "improve_over_hay_pct": 53.0546229212525
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 17.586624451780533,
+     "mse_std": 0.6641541601347892,
+     "improve_over_hay_pct": 0.5930993478796708
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 17.57654070028032,
+     "mse_std": 0.6574434411958511,
+     "improve_over_hay_pct": 0.6500968965753237
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop2031"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 2.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 4.5,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 4.518213143817292,
+     "mse_std": 0.14031564361002885,
+     "improve_over_hay_pct": -1.680560769313107
+    },
+    "Zero": {
+     "mse_mean": 3267.5268784361633,
+     "mse_std": 4.547473508864641e-13,
+     "improve_over_hay_pct": -73434.37183078312
+    },
+    "Hay": {
+     "mse_mean": 4.443536807461112,
+     "mse_std": 0.13843686233932936,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 4.2487119181720345,
+     "mse_std": 0.12794837039585658,
+     "improve_over_hay_pct": 4.384455395124633
+    },
+    "Scalar": {
+     "mse_mean": 4.439396532117862,
+     "mse_std": 0.13819111517243005,
+     "improve_over_hay_pct": 0.09317522331081185
+    },
+    "NoProject": {
+     "mse_mean": 4.343781239007089,
+     "mse_std": 0.13112787345447882,
+     "improve_over_hay_pct": 2.24495875192312
+    },
+    "NoRootProtect": {
+     "mse_mean": 4.2487123670047175,
+     "mse_std": 0.1279483421234372,
+     "improve_over_hay_pct": 4.384445294326497
+    },
+    "PerNode": {
+     "mse_mean": 2.087882202257032,
+     "mse_std": 0.11455175668951101,
+     "improve_over_hay_pct": 53.01305485415844
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 4.43820317409606,
+     "mse_std": 0.13825072237215819,
+     "improve_over_hay_pct": 0.1200312632967628
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 4.437432297216117,
+     "mse_std": 0.1382102816606332,
+     "improve_over_hay_pct": 0.13737953593059501
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop2031"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 5.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.72,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.7198662432998421,
+     "mse_std": 0.028313147919859488,
+     "improve_over_hay_pct": -1.653613279973682
+    },
+    "Zero": {
+     "mse_mean": 3267.5268784361633,
+     "mse_std": 4.547473508864641e-13,
+     "improve_over_hay_pct": -461313.3761292626
+    },
+    "Hay": {
+     "mse_mean": 0.7081560803128477,
+     "mse_std": 0.027925334351463847,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.7028775948540792,
+     "mse_std": 0.027530879252565046,
+     "improve_over_hay_pct": 0.7453844718012735
+    },
+    "Scalar": {
+     "mse_mean": 0.7080084317795426,
+     "mse_std": 0.027891439055979312,
+     "improve_over_hay_pct": 0.02084971624332296
+    },
+    "NoProject": {
+     "mse_mean": 0.7150956942475369,
+     "mse_std": 0.028064315395874482,
+     "improve_over_hay_pct": -0.9799554261573886
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.7028776009471431,
+     "mse_std": 0.02753087085206636,
+     "improve_over_hay_pct": 0.7453836113887019
+    },
+    "PerNode": {
+     "mse_mean": 0.3335646016611771,
+     "mse_std": 0.02199862245018582,
+     "improve_over_hay_pct": 52.89673972525723
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.7095383277028999,
+     "mse_std": 0.02778349331092838,
+     "improve_over_hay_pct": -0.1951896521797242
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.7095383277028999,
+     "mse_std": 0.02778349331092838,
+     "improve_over_hay_pct": -0.1951896521797242
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop2031"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 10.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.18,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.17952642175202185,
+     "mse_std": 0.007913443256892187,
+     "improve_over_hay_pct": -1.666978908970449
+    },
+    "Zero": {
+     "mse_mean": 3267.5268784361633,
+     "mse_std": 4.547473508864641e-13,
+     "improve_over_hay_pct": -1850321.698335455
+    },
+    "Hay": {
+     "mse_mean": 0.17658282333024217,
+     "mse_std": 0.007701952230583762,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.176283440836228,
+     "mse_std": 0.007729449770733723,
+     "improve_over_hay_pct": 0.16954225126091546
+    },
+    "Scalar": {
+     "mse_mean": 0.1765673501738022,
+     "mse_std": 0.007706898066834532,
+     "improve_over_hay_pct": 0.008762549011362523
+    },
+    "NoProject": {
+     "mse_mean": 0.1792745557907569,
+     "mse_std": 0.007940417110614561,
+     "improve_over_hay_pct": -1.5243455788905969
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.17628343823012474,
+     "mse_std": 0.0077294513451265905,
+     "improve_over_hay_pct": 0.16954372711411608
+    },
+    "PerNode": {
+     "mse_mean": 0.08276858444023551,
+     "mse_std": 0.006257891412367051,
+     "improve_over_hay_pct": 53.12761293580457
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.17888878893988266,
+     "mse_std": 0.007813177231178789,
+     "improve_over_hay_pct": -1.3058833051547265
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.17888878893988266,
+     "mse_std": 0.007813177231178789,
+     "improve_over_hay_pct": -1.3058833051547265
+    }
+   }
+  }
+ ]
+}

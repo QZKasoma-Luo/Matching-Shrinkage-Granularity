@@ -1,0 +1,500 @@
+{
+ "config": {
+  "methods": [
+   "Laplace",
+   "Zero",
+   "Hay",
+   "Ours",
+   "Scalar",
+   "NoProject",
+   "NoRootProtect",
+   "PerNode",
+   "Spectral(SURE)",
+   "Spectral(oracle)"
+  ],
+  "epsilons": [
+   0.01,
+   0.1,
+   0.5,
+   1.0,
+   2.0,
+   5.0,
+   10.0
+  ],
+  "num_trials": 50,
+  "source": "2020 Detailed DHC-A T01001, county, proxy GT",
+  "popgroup": "1190",
+  "popgroup_label": "Emirati alone or in any combination"
+ },
+ "results": [
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1190"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.01,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 180000.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 179937.32886250396,
+     "mse_std": 6174.502248421214,
+     "improve_over_hay_pct": -1.6502618201484236
+    },
+    "Zero": {
+     "mse_mean": 584.8781307269395,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": 99.66959043186252
+    },
+    "Hay": {
+     "mse_mean": 177016.09975276818,
+     "mse_std": 6052.456530627351,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 273.1360871027821,
+     "mse_std": 248.83034631215037,
+     "improve_over_hay_pct": 99.84569986149042
+    },
+    "Scalar": {
+     "mse_mean": 669.6864693248357,
+     "mse_std": 165.38871091863618,
+     "improve_over_hay_pct": 99.62168047411498
+    },
+    "NoProject": {
+     "mse_mean": 286.75416931370864,
+     "mse_std": 253.3495407891072,
+     "improve_over_hay_pct": 99.83800672949286
+    },
+    "NoRootProtect": {
+     "mse_mean": 284.7646666107916,
+     "mse_std": 245.5887219168303,
+     "improve_over_hay_pct": 99.8391306400895
+    },
+    "PerNode": {
+     "mse_mean": 81730.06465654574,
+     "mse_std": 5167.17496827054,
+     "improve_over_hay_pct": 53.829021896485635
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 563.2870429330138,
+     "mse_std": 81.90090041191627,
+     "improve_over_hay_pct": 99.68178767709846
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 544.156195436104,
+     "mse_std": 71.29935564328201,
+     "improve_over_hay_pct": 99.69259508248341
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1190"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.1,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 1800.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 1795.8004353991907,
+     "mse_std": 72.0868774985974,
+     "improve_over_hay_pct": -1.6950180966122215
+    },
+    "Zero": {
+     "mse_mean": 584.8781307269395,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": 66.87872944224611
+    },
+    "Hay": {
+     "mse_mean": 1765.868642348975,
+     "mse_std": 70.8693360746812,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 39.929454773833044,
+     "mse_std": 4.860830018291712,
+     "improve_over_hay_pct": 97.73882078110191
+    },
+    "Scalar": {
+     "mse_mean": 442.20152097580785,
+     "mse_std": 9.898184273261927,
+     "improve_over_hay_pct": 74.95841364578584
+    },
+    "NoProject": {
+     "mse_mean": 42.354501419772625,
+     "mse_std": 5.259369194705557,
+     "improve_over_hay_pct": 97.60149195676117
+    },
+    "NoRootProtect": {
+     "mse_mean": 39.944105652350984,
+     "mse_std": 4.872550208034684,
+     "improve_over_hay_pct": 97.73799111131976
+    },
+    "PerNode": {
+     "mse_mean": 826.003003000428,
+     "mse_std": 63.447485884153274,
+     "improve_over_hay_pct": 53.22398375557137
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 404.46713532646936,
+     "mse_std": 11.343142213620947,
+     "improve_over_hay_pct": 77.09528751875658
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 401.8415060932005,
+     "mse_std": 9.773516525345626,
+     "improve_over_hay_pct": 77.2439752053886
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1190"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 0.5,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 72.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 71.98725885512256,
+     "mse_std": 2.9090807323368564,
+     "improve_over_hay_pct": -1.5349598304898677
+    },
+    "Zero": {
+     "mse_mean": 584.8781307269395,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -724.945670297126
+    },
+    "Hay": {
+     "mse_mean": 70.89898787107764,
+     "mse_std": 2.899827383740933,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 16.387843447803544,
+     "mse_std": 0.436596226626856,
+     "improve_over_hay_pct": 76.88564542331251
+    },
+    "Scalar": {
+     "mse_mean": 63.134719163362554,
+     "mse_std": 2.392269504194059,
+     "improve_over_hay_pct": 10.951170024928409
+    },
+    "NoProject": {
+     "mse_mean": 17.074416127007172,
+     "mse_std": 0.4473352803606709,
+     "improve_over_hay_pct": 75.91726392758216
+    },
+    "NoRootProtect": {
+     "mse_mean": 16.38784600417516,
+     "mse_std": 0.4365408621611443,
+     "improve_over_hay_pct": 76.88564181765932
+    },
+    "PerNode": {
+     "mse_mean": 33.231157835439234,
+     "mse_std": 2.323389836172143,
+     "improve_over_hay_pct": 53.1288685025143
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 62.404398521489696,
+     "mse_std": 2.382836035527825,
+     "improve_over_hay_pct": 11.981256157047628
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 62.35135525504185,
+     "mse_std": 2.3593051262441582,
+     "improve_over_hay_pct": 12.05607142316158
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1190"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 1.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 18.0,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 17.98588083084787,
+     "mse_std": 0.6813882184150775,
+     "improve_over_hay_pct": -1.6636634162023038
+    },
+    "Zero": {
+     "mse_mean": 584.8781307269395,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -3205.973945948697
+    },
+    "Hay": {
+     "mse_mean": 17.69155293687895,
+     "mse_std": 0.6790740849577909,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 9.49322050788828,
+     "mse_std": 0.267703217793936,
+     "improve_over_hay_pct": 46.34037757025176
+    },
+    "Scalar": {
+     "mse_mean": 17.180896369739955,
+     "mse_std": 0.6213813061590938,
+     "improve_over_hay_pct": 2.886442863218099
+    },
+    "NoProject": {
+     "mse_mean": 9.798614032177557,
+     "mse_std": 0.2672971910531622,
+     "improve_over_hay_pct": 44.6141666187379
+    },
+    "NoRootProtect": {
+     "mse_mean": 9.493227317222583,
+     "mse_std": 0.26769705779617603,
+     "improve_over_hay_pct": 46.340339081068095
+    },
+    "PerNode": {
+     "mse_mean": 8.275508956856054,
+     "mse_std": 0.5619096848602674,
+     "improve_over_hay_pct": 53.2233886624767
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 17.140903571813094,
+     "mse_std": 0.6256712392962245,
+     "improve_over_hay_pct": 3.112498755934523
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 17.121012931860164,
+     "mse_std": 0.6155493501814985,
+     "improve_over_hay_pct": 3.224928908470578
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1190"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 2.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 4.5,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 4.518213143817292,
+     "mse_std": 0.14031564361002888,
+     "improve_over_hay_pct": -1.680560769313107
+    },
+    "Zero": {
+     "mse_mean": 584.8781307269395,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -13062.445953972401
+    },
+    "Hay": {
+     "mse_mean": 4.443536807461112,
+     "mse_std": 0.1384368623393295,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 3.645503122445257,
+     "mse_std": 0.1163284678564436,
+     "improve_over_hay_pct": 17.959425556594514
+    },
+    "Scalar": {
+     "mse_mean": 4.4124853724774145,
+     "mse_std": 0.1377022290994973,
+     "improve_over_hay_pct": 0.6987999948950443
+    },
+    "NoProject": {
+     "mse_mean": 3.728359236898261,
+     "mse_std": 0.11996944490432988,
+     "improve_over_hay_pct": 16.09478218706327
+    },
+    "NoRootProtect": {
+     "mse_mean": 3.6455043673942082,
+     "mse_std": 0.11632887608613371,
+     "improve_over_hay_pct": 17.959397539521518
+    },
+    "PerNode": {
+     "mse_mean": 2.0827965604228784,
+     "mse_std": 0.11645656175129197,
+     "improve_over_hay_pct": 53.127505168277914
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 4.409048309246736,
+     "mse_std": 0.13767385449780273,
+     "improve_over_hay_pct": 0.7761497138150549
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 4.407860390562065,
+     "mse_std": 0.13750415977614916,
+     "improve_over_hay_pct": 0.8028833437171782
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1190"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 5.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.72,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.7198662432998421,
+     "mse_std": 0.028313147919859515,
+     "improve_over_hay_pct": -1.653613279973682
+    },
+    "Zero": {
+     "mse_mean": 584.8781307269395,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -82491.69793028582
+    },
+    "Hay": {
+     "mse_mean": 0.7081560803128477,
+     "mse_std": 0.027925334351463837,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.6847442838983991,
+     "mse_std": 0.026345468596564225,
+     "improve_over_hay_pct": 3.306022085428647
+    },
+    "Scalar": {
+     "mse_mean": 0.7073848821672112,
+     "mse_std": 0.02780170590903498,
+     "improve_over_hay_pct": 0.10890228398460308
+    },
+    "NoProject": {
+     "mse_mean": 0.6966836620667342,
+     "mse_std": 0.026989100698100784,
+     "improve_over_hay_pct": 1.6200409154215405
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.6847443049512754,
+     "mse_std": 0.026345458947458603,
+     "improve_over_hay_pct": 3.3060191125139453
+    },
+    "PerNode": {
+     "mse_mean": 0.3324001037922734,
+     "mse_std": 0.021695644170558977,
+     "improve_over_hay_pct": 53.06118057400194
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.7073019771626778,
+     "mse_std": 0.027799731475059083,
+     "improve_over_hay_pct": 0.12060944951465326
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.7071974610221373,
+     "mse_std": 0.02776807376680868,
+     "improve_over_hay_pct": 0.13536836261956506
+    }
+   }
+  },
+  {
+   "spec": {
+    "kind": "census_ddhca",
+    "name": "pop1190"
+   },
+   "spec_name": "census_ddhca",
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "signal_type": "real",
+   "leaf_mean": null,
+   "epsilon": 10.0,
+   "num_nodes": 3274,
+   "num_trials": 50,
+   "sigma2": 0.18,
+   "methods": {
+    "Laplace": {
+     "mse_mean": 0.17952642175202185,
+     "mse_std": 0.007913443256892196,
+     "improve_over_hay_pct": -1.666978908970449
+    },
+    "Zero": {
+     "mse_mean": 584.8781307269395,
+     "mse_std": 0.0,
+     "improve_over_hay_pct": -331120.2850178188
+    },
+    "Hay": {
+     "mse_mean": 0.17658282333024217,
+     "mse_std": 0.007701952230583764,
+     "improve_over_hay_pct": 0.0
+    },
+    "Ours": {
+     "mse_mean": 0.17507459857677762,
+     "mse_std": 0.0076413718130097985,
+     "improve_over_hay_pct": 0.8541174758792293
+    },
+    "Scalar": {
+     "mse_mean": 0.17650854175177322,
+     "mse_std": 0.0076978358480136915,
+     "improve_over_hay_pct": 0.0420661404478898
+    },
+    "NoProject": {
+     "mse_mean": 0.17806330134172,
+     "mse_std": 0.007845308950687644,
+     "improve_over_hay_pct": -0.8384043156389347
+    },
+    "NoRootProtect": {
+     "mse_mean": 0.17507459319159388,
+     "mse_std": 0.007641374929312269,
+     "improve_over_hay_pct": 0.8541205255437674
+    },
+    "PerNode": {
+     "mse_mean": 0.0825608533640893,
+     "mse_std": 0.006308854247481959,
+     "improve_over_hay_pct": 53.24525239372495
+    },
+    "Spectral(SURE)": {
+     "mse_mean": 0.17670178976013712,
+     "mse_std": 0.007698139474648618,
+     "improve_over_hay_pct": -0.06737146209994735
+    },
+    "Spectral(oracle)": {
+     "mse_mean": 0.17670178976013712,
+     "mse_std": 0.007698139474648618,
+     "improve_over_hay_pct": -0.06737146209994735
+    }
+   }
+  }
+ ]
+}
