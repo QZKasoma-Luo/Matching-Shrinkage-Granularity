@@ -1,0 +1,1559 @@
+{
+ "strata": [
+  "present",
+  "empty",
+  "internal"
+ ],
+ "note": "same noise draws as run_ddhca; aggregate MSE cross-checked against ddhca_results_pop*.json",
+ "hay_vs_ls": {
+  "epsilon": 1.0,
+  "n_draws": 5,
+  "num_nodes": 3274,
+  "max_coord_diff": 0.3550129711272625,
+  "mse_hay_mean": 17.53147359505133,
+  "mse_ls_mean": 17.531352810700202,
+  "mse_rel_diff_pct": 0.0006889619553780973
+ },
+ "results": [
+  {
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 33,
+    "empty": 3188,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 179937.32886250396,
+     "mse_present": 197038.40081719722,
+     "mse_empty": 180148.44513641187,
+     "mse_internal": 156590.64856583643
+    },
+    "Hay": {
+     "mse_all": 177016.09975276818,
+     "mse_present": 191564.83543346272,
+     "mse_empty": 177365.19672890817,
+     "mse_internal": 146958.94055659356
+    },
+    "Scalar": {
+     "mse_all": 669.6864693248357,
+     "mse_present": 2065.646477496191,
+     "mse_empty": 104.23536468771387,
+     "mse_internal": 33812.9212110888
+    },
+    "Level": {
+     "mse_all": 273.1360871027821,
+     "mse_present": 2025.3246685358567,
+     "mse_empty": 102.7417454705836,
+     "mse_internal": 9431.53114250198
+    },
+    "Node": {
+     "mse_all": 81730.06465654574,
+     "mse_present": 90287.11339861229,
+     "mse_empty": 81899.69391630206,
+     "mse_internal": 66198.73090953904
+    }
+   }
+  },
+  {
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 33,
+    "empty": 3188,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 1795.8004353991907,
+     "mse_present": 1810.9942019530727,
+     "mse_empty": 1795.8387772756664,
+     "mse_internal": 1784.033865616533
+    },
+    "Hay": {
+     "mse_all": 1765.868642348975,
+     "mse_present": 1767.6932127956086,
+     "mse_empty": 1767.2497956118962,
+     "mse_internal": 1681.6549173125486
+    },
+    "Scalar": {
+     "mse_all": 442.20152097580785,
+     "mse_present": 1271.335187188585,
+     "mse_empty": 105.36608698325068,
+     "mse_internal": 20186.917607452237
+    },
+    "Level": {
+     "mse_all": 39.929454773833044,
+     "mse_present": 1827.181821577526,
+     "mse_empty": 2.9630347017444105,
+     "mse_internal": 1150.6769846850916
+    },
+    "Node": {
+     "mse_all": 826.003003000428,
+     "mse_present": 1540.4017968386993,
+     "mse_empty": 814.3077811221328,
+     "mse_internal": 1084.667288874809
+    }
+   }
+  },
+  {
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 33,
+    "empty": 3188,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 71.98725885512256,
+     "mse_present": 69.30986138188297,
+     "mse_empty": 72.06849337372736,
+     "mse_internal": 68.76798472879847
+    },
+    "Hay": {
+     "mse_all": 70.89898787107764,
+     "mse_present": 66.15664788108798,
+     "mse_empty": 71.03969151500348,
+     "mse_internal": 65.38830867926825
+    },
+    "Scalar": {
+     "mse_all": 63.134719163362554,
+     "mse_present": 77.64897965585112,
+     "mse_empty": 56.34418062297861,
+     "mse_internal": 462.55483747453104
+    },
+    "Level": {
+     "mse_all": 16.387843447803544,
+     "mse_present": 1126.3569332741847,
+     "mse_empty": 4.113416885075435,
+     "mse_internal": 63.59335132906066
+    },
+    "Node": {
+     "mse_all": 33.231157835439234,
+     "mse_present": 78.82494902645735,
+     "mse_empty": 32.61941616465917,
+     "mse_internal": 41.63940947965174
+    }
+   }
+  },
+  {
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 33,
+    "empty": 3188,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 17.98588083084787,
+     "mse_present": 17.068272549814147,
+     "mse_empty": 17.98696903890432,
+     "mse_internal": 18.491765094813083
+    },
+    "Hay": {
+     "mse_all": 17.69155293687895,
+     "mse_present": 16.445150875673264,
+     "mse_empty": 17.711075251942702,
+     "mse_internal": 17.293328929266476
+    },
+    "Scalar": {
+     "mse_all": 17.180896369739955,
+     "mse_present": 17.299118805145635,
+     "mse_empty": 16.668853411575256,
+     "mse_internal": 47.90715316711087
+    },
+    "Level": {
+     "mse_all": 9.49322050788828,
+     "mse_present": 405.14511795065766,
+     "mse_empty": 5.263735038918485,
+     "mse_internal": 17.55146691287531
+    },
+    "Node": {
+     "mse_all": 8.275508956856054,
+     "mse_present": 17.63110785671833,
+     "mse_empty": 8.131139886985794,
+     "mse_internal": 11.134260486119048
+    }
+   }
+  },
+  {
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 33,
+    "empty": 3188,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 4.518213143817292,
+     "mse_present": 5.134773471843179,
+     "mse_empty": 4.513248405855126,
+     "mse_internal": 4.432950762657429
+    },
+    "Hay": {
+     "mse_all": 4.443536807461112,
+     "mse_present": 4.859586538834643,
+     "mse_empty": 4.442768006273822,
+     "mse_internal": 4.230731091418724
+    },
+    "Scalar": {
+     "mse_all": 4.4124853724774145,
+     "mse_present": 4.914691455776721,
+     "mse_empty": 4.375150152784222,
+     "mse_internal": 6.3455397051758835
+    },
+    "Level": {
+     "mse_all": 3.645503122445257,
+     "mse_present": 62.27363246620754,
+     "mse_empty": 3.0283638550156216,
+     "mse_internal": 4.262705315304143
+    },
+    "Node": {
+     "mse_all": 2.0827965604228784,
+     "mse_present": 4.880752801101654,
+     "mse_empty": 2.045734776053506,
+     "mse_internal": 2.569974157161747
+    }
+   }
+  },
+  {
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 33,
+    "empty": 3188,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.7198662432998421,
+     "mse_present": 0.7239924146891685,
+     "mse_empty": 0.7204078730365615,
+     "mse_internal": 0.6847175780826967
+    },
+    "Hay": {
+     "mse_all": 0.7081560803128477,
+     "mse_present": 0.7087681493476478,
+     "mse_empty": 0.7093614916738502,
+     "mse_internal": 0.6352683501803199
+    },
+    "Scalar": {
+     "mse_all": 0.7073848821672112,
+     "mse_present": 0.7124809602333645,
+     "mse_empty": 0.707618031584585,
+     "mse_internal": 0.6901876950205764
+    },
+    "Level": {
+     "mse_all": 0.6847442838983991,
+     "mse_present": 2.801957649302044,
+     "mse_empty": 0.6636016286261129,
+     "mse_internal": 0.6382300187989276
+    },
+    "Node": {
+     "mse_all": 0.3324001037922734,
+     "mse_present": 0.7050707214280354,
+     "mse_empty": 0.3276982482612858,
+     "mse_internal": 0.3831809538075276
+    }
+   }
+  },
+  {
+   "popgroup": "1190",
+   "popgroup_label": "Emirati alone or in any combination",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 33,
+    "empty": 3188,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.17952642175202185,
+     "mse_present": 0.1741253136669955,
+     "mse_empty": 0.17939617968468224,
+     "mse_internal": 0.19072355906305075
+    },
+    "Hay": {
+     "mse_all": 0.17658282333024217,
+     "mse_present": 0.16797104564944218,
+     "mse_empty": 0.17662865066926936,
+     "mse_internal": 0.17918831590850054
+    },
+    "Scalar": {
+     "mse_all": 0.17650854175177322,
+     "mse_present": 0.16813915910382415,
+     "mse_empty": 0.17651999630776252,
+     "mse_internal": 0.1810306644477789
+    },
+    "Level": {
+     "mse_all": 0.17507459857677762,
+     "mse_present": 0.3038674006250102,
+     "mse_empty": 0.17367443587300316,
+     "mse_internal": 0.17910396144548418
+    },
+    "Node": {
+     "mse_all": 0.0825608533640893,
+     "mse_present": 0.16670839129029957,
+     "mse_empty": 0.08116884631363723,
+     "mse_internal": 0.1138976406334531
+    }
+   }
+  },
+  {
+   "popgroup": "1016",
+   "popgroup_label": "Carpatho Rusyn alone",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 44,
+    "empty": 3177,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 179937.32886250396,
+     "mse_present": 193436.19979704655,
+     "mse_empty": 180139.854432099,
+     "mse_internal": 156590.64856583643
+    },
+    "Hay": {
+     "mse_all": 177016.09975276818,
+     "mse_present": 186302.57497761608,
+     "mse_empty": 177388.91200568096,
+     "mse_internal": 146958.94055659356
+    },
+    "Scalar": {
+     "mse_all": 1564.8273843521122,
+     "mse_present": 3558.3168637487797,
+     "mse_empty": 131.84116286722374,
+     "mse_internal": 85807.91584782448
+    },
+    "Level": {
+     "mse_all": 556.6378469142398,
+     "mse_present": 3454.661699963206,
+     "mse_empty": 103.78958267539234,
+     "mse_internal": 25295.99418564375
+    },
+    "Node": {
+     "mse_all": 81773.8049748933,
+     "mse_present": 90052.77706634825,
+     "mse_empty": 81892.25953997334,
+     "mse_internal": 67800.12713935846
+    }
+   }
+  },
+  {
+   "popgroup": "1016",
+   "popgroup_label": "Carpatho Rusyn alone",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 44,
+    "empty": 3177,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 1795.8004353991907,
+     "mse_present": 1783.177900750208,
+     "mse_empty": 1796.1715464231245,
+     "mse_internal": 1784.0338656165331
+    },
+    "Hay": {
+     "mse_all": 1765.868642348975,
+     "mse_present": 1752.568208569301,
+     "mse_empty": 1767.4577347358925,
+     "mse_internal": 1681.6549173125486
+    },
+    "Scalar": {
+     "mse_all": 811.3034112383185,
+     "mse_present": 1410.181850380753,
+     "mse_empty": 358.9150914226534,
+     "mse_internal": 27431.81361373078
+    },
+    "Level": {
+     "mse_all": 68.92303801222671,
+     "mse_present": 2704.0996542793305,
+     "mse_empty": 7.329011297856867,
+     "mse_internal": 1573.3843918952534
+    },
+    "Node": {
+     "mse_all": 826.4319487209997,
+     "mse_present": 1444.0206549440222,
+     "mse_empty": 815.0796930639024,
+     "mse_internal": 994.2095553018447
+    }
+   }
+  },
+  {
+   "popgroup": "1016",
+   "popgroup_label": "Carpatho Rusyn alone",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 44,
+    "empty": 3177,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 71.98725885512256,
+     "mse_present": 69.99347951542646,
+     "mse_empty": 72.06857702309293,
+     "mse_internal": 68.76798472879847
+    },
+    "Hay": {
+     "mse_all": 70.89898787107764,
+     "mse_present": 68.45363261395714,
+     "mse_empty": 71.02478630623004,
+     "mse_internal": 65.38830867926825
+    },
+    "Scalar": {
+     "mse_all": 67.62750295322269,
+     "mse_present": 70.16083968874561,
+     "mse_empty": 64.62275606300432,
+     "mse_internal": 245.6390888751238
+    },
+    "Level": {
+     "mse_all": 27.37857583201531,
+     "mse_present": 1029.9280831913597,
+     "mse_empty": 12.846663590781883,
+     "mse_internal": 66.16549784309936
+    },
+    "Node": {
+     "mse_all": 33.3959113010528,
+     "mse_present": 80.45569684931421,
+     "mse_empty": 32.636284100921294,
+     "mse_internal": 39.86204433302064
+    }
+   }
+  },
+  {
+   "popgroup": "1016",
+   "popgroup_label": "Carpatho Rusyn alone",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 44,
+    "empty": 3177,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 17.98588083084787,
+     "mse_present": 17.647104941093147,
+     "mse_empty": 17.982133356236304,
+     "mse_internal": 18.491765094813086
+    },
+    "Hay": {
+     "mse_all": 17.69155293687895,
+     "mse_present": 16.902064037411535,
+     "mse_empty": 17.709130331899416,
+     "mse_internal": 17.293328929266462
+    },
+    "Scalar": {
+     "mse_all": 17.497174646797365,
+     "mse_present": 17.031667999990105,
+     "mse_empty": 17.287899639307753,
+     "mse_internal": 30.428287689326044
+    },
+    "Level": {
+     "mse_all": 12.617592803006493,
+     "mse_present": 218.40828385541198,
+     "mse_empty": 9.680043155795428,
+     "mse_internal": 17.859193234774626
+    },
+    "Node": {
+     "mse_all": 8.30165537335665,
+     "mse_present": 17.651683612767428,
+     "mse_empty": 8.13089642509518,
+     "mse_internal": 10.775239073217342
+    }
+   }
+  },
+  {
+   "popgroup": "1016",
+   "popgroup_label": "Carpatho Rusyn alone",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 44,
+    "empty": 3177,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 4.518213143817291,
+     "mse_present": 4.340300996464784,
+     "mse_empty": 4.522099527413446,
+     "mse_internal": 4.43295076265743
+    },
+    "Hay": {
+     "mse_all": 4.443536807461112,
+     "mse_present": 4.121060669161244,
+     "mse_empty": 4.451553065892162,
+     "mse_internal": 4.230731091418725
+    },
+    "Scalar": {
+     "mse_all": 4.431605390722183,
+     "mse_present": 4.12695107267346,
+     "mse_empty": 4.4247338486493355,
+     "mse_internal": 5.096429525808632
+    },
+    "Level": {
+     "mse_all": 4.032987859369331,
+     "mse_present": 23.942314644273345,
+     "mse_empty": 3.7534532111252825,
+     "mse_internal": 4.260746329851716
+    },
+    "Node": {
+     "mse_all": 2.0884714719524995,
+     "mse_present": 4.1510690027118065,
+     "mse_empty": 2.053220092835252,
+     "mse_internal": 2.4892137380295485
+    }
+   }
+  },
+  {
+   "popgroup": "1016",
+   "popgroup_label": "Carpatho Rusyn alone",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 44,
+    "empty": 3177,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.7198662432998421,
+     "mse_present": 0.6943171546999798,
+     "mse_empty": 0.720806450776991,
+     "mse_internal": 0.6847175780826968
+    },
+    "Hay": {
+     "mse_all": 0.7081560803128477,
+     "mse_present": 0.6700426681371665,
+     "mse_empty": 0.7098998762941995,
+     "mse_internal": 0.6352683501803209
+    },
+    "Scalar": {
+     "mse_all": 0.7078602823615817,
+     "mse_present": 0.6711244285233259,
+     "mse_empty": 0.7092131102898857,
+     "mse_internal": 0.6572648718080323
+    },
+    "Level": {
+     "mse_all": 0.697199611507876,
+     "mse_present": 1.28572700488592,
+     "mse_empty": 0.6900542161187588,
+     "mse_internal": 0.6369300991039228
+    },
+    "Node": {
+     "mse_all": 0.33340654711360557,
+     "mse_present": 0.6677997643245495,
+     "mse_empty": 0.32816677778745285,
+     "mse_internal": 0.36988665262125964
+    }
+   }
+  },
+  {
+   "popgroup": "1016",
+   "popgroup_label": "Carpatho Rusyn alone",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 44,
+    "empty": 3177,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.17952642175202185,
+     "mse_present": 0.180490039963274,
+     "mse_empty": 0.1793262809025476,
+     "mse_internal": 0.19072355906305066
+    },
+    "Hay": {
+     "mse_all": 0.17658282333024217,
+     "mse_present": 0.17611273482917914,
+     "mse_empty": 0.17654586795957777,
+     "mse_internal": 0.17918831590850026
+    },
+    "Scalar": {
+     "mse_all": 0.17655105113964165,
+     "mse_present": 0.176265751556339,
+     "mse_empty": 0.17650315144513307,
+     "mse_internal": 0.179659173990945
+    },
+    "Level": {
+     "mse_all": 0.17593165499570296,
+     "mse_present": 0.2173905953882693,
+     "mse_empty": 0.17530426189888368,
+     "mse_internal": 0.17912098502064464
+    },
+    "Node": {
+     "mse_all": 0.08280772095252675,
+     "mse_present": 0.17414888176428195,
+     "mse_empty": 0.08107510096989777,
+     "mse_internal": 0.11083644942601847
+    }
+   }
+  },
+  {
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 46,
+    "empty": 3175,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 179937.32886250396,
+     "mse_present": 194325.56525444082,
+     "mse_empty": 180118.59348665964,
+     "mse_internal": 156590.64856583643
+    },
+    "Hay": {
+     "mse_all": 177016.09975276818,
+     "mse_present": 186232.0535987485,
+     "mse_empty": 177384.31882693575,
+     "mse_internal": 146958.94055659356
+    },
+    "Scalar": {
+     "mse_all": 3312.5523503925033,
+     "mse_present": 7330.600128825202,
+     "mse_empty": 210.53728939084954,
+     "mse_internal": 185653.4508574179
+    },
+    "Level": {
+     "mse_all": 814.1134861068299,
+     "mse_present": 7029.971083187104,
+     "mse_empty": 109.34033678037336,
+     "mse_internal": 37639.11913980131
+    },
+    "Node": {
+     "mse_all": 81833.40342297111,
+     "mse_present": 94654.09173354613,
+     "mse_empty": 81854.16384190845,
+     "mse_internal": 69462.3469623569
+    }
+   }
+  },
+  {
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 46,
+    "empty": 3175,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 1795.8004353991907,
+     "mse_present": 1772.3696776752852,
+     "mse_empty": 1796.3363229751847,
+     "mse_internal": 1784.033865616533
+    },
+    "Hay": {
+     "mse_all": 1765.868642348975,
+     "mse_present": 1723.8759507763439,
+     "mse_empty": 1767.882812818037,
+     "mse_internal": 1681.6549173125488
+    },
+    "Scalar": {
+     "mse_all": 1148.5136855859628,
+     "mse_present": 1702.223988478629,
+     "mse_empty": 733.5853219242317,
+     "mse_internal": 25524.492566584708
+    },
+    "Level": {
+     "mse_all": 115.1815036562995,
+     "mse_present": 5164.881640425443,
+     "mse_empty": 17.190761248593493,
+     "mse_internal": 1602.623029186225
+    },
+    "Node": {
+     "mse_all": 829.1382153273003,
+     "mse_present": 1643.2571953213867,
+     "mse_empty": 815.1157640402779,
+     "mse_internal": 962.5685880927449
+    }
+   }
+  },
+  {
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 46,
+    "empty": 3175,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 71.98725885512256,
+     "mse_present": 75.98775279579714,
+     "mse_empty": 71.98303800706717,
+     "mse_internal": 68.76798472879847
+    },
+    "Hay": {
+     "mse_all": 70.89898787107764,
+     "mse_present": 73.97462915945363,
+     "mse_empty": 70.94641668931405,
+     "mse_internal": 65.38830867926826
+    },
+    "Scalar": {
+     "mse_all": 69.34311373603738,
+     "mse_present": 74.38491101186412,
+     "mse_empty": 67.92249889127756,
+     "mse_internal": 150.070084630837
+    },
+    "Level": {
+     "mse_all": 40.72587990075532,
+     "mse_present": 951.3166342546724,
+     "mse_empty": 27.08122307397782,
+     "mse_internal": 67.79400678261094
+    },
+    "Node": {
+     "mse_all": 33.40531837293569,
+     "mse_present": 84.98327019979627,
+     "mse_empty": 32.570750788604194,
+     "mse_internal": 38.634871131745584
+    }
+   }
+  },
+  {
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 46,
+    "empty": 3175,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 17.98588083084787,
+     "mse_present": 18.91784048733858,
+     "mse_empty": 17.96393374102465,
+     "mse_internal": 18.491765094813083
+    },
+    "Hay": {
+     "mse_all": 17.69155293687895,
+     "mse_present": 18.129012001080458,
+     "mse_empty": 17.6918624661546,
+     "mse_internal": 17.29332892926648
+    },
+    "Scalar": {
+     "mse_all": 17.600623310699934,
+     "mse_present": 18.18772203651762,
+     "mse_empty": 17.498499223574058,
+     "mse_internal": 23.208876805738537
+    },
+    "Level": {
+     "mse_all": 14.931673641682346,
+     "mse_present": 132.37646172769763,
+     "mse_empty": 13.181614059967764,
+     "mse_internal": 17.83693628294822
+    },
+    "Node": {
+     "mse_all": 8.30536623730405,
+     "mse_present": 18.69308915355944,
+     "mse_empty": 8.114792636679717,
+     "mse_internal": 10.706044120974028
+    }
+   }
+  },
+  {
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 46,
+    "empty": 3175,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 4.518213143817292,
+     "mse_present": 4.67037504361136,
+     "mse_empty": 4.5174318710018415,
+     "mse_internal": 4.432950762657429
+    },
+    "Hay": {
+     "mse_all": 4.443536807461112,
+     "mse_present": 4.485281840495354,
+     "mse_empty": 4.446484344919592,
+     "mse_internal": 4.230731091418721
+    },
+    "Scalar": {
+     "mse_all": 4.439396532117862,
+     "mse_present": 4.4957462423213626,
+     "mse_empty": 4.434257262834839,
+     "mse_internal": 4.698360556726092
+    },
+    "Level": {
+     "mse_all": 4.2487119181720345,
+     "mse_present": 13.707265002452102,
+     "mse_empty": 4.110819548121987,
+     "mse_internal": 4.299935182927079
+    },
+    "Node": {
+     "mse_all": 2.087882202257032,
+     "mse_present": 4.435678415469169,
+     "mse_empty": 2.048232841497578,
+     "mse_internal": 2.425393421191175
+    }
+   }
+  },
+  {
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 46,
+    "empty": 3175,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.7198662432998421,
+     "mse_present": 0.7451976651855768,
+     "mse_empty": 0.7200859704966185,
+     "mse_internal": 0.6847175780826968
+    },
+    "Hay": {
+     "mse_all": 0.7081560803128477,
+     "mse_present": 0.7246915147261898,
+     "mse_empty": 0.7091332203802527,
+     "mse_internal": 0.6352683501803204
+    },
+    "Scalar": {
+     "mse_all": 0.7080084317795426,
+     "mse_present": 0.7246468147325367,
+     "mse_empty": 0.7088208066579215,
+     "mse_internal": 0.6449017175400829
+    },
+    "Level": {
+     "mse_all": 0.7028775948540792,
+     "mse_present": 0.9707520796656371,
+     "mse_empty": 0.7001215951499128,
+     "mse_internal": 0.6354827412577828
+    },
+    "Node": {
+     "mse_all": 0.3335646016611771,
+     "mse_present": 0.7188146160725647,
+     "mse_empty": 0.3274126433716941,
+     "mse_internal": 0.3677337885703246
+    }
+   }
+  },
+  {
+   "popgroup": "2031",
+   "popgroup_label": "Pueblo alone",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 46,
+    "empty": 3175,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.17952642175202185,
+     "mse_present": 0.16830309306152563,
+     "mse_empty": 0.17950211461573154,
+     "mse_internal": 0.1907235590630506
+    },
+    "Hay": {
+     "mse_all": 0.17658282333024217,
+     "mse_present": 0.16158194759408304,
+     "mse_empty": 0.1767566655907825,
+     "mse_internal": 0.17918831590850048
+    },
+    "Scalar": {
+     "mse_all": 0.1765673501738022,
+     "mse_present": 0.16165104968816124,
+     "mse_empty": 0.17673719364341373,
+     "mse_internal": 0.17933898802895332
+    },
+    "Level": {
+     "mse_all": 0.176283440836228,
+     "mse_present": 0.17884343513847867,
+     "mse_empty": 0.17619598428476632,
+     "mse_internal": 0.17930070145863086
+    },
+    "Node": {
+     "mse_all": 0.08276858444023551,
+     "mse_present": 0.16144800259324957,
+     "mse_empty": 0.08121946094722869,
+     "mse_internal": 0.10728205340736874
+    }
+   }
+  },
+  {
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 106,
+    "empty": 3115,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 179937.32886250396,
+     "mse_present": 186155.84489870808,
+     "mse_empty": 180122.95048558127,
+     "mse_internal": 156590.64856583643
+    },
+    "Hay": {
+     "mse_all": 177016.09975276818,
+     "mse_present": 180046.7691524514,
+     "mse_empty": 177424.3753486047,
+     "mse_internal": 146958.94055659356
+    },
+    "Scalar": {
+     "mse_all": 15710.85511779895,
+     "mse_present": 10087.447158073443,
+     "mse_empty": 1495.75375657493,
+     "mse_internal": 862430.1378337183
+    },
+    "Level": {
+     "mse_all": 1426.1693365393903,
+     "mse_present": 9528.789942686286,
+     "mse_empty": 130.67116852918602,
+     "mse_internal": 61361.999696920815
+    },
+    "Node": {
+     "mse_all": 82069.98491079477,
+     "mse_present": 90394.61992676955,
+     "mse_empty": 81885.86592867179,
+     "mse_internal": 76242.04750739416
+    }
+   }
+  },
+  {
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 106,
+    "empty": 3115,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 1795.8004353991907,
+     "mse_present": 1818.0072295174793,
+     "mse_empty": 1795.2449644592043,
+     "mse_internal": 1784.033865616533
+    },
+    "Hay": {
+     "mse_all": 1765.868642348975,
+     "mse_present": 1761.1628922403531,
+     "mse_empty": 1767.4616237096313,
+     "mse_internal": 1681.6549173125488
+    },
+    "Scalar": {
+     "mse_all": 1602.2659370799995,
+     "mse_present": 1547.807930535702,
+     "mse_empty": 1445.1243706655875,
+     "mse_internal": 10946.955146034497
+    },
+    "Level": {
+     "mse_all": 291.9688643273867,
+     "mse_present": 6451.884241248616,
+     "mse_empty": 59.5763508225568,
+     "mse_internal": 1630.6792344008747
+    },
+    "Node": {
+     "mse_all": 854.1347313771882,
+     "mse_present": 1714.7226280614914,
+     "mse_empty": 815.7935643926876,
+     "mse_internal": 1386.4067711542446
+    }
+   }
+  },
+  {
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 106,
+    "empty": 3115,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 71.98725885512256,
+     "mse_present": 70.5034634675761,
+     "mse_empty": 72.09252493530718,
+     "mse_internal": 68.76798472879847
+    },
+    "Hay": {
+     "mse_all": 70.89898787107764,
+     "mse_present": 68.56314944839185,
+     "mse_empty": 71.07223502034589,
+     "mse_internal": 65.38830867926826
+    },
+    "Scalar": {
+     "mse_all": 70.58535375666577,
+     "mse_present": 68.29950040297027,
+     "mse_empty": 70.47498315301364,
+     "mse_internal": 81.64393650889357
+    },
+    "Level": {
+     "mse_all": 58.20118177956742,
+     "mse_present": 324.9316215881352,
+     "mse_empty": 49.00222346290938,
+     "mse_internal": 65.3960598301646
+    },
+    "Node": {
+     "mse_all": 34.54348649247976,
+     "mse_present": 78.77982869063077,
+     "mse_empty": 32.69976365826655,
+     "mse_internal": 54.433002635312604
+    }
+   }
+  },
+  {
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 106,
+    "empty": 3115,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 17.98588083084787,
+     "mse_present": 18.197586143841402,
+     "mse_empty": 17.970069392912887,
+     "mse_internal": 18.49176509481309
+    },
+    "Hay": {
+     "mse_all": 17.69155293687895,
+     "mse_present": 17.670709209338924,
+     "mse_empty": 17.69903778680598,
+     "mse_internal": 17.293328929266476
+    },
+    "Scalar": {
+     "mse_all": 17.674298017922936,
+     "mse_present": 17.65484073157595,
+     "mse_empty": 17.661665486893153,
+     "mse_internal": 18.455671725669234
+    },
+    "Level": {
+     "mse_all": 16.78053389812692,
+     "mse_present": 39.00154399671003,
+     "mse_empty": 16.016179281069377,
+     "mse_internal": 17.26237468462558
+    },
+    "Node": {
+     "mse_all": 8.54666258646826,
+     "mse_present": 18.194717230348243,
+     "mse_empty": 8.124298435125256,
+     "mse_internal": 14.07440860877356
+    }
+   }
+  },
+  {
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 106,
+    "empty": 3115,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 4.518213143817292,
+     "mse_present": 4.59127557375906,
+     "mse_empty": 4.517177602445749,
+     "mse_internal": 4.432950762657426
+    },
+    "Hay": {
+     "mse_all": 4.443536807461112,
+     "mse_present": 4.429557460012599,
+     "mse_empty": 4.447633280584641,
+     "mse_internal": 4.2307310914187255
+    },
+    "Scalar": {
+     "mse_all": 4.44295033408008,
+     "mse_present": 4.430111381523671,
+     "mse_empty": 4.445282466433632,
+     "mse_internal": 4.3315604603001745
+    },
+    "Level": {
+     "mse_all": 4.386137847623318,
+     "mse_present": 5.929214728440312,
+     "mse_empty": 4.336110837728642,
+     "mse_internal": 4.240250799610379
+    },
+    "Node": {
+     "mse_all": 2.1484934015665744,
+     "mse_present": 4.435004832541157,
+     "mse_empty": 2.0508279481310847,
+     "mse_internal": 3.3156193594579837
+    }
+   }
+  },
+  {
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 106,
+    "empty": 3115,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.7198662432998421,
+     "mse_present": 0.7139483066282043,
+     "mse_empty": 0.7206656592047226,
+     "mse_internal": 0.6847175780826956
+    },
+    "Hay": {
+     "mse_all": 0.7081560803128478,
+     "mse_present": 0.6966019836058277,
+     "mse_empty": 0.7097893977921313,
+     "mse_internal": 0.6352683501803194
+    },
+    "Scalar": {
+     "mse_all": 0.7081377255191685,
+     "mse_present": 0.6966319550202245,
+     "mse_empty": 0.7097293585539418,
+     "mse_internal": 0.6376032872091523
+    },
+    "Level": {
+     "mse_all": 0.7067045353698288,
+     "mse_present": 0.7368148699519534,
+     "mse_empty": 0.7068909827729071,
+     "mse_internal": 0.6355256839303131
+    },
+    "Node": {
+     "mse_all": 0.34254881666903164,
+     "mse_present": 0.690682303777215,
+     "mse_empty": 0.3280061076871197,
+     "mse_internal": 0.5010089835593813
+    }
+   }
+  },
+  {
+   "popgroup": "3657",
+   "popgroup_label": "Guatemalan Indian alone or in any combination",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 106,
+    "empty": 3115,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.1795264217520219,
+     "mse_present": 0.17386812607851865,
+     "mse_empty": 0.1795284541962937,
+     "mse_internal": 0.19072355906305155
+    },
+    "Hay": {
+     "mse_all": 0.17658282333024217,
+     "mse_present": 0.1693980580389072,
+     "mse_empty": 0.17678298192229153,
+     "mse_internal": 0.17918831590849937
+    },
+    "Scalar": {
+     "mse_all": 0.17657872277159714,
+     "mse_present": 0.1694185351349983,
+     "mse_empty": 0.17677924344253157,
+     "mse_internal": 0.17911377936628944
+    },
+    "Level": {
+     "mse_all": 0.17652280247086968,
+     "mse_present": 0.1727559311542068,
+     "mse_empty": 0.17660599046789968,
+     "mse_internal": 0.1791672882976182
+    },
+    "Node": {
+     "mse_all": 0.08516736452827445,
+     "mse_present": 0.16757426226953537,
+     "mse_empty": 0.08133301750254666,
+     "mse_internal": 0.14571188952013014
+    }
+   }
+  },
+  {
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 157,
+    "empty": 3064,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 179937.32886250396,
+     "mse_present": 178737.8379381186,
+     "mse_empty": 180402.63373549737,
+     "mse_internal": 156590.64856583643
+    },
+    "Hay": {
+     "mse_all": 177016.09975276818,
+     "mse_present": 172658.65975150123,
+     "mse_empty": 177759.29411229692,
+     "mse_internal": 146958.94055659356
+    },
+    "Scalar": {
+     "mse_all": 56039.09047714001,
+     "mse_present": 34473.56383908995,
+     "mse_empty": 17416.68888617118,
+     "mse_internal": 2352733.9236262403
+    },
+    "Level": {
+     "mse_all": 3655.6648357617605,
+     "mse_present": 27789.37117395184,
+     "mse_empty": 296.80812255578786,
+     "mse_internal": 126345.19453703078
+    },
+    "Node": {
+     "mse_all": 82396.2759859495,
+     "mse_present": 87604.41200304157,
+     "mse_empty": 82109.17283174956,
+     "mse_internal": 83566.21390642443
+    }
+   }
+  },
+  {
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 157,
+    "empty": 3064,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 1795.8004353991907,
+     "mse_present": 1751.750633468359,
+     "mse_empty": 1798.2610904584667,
+     "mse_internal": 1784.033865616533
+    },
+    "Hay": {
+     "mse_all": 1765.868642348975,
+     "mse_present": 1687.3945458496266,
+     "mse_empty": 1771.3463709969285,
+     "mse_internal": 1681.6549173125486
+    },
+    "Scalar": {
+     "mse_all": 1729.425561124512,
+     "mse_present": 1633.5240909430804,
+     "mse_empty": 1695.7798878654598,
+     "mse_internal": 3958.6118570532044
+    },
+    "Level": {
+     "mse_all": 823.5314512233344,
+     "mse_present": 7559.937243382901,
+     "mse_empty": 462.41425152059213,
+     "mse_internal": 1745.1803289620157
+    },
+    "Node": {
+     "mse_all": 862.7997762685941,
+     "mse_present": 1591.332032811647,
+     "mse_empty": 820.1744402733749,
+     "mse_internal": 1168.921761402411
+    }
+   }
+  },
+  {
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 157,
+    "empty": 3064,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 71.98725885512255,
+     "mse_present": 69.96972975892193,
+     "mse_empty": 72.14632334493936,
+     "mse_internal": 68.76798472879842
+    },
+    "Hay": {
+     "mse_all": 70.89898787107764,
+     "mse_present": 68.18171244495434,
+     "mse_empty": 71.13354343213092,
+     "mse_internal": 65.38830867926826
+    },
+    "Scalar": {
+     "mse_all": 70.8275166276461,
+     "mse_present": 68.0311150081142,
+     "mse_empty": 71.00838733672548,
+     "mse_internal": 68.65482231910596
+    },
+    "Level": {
+     "mse_all": 67.632005185909,
+     "mse_present": 103.87528017538305,
+     "mse_empty": 65.80260819997885,
+     "mse_internal": 66.02970691312629
+    },
+    "Node": {
+     "mse_all": 35.14219278575382,
+     "mse_present": 76.53959606046494,
+     "mse_empty": 32.77734096374205,
+     "mse_internal": 49.22735634262969
+    }
+   }
+  },
+  {
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 157,
+    "empty": 3064,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 17.985880830847872,
+     "mse_present": 18.124277468690728,
+     "mse_empty": 17.970038749212268,
+     "mse_internal": 18.491765094813125
+    },
+    "Hay": {
+     "mse_all": 17.69155293687895,
+     "mse_present": 17.522638858368545,
+     "mse_empty": 17.7070964691014,
+     "mse_internal": 17.293328929266547
+    },
+    "Scalar": {
+     "mse_all": 17.687926325333663,
+     "mse_present": 17.521150231039154,
+     "mse_empty": 17.69929888404913,
+     "mse_internal": 17.524498530995185
+    },
+    "Level": {
+     "mse_all": 17.49889345139007,
+     "mse_present": 20.20267856609343,
+     "mse_empty": 17.363662333788614,
+     "mse_internal": 17.307457249926298
+    },
+    "Node": {
+     "mse_all": 8.685589020226779,
+     "mse_present": 18.097313116348374,
+     "mse_empty": 8.127418157680776,
+     "mse_internal": 13.07417090229959
+    }
+   }
+  },
+  {
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 157,
+    "empty": 3064,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 4.518213143817292,
+     "mse_present": 4.691857882084533,
+     "mse_empty": 4.510790389996637,
+     "mse_internal": 4.432950762657433
+    },
+    "Hay": {
+     "mse_all": 4.443536807461112,
+     "mse_present": 4.538672570079704,
+     "mse_empty": 4.442343069934719,
+     "mse_internal": 4.23073109141875
+    },
+    "Scalar": {
+     "mse_all": 4.4435845109246,
+     "mse_present": 4.538635993421101,
+     "mse_empty": 4.441853857580885,
+     "mse_internal": 4.262068267399931
+    },
+    "Level": {
+     "mse_all": 4.431445825697784,
+     "mse_present": 4.715199730905897,
+     "mse_empty": 4.420263251613923,
+     "mse_internal": 4.237371181835083
+    },
+    "Node": {
+     "mse_all": 2.181791463637514,
+     "mse_present": 4.542886449257079,
+     "mse_empty": 2.0459414957753967,
+     "mse_internal": 3.041270497359327
+    }
+   }
+  },
+  {
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 157,
+    "empty": 3064,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.7198662432998421,
+     "mse_present": 0.7104735991436238,
+     "mse_empty": 0.7209555136617987,
+     "mse_internal": 0.6847175780826967
+    },
+    "Hay": {
+     "mse_all": 0.7081560803128477,
+     "mse_present": 0.6922837263344545,
+     "mse_empty": 0.7102301695007174,
+     "mse_internal": 0.6352683501803188
+    },
+    "Scalar": {
+     "mse_all": 0.7081536593231847,
+     "mse_present": 0.6923049877661873,
+     "mse_empty": 0.7102176551328168,
+     "mse_internal": 0.6357792871295256
+    },
+    "Level": {
+     "mse_all": 0.7078959935096372,
+     "mse_present": 0.6973802322158881,
+     "mse_empty": 0.7096916156063271,
+     "mse_internal": 0.6352391712239885
+    },
+    "Node": {
+     "mse_all": 0.34750460659336047,
+     "mse_present": 0.6868088360644533,
+     "mse_empty": 0.32836149855130825,
+     "mse_internal": 0.4490842106289489
+    }
+   }
+  },
+  {
+   "popgroup": "1009",
+   "popgroup_label": "Basque alone",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "strata_counts": {
+    "present": 157,
+    "empty": 3064,
+    "internal": 53
+   },
+   "methods": {
+    "Laplace": {
+     "mse_all": 0.1795264217520219,
+     "mse_present": 0.17861650748536298,
+     "mse_empty": 0.179379361785436,
+     "mse_internal": 0.19072355906305255
+    },
+    "Hay": {
+     "mse_all": 0.17658282333024222,
+     "mse_present": 0.1726615486172451,
+     "mse_empty": 0.1767386813665649,
+     "mse_internal": 0.1791883159085032
+    },
+    "Scalar": {
+     "mse_all": 0.17658043320320518,
+     "mse_present": 0.1726623868980666,
+     "mse_empty": 0.17673790283037932,
+     "mse_internal": 0.1790831941889661
+    },
+    "Level": {
+     "mse_all": 0.17656558186177024,
+     "mse_present": 0.1729861807834218,
+     "mse_empty": 0.17670435320846895,
+     "mse_internal": 0.1791461585224442
+    },
+    "Node": {
+     "mse_all": 0.0863637582320149,
+     "mse_present": 0.1714589039667202,
+     "mse_empty": 0.08123081975272693,
+     "mse_internal": 0.13103141144314034
+    }
+   }
+  }
+ ]
+}
