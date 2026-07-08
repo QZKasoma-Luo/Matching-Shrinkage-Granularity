@@ -40,6 +40,7 @@ core/                       all code (run every script FROM this directory)
   T01001_census_loader.py       Detailed DHC-A per-group counts (sparse regime)
   stratified_eval.py            populated/empty/internal cell-type error split
   diagnostic_check.py           granularity-selection rule + held-out validation
+  threshold_variants.py         universal-threshold per-node variants (soft/hard)
   make_paper_assets.py          regenerates every paper figure and table
 synthetic_data/             archived signals and DP noise draws (golden-master)
 census_data/
@@ -85,6 +86,9 @@ python stratified_eval.py               # ~4 min
 # 8. granularity diagnostic: tuned on balanced synthetic configs only,
 #    validated on held-out unbalanced + census configs
 python diagnostic_check.py              # seconds
+
+# optional: per-node threshold variants (universal soft/hard thresholds)
+python threshold_variants.py            # ~3 min
 
 # 9. regenerate every paper figure and table into results/paper_assets/
 python make_paper_assets.py             # seconds

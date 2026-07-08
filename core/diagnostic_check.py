@@ -184,6 +184,24 @@ def evaluate(records: list, decider) -> dict:
             "median_regret_pct": 100 * float(np.median(regrets))}
 
 
+def evaluate_single_draw(records: list, kappa: float) -> dict:
+    """Deployment-relevant variant: accuracy of the RULE-B decision computed
+    from ONE draw (averaged over draws), rather than the 50-draw majority.
+    A release in practice is a single z."""
+    fracs = []
+    for r in records:
+        if not r["decisive"]:
+            continue
+        hits = 0
+        for s in r["stats"]:
+            sigma2 = s["noise_floor"] / s["K"]["NODE"]
+            scores = {g: s["R"][g] + kappa * sigma2 * s["K"][g] for g in GRANS}
+            hits += (min(GRANS, key=lambda g: scores[g]) == r["best"])
+        fracs.append(hits / len(r["stats"]))
+    return {"n_decisive": len(fracs),
+            "accuracy_single_draw": float(np.mean(fracs)) if fracs else None}
+
+
 def nogain_report(records: list, kappa: float) -> dict:
     pred = np.array([nogain_pred(r["stats"], kappa) for r in records])
     true = np.array([r["nogain_true"] for r in records])
@@ -246,6 +264,11 @@ if __name__ == "__main__":
     print(f"\nno-gain detector (kappa={kappaB}): synthetic {ng['synthetic']}")
     print(f"                                 census    {ng['census']}")
 
+    sd = {name: evaluate_single_draw(grp, kappaB)
+          for name, grp in [("balanced", bal), ("unbalanced", unb), ("census", dd)]}
+    print(f"\nsingle-draw accuracy (rule B, kappa={kappaB}): "
+          + ", ".join(f"{k} {v['accuracy_single_draw']:.3f}" for k, v in sd.items()))
+
     payload = {
         "rule_a": {"tau": tauA, "balanced": resA[tauA][0],
                    "unbalanced_heldout": resA[tauA][1], "census_heldout": resA[tauA][2]},
@@ -254,6 +277,7 @@ if __name__ == "__main__":
         "rule_a_grid": {str(t): [resA[t][0], resA[t][1], resA[t][2]] for t in TAU_GRID},
         "rule_b_grid": {str(k): [resB[k][0], resB[k][1], resB[k][2]] for k in KAPPA_GRID},
         "nogain": ng,
+        "single_draw": sd,
         "decisive_winners": {name: {g: sum(1 for r in grp if r["decisive"] and r["best"] == g)
                                     for g in GRANS}
                              for name, grp in [("balanced", bal), ("unbalanced", unb),

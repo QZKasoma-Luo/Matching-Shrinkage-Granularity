@@ -389,6 +389,20 @@
    "recall": null
   }
  },
+ "single_draw": {
+  "balanced": {
+   "n_decisive": 317,
+   "accuracy_single_draw": 0.8824605678233439
+  },
+  "unbalanced": {
+   "n_decisive": 87,
+   "accuracy_single_draw": 0.6954022988505747
+  },
+  "census": {
+   "n_decisive": 32,
+   "accuracy_single_draw": 0.940625
+  }
+ },
  "decisive_winners": {
   "balanced": {
    "SCALAR": 34,
