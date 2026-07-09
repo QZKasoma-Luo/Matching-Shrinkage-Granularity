@@ -38,9 +38,9 @@ core/                       all code (run every script FROM this directory)
   runner.py                     synthetic experiment grid (504 configurations)
   P1_census_loader.py           PL94 P1 county populations (high-SNR control)
   T01001_census_loader.py       Detailed DHC-A per-group counts (sparse regime)
-  stratified_eval.py            populated/empty/internal cell-type error split
+  stratified_eval.py            evaluation suite on the archived draws: cell-type
+                                error split, threshold variants, paired error bars
   diagnostic_check.py           granularity-selection rule + held-out validation
-  threshold_variants.py         universal-threshold per-node variants (soft/hard)
   make_paper_assets.py          regenerates every paper figure and table
 synthetic_data/             archived signals and DP noise draws (golden-master)
 census_data/
@@ -79,16 +79,14 @@ python P1_census_loader.py              # add --no-spectral for a fast pass
 # 6. Detailed DHC-A, five population groups spanning the sparsity range
 python T01001_census_loader.py          # ~1h with spectral; --no-spectral ~minutes
 
-# 7. cell-type-stratified evaluation (reuses the exact draws of step 6;
-#    cross-checks its aggregates against step 6's outputs)
-python stratified_eval.py               # ~4 min
+# 7. evaluation suite (reuses the exact draws of steps 5-6; cross-checks its
+#    aggregates against step 6's outputs): cell-type-stratified errors,
+#    universal-threshold per-node variants, paired error bars
+python stratified_eval.py               # ~7 min
 
 # 8. granularity diagnostic: tuned on balanced synthetic configs only,
 #    validated on held-out unbalanced + census configs
 python diagnostic_check.py              # seconds
-
-# optional: per-node threshold variants (universal soft/hard thresholds)
-python threshold_variants.py            # ~3 min
 
 # 9. regenerate every paper figure and table into results/paper_assets/
 python make_paper_assets.py             # seconds
