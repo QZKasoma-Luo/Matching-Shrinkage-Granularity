@@ -1,4 +1,5 @@
 # Scalar, Level, or Node? Choosing Shrinkage Granularity for Differentially Private Hierarchical Counts
+# Statement: The repository code has been optimized and debugged using Claude.
 
 Code, data archives, and experiment results for the paper. Everything in the
 paper — every number, figure, and table — is regenerated from the archived
