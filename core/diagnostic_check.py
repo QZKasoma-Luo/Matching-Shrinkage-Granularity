@@ -288,3 +288,124 @@ if __name__ == "__main__":
     with open(OUT_FILE, "w") as f:
         json.dump(payload, f, indent=1)
     print(f"\nwrote -> {OUT_FILE} in {time.time()-t0:.1f}s")
+
+
+# ---------------------------------------------------------------------------
+# [PATCH v13] Sensitivity analysis for the diagnostic's heuristic constants
+# (advisor Q3). Additive only: everything below this marker is new.
+#   (a) lambda robustness  -- reuses resB, already computed on the full grid
+#   (b) decisiveness-threshold sweep (paper default 2%)
+#   (c) no-gain-threshold sweep      (paper default 5%)
+# diagnostic_validation.json is untouched; new output goes to
+# ../results/diagnostic_sensitivity.json.
+# ---------------------------------------------------------------------------
+
+def _fmt(x):
+    return f"{x:.3f}" if isinstance(x, float) else "  -- "
+
+
+def _re_decisive(r: dict, frac: float) -> bool:
+    """Recompute decisiveness of an already-collected record at margin `frac`."""
+    best_v = r["mse"][r["best"]]
+    runner = min(v for g, v in r["mse"].items() if g != r["best"])
+    return (runner - best_v) > frac * r["hay"]
+
+
+def evaluate_at(records: list, decider, frac: float) -> dict:
+    """evaluate(), but with the decisiveness margin recomputed at `frac`."""
+    n_dec = n_correct = 0
+    regrets = []
+    for r in records:
+        choice = decider(r["stats"])
+        if _re_decisive(r, frac):
+            n_dec += 1
+            n_correct += (choice == r["best"])
+        best = min(r["mse"].values())
+        regrets.append(r["mse"][choice] / best - 1.0 if best > 0 else 0.0)
+    return {"n_decisive": n_dec,
+            "accuracy_decisive": (n_correct / n_dec) if n_dec else None,
+            "median_regret_pct": 100 * float(np.median(regrets))}
+
+
+def nogain_report_at(records: list, kappa: float, frac: float) -> dict:
+    """nogain_report(), but with the predictor threshold set to `frac`."""
+    def pred_one(stats):
+        flags = []
+        for s in stats:
+            sigma2 = s["noise_floor"] / s["K"]["NODE"]
+            best = min(s["R"][g] + kappa * sigma2 * s["K"][g] for g in GRANS)
+            flags.append(best >= (1.0 - frac) * s["noise_floor"])
+        return sum(flags) > len(flags) / 2
+    pred = np.array([pred_one(r["stats"]) for r in records])
+    true = np.array([r["nogain_true"] for r in records])
+    return {"n_nogain_pred": int(pred.sum()),
+            "precision": float((pred & true).sum() / pred.sum()) if pred.sum() else None,
+            "recall": float((pred & true).sum() / true.sum()) if true.sum() else None}
+
+
+if __name__ == "__main__":
+    t1 = time.time()
+    print("\n" + "=" * 74)
+    print("SENSITIVITY ANALYSIS -- heuristic constants of Eq. (12) / Section 6")
+    print("=" * 74)
+    splits = [("balanced", bal), ("unbalanced", unb), ("census", dd)]
+
+    # (a) lambda robustness: majority-vote accuracy, straight out of resB
+    LAM_FOCUS = [0.25, 0.5, 1.0]
+    print(f"\n(a) accuracy across lambda in {LAM_FOCUS} (tuned lambda={kappaB}):")
+    lam_rows, lam_spread = {}, {}
+    for i, (name, _) in enumerate(splits):
+        accs = {str(k): resB[k][i]["accuracy_decisive"] for k in LAM_FOCUS}
+        lam_rows[name] = accs
+        vals = [v for v in accs.values() if v is not None]
+        lam_spread[name] = 100 * (max(vals) - min(vals)) if vals else None
+        print(f"    {name:<10} " +
+              "  ".join(f"l={k}:{_fmt(v)}" for k, v in accs.items()) +
+              f"   spread {_fmt(lam_spread[name])} pp" if vals else f"    {name}: --")
+
+    print("\n    single-draw accuracy per lambda (deployment mode):")
+    sd_rows = {}
+    for k in LAM_FOCUS:
+        row = {name: evaluate_single_draw(grp, k)["accuracy_single_draw"]
+               for name, grp in splits}
+        sd_rows[str(k)] = row
+        print(f"    l={k:<5} " + "  ".join(f"{n}:{_fmt(v)}" for n, v in row.items()))
+
+    # (b) decisiveness-threshold sweep at the tuned lambda
+    DEC_SWEEP = [0.01, 0.02, 0.03, 0.05]
+    dB = lambda s: decide_kappa(s, kappaB)
+    print(f"\n(b) decisiveness margin sweep (lambda={kappaB}; paper default 2%):")
+    dec_rows = {}
+    for frac in DEC_SWEEP:
+        row = {name: evaluate_at(grp, dB, frac) for name, grp in splits}
+        dec_rows[str(frac)] = row
+        print(f"    margin>{100*frac:>3g}%  " +
+              " | ".join(f"{n} {_fmt(r['accuracy_decisive'])} (n={r['n_decisive']})"
+                         for n, r in row.items()))
+
+    # (c) no-gain-threshold sweep at the tuned lambda
+    NOG_SWEEP = [0.03, 0.05, 0.075, 0.10]
+    print(f"\n(c) no-gain threshold sweep (lambda={kappaB}; paper default 5%):")
+    nog_rows = {}
+    for frac in NOG_SWEEP:
+        row = {"synthetic": nogain_report_at(syn, kappaB, frac),
+               "census": nogain_report_at(dd, kappaB, frac)}
+        nog_rows[str(frac)] = row
+        sr, cr = row["synthetic"], row["census"]
+        print(f"    within {100*frac:>4g}%   synthetic P={_fmt(sr['precision'])} "
+              f"R={_fmt(sr['recall'])}   census false alarms={cr['n_nogain_pred']}")
+
+    out = {"tuned": {"lambda": kappaB, "tau": tauA},
+           "lambda_grid_accuracy": lam_rows,
+           "lambda_spread_pp": lam_spread,
+           "single_draw_by_lambda": sd_rows,
+           "decisive_sweep": dec_rows,
+           "nogain_sweep": nog_rows}
+    SENS_FILE = "../results/diagnostic_sensitivity.json"
+    with open(SENS_FILE, "w") as f:
+        json.dump(out, f, indent=1)
+    print(f"\nwrote -> {SENS_FILE} in {time.time()-t1:.1f}s")
+
+    print("\nPAPER SENTENCE INPUTS: held-out accuracy spread over lambda in "
+          f"[0.25, 1]: unbalanced {_fmt(lam_spread.get('unbalanced'))} pp, "
+          f"census {_fmt(lam_spread.get('census'))} pp")
