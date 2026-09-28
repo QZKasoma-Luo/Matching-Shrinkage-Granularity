@@ -30,7 +30,7 @@ import numpy as np
 from hierarchy_data_generator import Hierarchy 
 
 __all__ = ["ls_projection", "hay_two_pass", "leaf_incidence_matrix",
-           "projection_matrix"]
+           "projection_matrix", "project", "set_projection", "active_projection"]
 
 
 def leaf_incidence_matrix(h: Hierarchy):
@@ -100,6 +100,46 @@ def hay_two_pass(z: np.ndarray, h: Hierarchy) -> np.ndarray:
         correction = out[p] - sum(u[c] for c in C)
         out[v] = u[v] + correction / len(C)
     return out
+
+
+# ----------------------------------------------------------------------------
+# Run-wide projection switch. Every estimator ends with `project(y, h)`; which
+# implementation that is (Hay two-pass, the WPES default, or the exact LS
+# projector) is set ONCE per run with set_projection(). The exact projector is
+# dense (n x n) and cached per tree structure, so a 3,274-node census tree costs
+# one solve and then a matrix-vector product per call.
+# ----------------------------------------------------------------------------
+_ACTIVE = "hay"
+_LS_CACHE = {}
+
+
+def set_projection(kind: str) -> None:
+    """kind = "hay" (two-pass, default) or "ls" (exact orthogonal projection)."""
+    global _ACTIVE
+    if kind not in ("hay", "ls"):
+        raise ValueError("projection kind must be 'hay' or 'ls'.")
+    _ACTIVE = kind
+
+
+def active_projection() -> str:
+    return _ACTIVE
+
+
+def _tree_key(h: Hierarchy):
+    # stable identity (NOT id(graph): CPython reuses addresses)
+    return (h.num_nodes, tuple(sorted(h.graph.edges())))
+
+
+def project(y: np.ndarray, h: Hierarchy) -> np.ndarray:
+    """Consistency projection under the active setting."""
+    if _ACTIVE == "hay":
+        return hay_two_pass(y, h)
+    key = _tree_key(h)
+    P = _LS_CACHE.get(key)
+    if P is None:
+        P = projection_matrix(h)
+        _LS_CACHE[key] = P
+    return P @ np.asarray(y, dtype=float)
 
 
 def _max_consistency_violation(x, h):
@@ -172,4 +212,10 @@ if __name__ == "__main__":
           f"max|Hay - LS| = {np.max(np.abs(au - bu)):.3f}  (Hay != exact LS here)")
     print(f"  MSE: LS {np.mean((au-xu)**2):.2f} vs Hay {np.mean((bu-xu)**2):.2f} "
           f"(deviation tiny relative to error)")
+    # ---- 5) the run-wide switch dispatches to the right implementation ----
+    z = add_laplace_noise(x, h, 0.5, np.random.default_rng(7))
+    set_projection("hay"); assert np.allclose(project(z, h), hay_two_pass(z, h))
+    set_projection("ls");  assert np.allclose(project(z, h), ls_projection(z, h))
+    set_projection("hay")
+    print("project() switch: hay == two-pass, ls == exact LS (cached)")
     print("\nSelf-test passed.")

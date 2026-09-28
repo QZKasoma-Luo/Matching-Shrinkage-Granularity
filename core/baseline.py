@@ -20,7 +20,7 @@ from typing import Callable, Dict
 import numpy as np
 
 from hierarchy_data_generator import Hierarchy
-from projection import hay_two_pass
+import projection as _proj
 from shrinkage import level_wise_shrinkage
 
 __all__ = ["zero_release", "laplace_release", "hay_release", "ours_release",
@@ -43,8 +43,9 @@ def laplace_release(z: np.ndarray, h: Hierarchy, sigma2: float) -> np.ndarray:
 
 # ---- thin wrappers giving the existing methods the unified signature ----
 def hay_release(z: np.ndarray, h: Hierarchy, sigma2: float) -> np.ndarray:
-    """Hay (2010) consistency projection -- the canonical baseline."""
-    return hay_two_pass(z, h)
+    """Consistency projection alone -- the canonical baseline (Hay two-pass by
+    default; exact LS when projection.set_projection("ls") is active)."""
+    return _proj.project(z, h)
 
 
 def ours_release(z: np.ndarray, h: Hierarchy, sigma2: float) -> np.ndarray:

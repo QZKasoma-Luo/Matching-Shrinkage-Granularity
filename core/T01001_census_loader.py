@@ -10,21 +10,30 @@ file directly) are handled here:
   1. Count column is `T01001_001N` (not `P1_001N`).
   2. The file is a LONG table: one row per (county, population group). There are
      ~2962 groups x ~3221 counties. We therefore FILTER to a single POPGROUP.
-  3. Suppressed cells are the literal string "X" (adaptive-design <22 floor at
-     substate geographies). "X" / non-numeric / negative -> treated as 0.
-  4. To put the method in its working regime, the tree is built over the FULL
+  3. Publication threshold (the important one). At substate geographies the
+     Detailed DHC-A adaptive design publishes a group's total for a county only
+     if its noisy count reached the threshold (22); below it the (group, county)
+     row is simply ABSENT from the file. Absent counties are therefore "fewer
+     than 22 (noisy)", not "known to be zero".
+  4. The literal "X" is something else and rare: per the table notes it marks a
+     negative noisy count or an "alone" count exceeding its "alone or in any
+     combination" count. Across the five selected groups only 2 cells are "X".
+     "X" / non-numeric / negative -> treated as 0, like absent rows.
+  5. To put the method in its working regime, the tree is built over the FULL
      county universe (every county that appears for ANY group), with the chosen
-     group's count = 0 wherever it is absent or suppressed. This makes x a
-     sparse, mostly-zero signal -- exactly the low-count regime where level-wise
-     shrinkage helps (county-level TOTAL population, by contrast, is high-SNR and
-     the shrinkage coefficient collapses to ~1, giving no improvement).
+     group's count = 0 wherever it is absent or "X". This makes x a sparse,
+     mostly-zero signal -- the low-count regime -- but 85-99 % of its leaves are
+     IMPUTED zeros (see sensitivity_absent_counties.py). The PL94 P1 columns
+     (P1_sparse_columns.py) have no threshold and are the fully observed
+     alternative used in the conference version.
 
 Note on the proxy: the published DDHC-A counts are already DP-processed
 (SafeTab-P), so -- exactly as in the PL94 pipeline -- they are a proxy ground
 truth, not the secret truth; we re-impose consistency by bottom-up summation and
-add our OWN calibrated noise on top. Padding suppressed (true 1-21) cells to 0
-introduces a small downward bias in those cells; acceptable for a proxy-GT
-denoising study, but state it in the write-up.
+add our OWN calibrated noise on top. Setting below-threshold counties to 0
+biases those cells downward by up to ~21 persons each; state it in the write-up
+and calibrate it with the state-level T01001 totals (published for every group)
+before drawing conclusions that depend on the empty stratum.
 
 Output matches the synthetic / PL94 pipeline interface:
     load_ddhca(csv, popgroup) -> (Hierarchy, x, meta)
@@ -216,8 +225,11 @@ def save_hierarchy(h, x, meta, out_dir: str = CENSUS_DDHCA_HIER_DIR) -> str:
     record = {
         "source": "2020 Census Detailed DHC-A, table T01001 (T01001_001N), county level",
         "note": "Published DDHC-A counts used as ground-truth PROXY (already "
-                "SafeTab-P/DP-processed); suppressed 'X' and absent counties set "
-                "to 0; state/nation values are bottom-up sums.",
+                "SafeTab-P/DP-processed). Counties where the group did not reach "
+                "the publication threshold (noisy count < 22) are absent from the "
+                "table and set to 0 here (imputed zeros, true value 0-21); the "
+                "rare literal 'X' (negative noisy count / alone > combination) is "
+                "also set to 0; state/nation values are bottom-up sums.",
         "popgroup": meta["popgroup"],
         "popgroup_label": meta["popgroup_label"],
         "num_nodes": int(h.num_nodes),

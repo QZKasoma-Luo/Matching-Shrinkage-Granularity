@@ -7,6 +7,8 @@ shrinkage functions with a component switched off. Importing this module
 registers the ablations into baselines.METHODS so the runner picks them up.
 
 Full method = per-level shrink-to-zero  +  root protection (n_l<=3)  +  projection.
+All variants end with projection.project(), i.e. the run-wide setting (Hay
+two-pass by default, exact LS after projection.set_projection("ls")).
 
   Scalar         : ONE global coefficient instead of per-level  -> tests that
                    per-LEVEL granularity matters (vs a single tree-wide factor).
@@ -21,7 +23,7 @@ from __future__ import annotations
 import numpy as np
 
 from hierarchy_data_generator import Hierarchy
-from projection import hay_two_pass
+import projection as _proj
 from shrinkage import level_wise_shrinkage, _apply_level_scaling, ROOT_PROTECT_MAX
 import baseline
 
@@ -42,7 +44,7 @@ def scalar_shrinkage(z: np.ndarray, h: Hierarchy, sigma2: float) -> np.ndarray:
     n = h.num_nodes
     energy = float(np.dot(z, z))
     c = max(0.0, 1.0 - n * sigma2 / energy) if energy > 0 else 0.0
-    return hay_two_pass(c * z, h)
+    return _proj.project(c * z, h)
 
 
 # ---- Ablation 2: per-level shrink but no projection (disable projection) ----
@@ -66,7 +68,7 @@ def per_node_shrinkage(z: np.ndarray, h: Hierarchy, sigma2: float) -> np.ndarray
     z = np.asarray(z, dtype=float)
     with np.errstate(divide="ignore", invalid="ignore"):
         c = np.where(z**2 > 0, np.maximum(0.0, 1.0 - sigma2 / z**2), 0.0)
-    return hay_two_pass(c * z, h)
+    return _proj.project(c * z, h)
 
 
 # register into the shared method registry (runner will iterate over it)

@@ -10,8 +10,13 @@ It consumes data only; no other module needs to change. The oracle spectral
 method legitimately needs the true signal, so it is bound per configuration via
 make_spectral_oracle_method and added alongside the registry.
 
-Run:  python runner.py            # both balanced and unbalanced
-Output: results/results.json
+Run:  python runner.py                          # WPES setting: Hay two-pass, all methods incl. spectral
+      python runner.py --exact-ls --no-spectral  # CCECE setting: exact LS projection, no spectral (minutes)
+      python runner.py --quick                   # tiny subset to check the pipeline
+Output: results/synthetic_data_results/results.json          (Hay two-pass)
+        results/synthetic_data_results/results_exactls.json  (--exact-ls)
+Balanced trees give identical numbers under both projections (two-pass == exact
+LS there, bit for bit); only the unbalanced trees differ.
 """
 from __future__ import annotations
 import json
@@ -26,6 +31,7 @@ from laplace_noise_injection import EPSILONS, NUM_TRIALS
 import baseline, ablations, spectral          # importing registers all methods
 from baseline import METHODS
 from spectral import make_spectral_oracle_method
+import projection as _proj
 # Cache the graph Fourier basis per tree: spectral methods recompute the
 # eigendecomposition on every call, but it only depends on the tree's structure.
 # Key the cache by (num_nodes, sorted edges) -- a STABLE identity. (Keying by
@@ -44,6 +50,11 @@ DP_BAL_DIR = "../synthetic_data/dp_balanced_tree"
 DP_UNBAL_DIR = "../synthetic_data/dp_unbalanced_tree"
 RESULTS_DIR = "../results/synthetic_data_results"
 RESULTS_FILE = os.path.join(RESULTS_DIR, "results.json")
+RESULTS_FILE_LS = os.path.join(RESULTS_DIR, "results_exactls.json")
+
+
+def results_path(exact_ls: bool = False) -> str:
+    return RESULTS_FILE_LS if exact_ls else RESULTS_FILE
 
 
 def _dp_filename(spec_name, st, lm, eps):
@@ -51,10 +62,11 @@ def _dp_filename(spec_name, st, lm, eps):
     return f"dp_{spec_name[len('tree_'):]}_{st}_mean{lm}_eps{e}.json"
 
 
-def _evaluate_config(h, x, Z, sigma2):
+def _evaluate_config(h, x, Z, sigma2, with_spectral=True):
     """Run every method on all trials; return {method: (mse_mean, mse_std)}."""
-    methods = dict(METHODS)
-    methods["Spectral(oracle)"] = make_spectral_oracle_method(x)  # needs truth
+    methods = {k: v for k, v in METHODS.items() if with_spectral or "Spectral" not in k}
+    if with_spectral:
+        methods["Spectral(oracle)"] = make_spectral_oracle_method(x)  # needs truth
     out = {}
     for name, fn in methods.items():
         errs = np.array([np.mean((fn(z, h, sigma2) - x) ** 2) for z in Z])
@@ -62,7 +74,8 @@ def _evaluate_config(h, x, Z, sigma2):
     return out
 
 
-def _run_group(specs, dp_dir, build_tree, kind, results, t0, quick=False):
+def _run_group(specs, dp_dir, build_tree, kind, results, t0, quick=False,
+               with_spectral=True):
     for spec in specs:
         if kind == "balanced":
             depth, bf, spec_name = spec
@@ -85,7 +98,7 @@ def _run_group(specs, dp_dir, build_tree, kind, results, t0, quick=False):
                         rec = json.load(f)
                     Z = np.array(rec["z"])
                     sigma2 = rec["sigma2"]
-                    per_method = _evaluate_config(h, x, Z, sigma2)
+                    per_method = _evaluate_config(h, x, Z, sigma2, with_spectral)
 
                     hay_mean = per_method["Hay"][0]
                     methods_block = {}
@@ -112,28 +125,37 @@ def _run_group(specs, dp_dir, build_tree, kind, results, t0, quick=False):
               f"({len(SIGNAL_TYPES)*len(LEAF_MEANS)*len(EPSILONS)} configs)")
 
 
-def run_all(balanced=True, unbalanced=True, quick=False) -> None:
-    """Run experiments and write results.json.
+def run_all(balanced=True, unbalanced=True, quick=False, exact_ls=False,
+            with_spectral=True) -> str:
+    """Run experiments and write the results JSON (path returned).
     quick=True runs only a tiny subset (main tree, smooth, mean1, a few eps) to
-    verify the pipeline end-to-end in seconds before committing to the full run."""
+    verify the pipeline end-to-end in seconds before committing to the full run.
+    exact_ls=True projects with the exact LS projector instead of Hay two-pass
+    and writes results_exactls.json; with_spectral=False skips the (slow)
+    spectral references."""
     os.makedirs(RESULTS_DIR, exist_ok=True)
+    _proj.set_projection("ls" if exact_ls else "hay")
+    out_file = results_path(exact_ls)
     results: list = []
     t0 = time.time()
-    print(f"Methods: {list(METHODS)} + Spectral(oracle)"
+    names = [k for k in METHODS if with_spectral or "Spectral" not in k]
+    print(f"Methods: {names}" + (" + Spectral(oracle)" if with_spectral else "")
+          + f" | projection: {'exact LS' if exact_ls else 'Hay two-pass'}"
           + ("  [QUICK SUBSET]" if quick else ""))
     bal_specs = [SYNTHETIC_SPECS[0]] if quick else SYNTHETIC_SPECS
     if balanced:
         print("Balanced trees:")
         _run_group(bal_specs, DP_BAL_DIR, create_balanced_tree,
-                   "balanced", results, t0, quick=quick)
+                   "balanced", results, t0, quick=quick, with_spectral=with_spectral)
     if unbalanced and UNBALANCED_SPECS and not quick:
         print("Unbalanced trees:")
         _run_group(UNBALANCED_SPECS, DP_UNBAL_DIR, create_unbalanced_tree,
-                   "unbalanced", results, t0)
+                   "unbalanced", results, t0, with_spectral=with_spectral)
 
     payload = {
         "config": {
-            "methods": list(METHODS) + ["Spectral(oracle)"],
+            "methods": names + (["Spectral(oracle)"] if with_spectral else []),
+            "projection": "exact_ls" if exact_ls else "hay_two_pass",
             "signal_types": SIGNAL_TYPES,
             "leaf_means": LEAF_MEANS,
             "epsilons": EPSILONS,
@@ -142,10 +164,11 @@ def run_all(balanced=True, unbalanced=True, quick=False) -> None:
         },
         "results": results,
     }
-    with open(RESULTS_FILE, "w") as f:
+    with open(out_file, "w") as f:
         json.dump(payload, f, indent=1)
-    print(f"\nwrote {len(results)} configurations -> {RESULTS_FILE} "
+    print(f"\nwrote {len(results)} configurations -> {out_file} "
           f"in {time.time()-t0:.1f}s")
+    return out_file
 
 
 def summarize(results_file: str = RESULTS_FILE) -> None:
@@ -165,5 +188,8 @@ def summarize(results_file: str = RESULTS_FILE) -> None:
 if __name__ == "__main__":
     import sys
     quick = "--quick" in sys.argv
-    run_all(balanced=True, unbalanced=True, quick=quick)
-    summarize()
+    exact_ls = "--exact-ls" in sys.argv
+    with_spectral = "--no-spectral" not in sys.argv
+    out = run_all(balanced=True, unbalanced=True, quick=quick, exact_ls=exact_ls,
+                  with_spectral=with_spectral)
+    summarize(out)

@@ -16,6 +16,8 @@ county), same mechanism, same three granularities.
     python P1_sparse_columns.py --columns P1_060N P1_043N
     python P1_sparse_columns.py --trials 20           # quick pass (default NUM_TRIALS = 50)
     python P1_sparse_columns.py --list                # rank all P1 columns by sparsity
+    python P1_sparse_columns.py --columns P1_001N --exact-ls   # the total-population control row
+                                                      # (blocks merge into the same JSON by column)
 
 Outputs (run from core/):
     ../results/P1_sparse_results/p1_sparse_results.json
@@ -357,10 +359,25 @@ if __name__ == "__main__":
               f"decisive configs; single-draw {sd:.3f}; regret mean {np.mean(reg):.1f}% "
               f"median {np.median(reg):.1f}%")
     os.makedirs(RESULTS_DIR, exist_ok=True)
+    # Merge by column: blocks of columns run now replace their old blocks, all
+    # other columns' blocks are kept, so the control (P1_001N) and the sparse
+    # columns can be run in separate invocations into one file.
+    kept = []
+    if os.path.exists(OUT_FILE):
+        with open(OUT_FILE) as f:
+            old = json.load(f)
+        kept = [r for r in old["results"] if r["column"] not in columns]
+        mixed = {r["projection"] for r in kept} - {"exact_ls" if exact_ls else "hay_two_pass"}
+        if mixed:
+            print(f"  !! WARNING: kept blocks use projection {mixed}; this run uses "
+                  f"{'exact_ls' if exact_ls else 'hay_two_pass'} -- re-run those columns too.")
+    all_rows = kept + rows
+    all_cols = list(dict.fromkeys(r["column"] for r in all_rows))
     with open(OUT_FILE, "w") as f:
-        json.dump({"config": {"columns": columns, "epsilons": EPSILONS, "num_trials": n_trials,
+        json.dump({"config": {"columns": all_cols, "epsilons": EPSILONS, "num_trials": n_trials,
                               "projection": "exact_ls" if exact_ls else "hay_two_pass",
                               "seed_base": SEED_BASE, "diagnostic_kappa": kappa,
                               "source": "2020 PL94-171 P1, county level, proxy GT, no suppression"},
-                   "results": rows}, f, indent=1)
-    print(f"\nwrote {len(rows)} (column, eps) blocks -> {OUT_FILE} in {time.time()-t0:.1f}s")
+                   "results": all_rows}, f, indent=1)
+    print(f"\nwrote {len(rows)} new + {len(kept)} kept (column, eps) blocks -> {OUT_FILE} "
+          f"in {time.time()-t0:.1f}s")

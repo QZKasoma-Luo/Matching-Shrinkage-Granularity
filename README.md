@@ -1,5 +1,4 @@
 # Scalar, Level, or Node? Choosing Shrinkage Granularity for Differentially Private Hierarchical Counts
-
 # Statement: The repository code has been optimized and debugged using Claude.
 
 Code, data archives, and experiment results for the paper. Everything in the
@@ -8,11 +7,11 @@ results by the scripts in `core/`.
 
 **What this is.** Differentially private releases of hierarchical counts
 (e.g., nation → state → county populations) are routinely post-processed with
-consistency projection (Hay et al., 2010). A biased _shrinkage_ step can
+consistency projection (Hay et al., 2010). A biased *shrinkage* step can
 reduce error further at no privacy cost, but the shrinkage coefficient can be
 estimated at three granularities: one per tree (**scalar**), one per level
 (**level-wise**), or one per cell (**per-node**). This repository contains the
-full experimental study of _which granularity to use_, on synthetic trees and
+full experimental study of *which granularity to use*, on synthetic trees and
 on two 2020 U.S. Census releases, plus a zero-cost diagnostic that selects the
 granularity from the released data alone.
 
@@ -106,12 +105,19 @@ the projection lemmas apply verbatim; balanced trees are unchanged, only the two
 unbalanced synthetic trees move) and replaces the Detailed DHC-A groups by six
 sparse multi-race-combination columns of the PL94 P1 table, which are published
 for every county with no threshold (see the note in `T01001_census_loader.py`
-on why the DDHC-A zeros are imputed). Everything runs in minutes:
+on why the DDHC-A zeros are imputed). One command runs the whole pipeline
+(under a minute; the log goes to `results/ccece_run_log.txt`):
 
 ```bash
-cd core
+python core/run_ccece.py --fresh        # add --verify to re-check the data archives first,
+                                        # --sensitivity for the DDHC-A absent-county check (arXiv)
+```
+
+or step by step, from `core/`:
+
+```bash
 python runner.py --exact-ls --no-spectral       # synthetic grid -> results_exactls.json (~10 s)
-python P1_sparse_columns.py --exact-ls           # six P1 columns -> P1_sparse_results/ (~10 min)
+python P1_sparse_columns.py --exact-ls           # six P1 columns -> P1_sparse_results/ (~30 s)
 python P1_sparse_columns.py --columns P1_001N --exact-ls   # total-population control row
 python diagnostic_check.py --exact-ls --p1       # diagnostic -> diagnostic_validation_exactls.json
 python make_ccece_assets.py                      # IEEE tables/figures -> results/ccece_assets/

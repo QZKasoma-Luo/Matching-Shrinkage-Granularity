@@ -32,7 +32,10 @@ Metrics: accuracy on decisive configs; mean/median regret
 MSE(chosen)/MSE(best) - 1 over all configs.
 
 Output: ../results/diagnostic_validation.json
-Run:    python diagnostic_check.py          (from core/)
+Run:    python diagnostic_check.py                 (WPES setting: two-pass results, DDHC-A held out)
+        python diagnostic_check.py --exact-ls --p1  (CCECE setting: results_exactls.json, PL94 P1
+                                                    sparse columns as the census held-out set;
+                                                    writes diagnostic_validation_exactls.json)
 """
 from __future__ import annotations
 import json
@@ -48,9 +51,12 @@ from T01001_census_loader import (SELECTED_POPGROUPS, CENSUS_DDHCA_HIER_DIR,
                                   load_hierarchy_archive)
 
 RESULTS_JSON = "../results/synthetic_data_results/results.json"
+RESULTS_JSON_LS = "../results/synthetic_data_results/results_exactls.json"
 DP_BAL_DIR = "../synthetic_data/dp_balanced_tree"
 DP_UNBAL_DIR = "../synthetic_data/dp_unbalanced_tree"
 OUT_FILE = "../results/diagnostic_validation.json"
+OUT_FILE_LS = "../results/diagnostic_validation_exactls.json"
+P1_RESULTS = "../results/P1_sparse_results/p1_sparse_results.json"
 
 PROTECT_MAX = 3          # matches ROOT_PROTECT_MAX in shrinkage.py
 DECISIVE_FRAC = 0.02     # best must beat runner-up by >2% of Hay's MSE
@@ -125,8 +131,8 @@ def config_record(spec_kind, h, Z, sigma2, methods_block):
     }
 
 
-def collect_synthetic() -> list:
-    with open(RESULTS_JSON) as f:
+def collect_synthetic(results_json: str = RESULTS_JSON) -> list:
+    with open(results_json) as f:
         payload = json.load(f)
     unbal_edges = dict(UNBALANCED_SPECS)
     trees, records = {}, []
@@ -165,6 +171,36 @@ def collect_ddhca() -> list:
                  for t in range(NUM_TRIALS)]
             records.append(config_record("census_ddhca", h, np.asarray(Z), s2,
                                          per_eps[eps]))
+    return records
+
+
+def collect_p1_sparse(results_json: str = P1_RESULTS) -> list:
+    """Held-out real configs from the PL94 P1 sparse-column experiment
+    (P1_sparse_columns.py): regenerates its exact draws from its seed schedule
+    and reads the per-method MSEs from its results file. Method names there are
+    Scalar / Level / Node; mapped onto the registry names used here."""
+    from P1_sparse_columns import SEED_BASE, HIER_DIR   # lazy: avoids a circular import
+    with open(results_json) as f:
+        payload = json.load(f)
+    name_map = {"Hay": "Hay", "Scalar": "Scalar", "Level": "Ours", "Node": "PerNode"}
+    records = []
+    trees = {}
+    for r in payload["results"]:
+        col = r["column"]
+        if col not in trees:
+            h, x, _ = load_hierarchy_archive(
+                os.path.join(HIER_DIR, f"P1_census_county_2020_{col}.json"))
+            trees[col] = (h, x)
+        h, x = trees[col]
+        eps = r["epsilon"]
+        ei = EPSILONS.index(eps)
+        colnum = int(col[3:6])
+        s2 = noise_variance(h, eps)
+        Z = [add_laplace_noise(x, h, eps,
+                               np.random.default_rng(SEED_BASE + colnum * 100_000 + ei * 10_000 + t))
+             for t in range(r["num_trials"])]
+        block = {name_map[k]: v for k, v in r["methods"].items() if k in name_map}
+        records.append(config_record("census_p1", h, np.asarray(Z), s2, block))
     return records
 
 
@@ -212,14 +248,21 @@ def nogain_report(records: list, kappa: float) -> dict:
 
 
 if __name__ == "__main__":
+    import sys
+    EXACT_LS = "--exact-ls" in sys.argv
+    USE_P1 = "--p1" in sys.argv
+    results_json = RESULTS_JSON_LS if EXACT_LS else RESULTS_JSON
+    out_file = OUT_FILE_LS if EXACT_LS else OUT_FILE
+    census_name = "P1 sparse columns" if USE_P1 else "DDHC-A"
     t0 = time.time()
+    print(f"synthetic results: {results_json} | census held-out set: {census_name}")
     print("collecting synthetic configs (reads all DP archives)...")
-    syn = collect_synthetic()
+    syn = collect_synthetic(results_json)
     bal = [r for r in syn if r["spec_kind"] == "balanced"]
     unb = [r for r in syn if r["spec_kind"] == "unbalanced"]
     print(f"  [{time.time()-t0:.1f}s] {len(bal)} balanced + {len(unb)} unbalanced")
-    print("collecting DDHC-A configs (regenerates run_ddhca draws)...")
-    dd = collect_ddhca()
+    print(f"collecting {census_name} configs (regenerates the experiment draws)...")
+    dd = collect_p1_sparse() if USE_P1 else collect_ddhca()
     print(f"  [{time.time()-t0:.1f}s] {len(dd)} census configs")
 
     # where do the three granularities actually win?
@@ -284,10 +327,13 @@ if __name__ == "__main__":
                                                ("census", dd)]},
         "params": {"protect_max": PROTECT_MAX, "decisive_frac": DECISIVE_FRAC,
                    "nogain_frac": NOGAIN_FRAC},
+        "setting": {"synthetic_results": results_json,
+                    "projection": "exact_ls" if EXACT_LS else "hay_two_pass",
+                    "census_heldout_set": "p1_sparse" if USE_P1 else "ddhca"},
     }
-    with open(OUT_FILE, "w") as f:
+    with open(out_file, "w") as f:
         json.dump(payload, f, indent=1)
-    print(f"\nwrote -> {OUT_FILE} in {time.time()-t0:.1f}s")
+    print(f"\nwrote -> {out_file} in {time.time()-t0:.1f}s")
 
 
 # ---------------------------------------------------------------------------
@@ -401,7 +447,8 @@ if __name__ == "__main__":
            "single_draw_by_lambda": sd_rows,
            "decisive_sweep": dec_rows,
            "nogain_sweep": nog_rows}
-    SENS_FILE = "../results/diagnostic_sensitivity.json"
+    SENS_FILE = ("../results/diagnostic_sensitivity_exactls.json" if EXACT_LS
+                 else "../results/diagnostic_sensitivity.json")
     with open(SENS_FILE, "w") as f:
         json.dump(out, f, indent=1)
     print(f"\nwrote -> {SENS_FILE} in {time.time()-t1:.1f}s")

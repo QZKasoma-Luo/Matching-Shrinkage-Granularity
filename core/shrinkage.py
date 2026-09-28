@@ -23,7 +23,7 @@ from __future__ import annotations
 import numpy as np
 
 from hierarchy_data_generator import Hierarchy
-from projection import hay_two_pass, ls_projection
+import projection as _proj
 
 __all__ = ["level_coefficients", "level_wise_shrinkage", "shrink_to_mean",
            "ROOT_PROTECT_MAX"]
@@ -57,22 +57,27 @@ def _apply_level_scaling(z, h, c):
 
 def level_wise_shrinkage(z: np.ndarray, h: Hierarchy, sigma2: float,
                          root_protect_max: int = ROOT_PROTECT_MAX,
-                         project=hay_two_pass) -> np.ndarray:
+                         project=None) -> np.ndarray:
     """Shrink each level toward zero, then project for consistency.
-    Returns the post-processed estimate x_hat (shape (num_nodes,))."""
+    `project` defaults to the run-wide setting (projection.set_projection:
+    Hay two-pass or exact LS). Returns x_hat (shape (num_nodes,))."""
     z = np.asarray(z, dtype=float)
     if z.shape != (h.num_nodes,):
         raise ValueError(f"z must be ({h.num_nodes},), got {z.shape}.")
+    if project is None:
+        project = _proj.project
     c = level_coefficients(z, h, sigma2, root_protect_max)
     return project(_apply_level_scaling(z, h, c), h)
 
 
 def shrink_to_mean(z: np.ndarray, h: Hierarchy, sigma2: float,
                    root_protect_max: int = ROOT_PROTECT_MAX,
-                   project=hay_two_pass) -> np.ndarray:
+                   project=None) -> np.ndarray:
     """Variant: shrink each level toward its own mean (protects small areas).
     c'_l = max(0, 1 - (n_l - 1) sigma^2 / ||z_l - mean||^2); level means kept."""
     z = np.asarray(z, dtype=float)
+    if project is None:
+        project = _proj.project
     out = z.copy()
     for ell in range(h.depth):
         mask = h.level_mask(ell)
@@ -91,6 +96,7 @@ if __name__ == "__main__":
     from hierarchy_data_generator import create_balanced_tree
     from signal_generator import generate_signal
     from laplace_noise_injection import add_laplace_noise, noise_variance
+    from projection import hay_two_pass
 
     h = create_balanced_tree(depth=6, branching_factor=3)
 
