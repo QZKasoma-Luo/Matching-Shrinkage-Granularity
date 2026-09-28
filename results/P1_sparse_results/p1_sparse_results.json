@@ -1,0 +1,2590 @@
+{
+ "config": {
+  "columns": [
+   "P1_060N",
+   "P1_058N",
+   "P1_068N",
+   "P1_044N",
+   "P1_043N",
+   "P1_057N"
+  ],
+  "epsilons": [
+   0.01,
+   0.1,
+   0.5,
+   1.0,
+   2.0,
+   5.0,
+   10.0
+  ],
+  "num_trials": 50,
+  "projection": "exact_ls",
+  "seed_base": 1500000,
+  "diagnostic_kappa": 0.25,
+  "source": "2020 PL94-171 P1, county level, proxy GT, no suppression"
+ },
+ "results": [
+  {
+   "column": "P1_060N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 177,
+    "empty": 3044,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 175862.26920414215,
+     "mse_std": 6661.81024247415,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 175726.99804902193,
+     "mse_empty": 176073.45161562652,
+     "mse_internal": 164184.98116447916
+    },
+    "Scalar": {
+     "mse_mean": 142.02427220804967,
+     "mse_std": 240.38630348405775,
+     "improve_over_hay_pct": 99.91924119206992,
+     "imp_se": 0.01793854344252885,
+     "mse_present": 104.78683151830359,
+     "mse_empty": 97.37453565427185,
+     "mse_internal": 2830.794556581347
+    },
+    "Level": {
+     "mse_mean": 198.86825262033395,
+     "mse_std": 294.409570380875,
+     "improve_over_hay_pct": 99.88691818118785,
+     "imp_se": 0.022822164989214376,
+     "mse_present": 111.20331084596566,
+     "mse_empty": 102.69411924131414,
+     "mse_internal": 6015.297624314661
+    },
+    "Node": {
+     "mse_mean": 80192.55696731253,
+     "mse_std": 5598.914114045586,
+     "improve_over_hay_pct": 54.40036266436182,
+     "imp_se": 0.22727009011106752,
+     "mse_present": 79874.18197436313,
+     "mse_empty": 80312.43703953155,
+     "mse_internal": 74370.6217582051
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "SCALAR",
+    "decisive": false,
+    "choice_majority": "SCALAR",
+    "correct_majority": true,
+    "single_draw_accuracy": 0.92,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_060N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 177,
+    "empty": 3044,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 1763.7588056303,
+     "mse_std": 76.39781258352957,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 1784.3842018482424,
+     "mse_empty": 1765.9854156934443,
+     "mse_internal": 1566.9947270871446
+    },
+    "Scalar": {
+     "mse_mean": 46.59666897165147,
+     "mse_std": 2.9291965569567977,
+     "improve_over_hay_pct": 97.35810424742289,
+     "imp_se": 0.01916291572857591,
+     "mse_present": 11.078255065815949,
+     "mse_empty": 2.988340955724935,
+     "mse_internal": 2669.813833911523
+    },
+    "Level": {
+     "mse_mean": 4.938113637686157,
+     "mse_std": 4.190583831908644,
+     "improve_over_hay_pct": 99.72002330353092,
+     "imp_se": 0.030824020456746395,
+     "mse_present": 8.937503553310973,
+     "mse_empty": 1.4650671432435345,
+     "mse_internal": 191.0524818267003
+    },
+    "Node": {
+     "mse_mean": 812.0009566144853,
+     "mse_std": 62.68928548092246,
+     "improve_over_hay_pct": 53.96190488050847,
+     "imp_se": 0.23774920991436185,
+     "mse_present": 837.0463936833016,
+     "mse_empty": 811.3327582935365,
+     "mse_internal": 766.7359250632965
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 0.66,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_060N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 177,
+    "empty": 3044,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 70.99273876565643,
+     "mse_std": 2.9748766703206324,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 70.59006014968816,
+     "mse_empty": 71.08565807785867,
+     "mse_internal": 67.00080911816212
+    },
+    "Scalar": {
+     "mse_mean": 27.97488293872397,
+     "mse_std": 0.7006412908307803,
+     "improve_over_hay_pct": 60.594726411291596,
+     "imp_se": 0.19189496095353767,
+     "mse_present": 13.939368845633842,
+     "mse_empty": 10.932071650792208,
+     "mse_internal": 1053.6843839753506
+    },
+    "Level": {
+     "mse_mean": 1.229248658153942,
+     "mse_std": 0.33571184534028764,
+     "improve_over_hay_pct": 98.26848677832866,
+     "imp_se": 0.06182293172579162,
+     "mse_present": 6.791337993269657,
+     "mse_empty": 0.139135351588468,
+     "mse_internal": 45.263495693433576
+    },
+    "Node": {
+     "mse_mean": 33.207741627922374,
+     "mse_std": 2.489035640246621,
+     "improve_over_hay_pct": 53.2237490688456,
+     "imp_se": 0.23394967332630484,
+     "mse_present": 36.42505531388584,
+     "mse_empty": 32.78657936298448,
+     "mse_internal": 46.652145628967574
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_060N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 177,
+    "empty": 3044,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 17.642003154000303,
+     "mse_std": 0.6587015890468655,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 17.137736274373484,
+     "mse_empty": 17.662968791129035,
+     "mse_internal": 18.121924630869717
+    },
+    "Scalar": {
+     "mse_mean": 12.736530909703392,
+     "mse_std": 0.3596691035516826,
+     "improve_over_hay_pct": 27.805642032121515,
+     "imp_se": 0.18304763979860397,
+     "mse_present": 9.55633807937969,
+     "mse_empty": 9.137367330789058,
+     "mse_internal": 230.0714000640906
+    },
+    "Level": {
+     "mse_mean": 0.6748135263516168,
+     "mse_std": 0.08285819255444282,
+     "improve_over_hay_pct": 96.1749608564229,
+     "imp_se": 0.06698563345144533,
+     "mse_present": 6.463424929161993,
+     "mse_empty": 0.07031984896542927,
+     "mse_internal": 16.061502878542523
+    },
+    "Node": {
+     "mse_mean": 8.353730084595874,
+     "mse_std": 0.5055310721309548,
+     "improve_over_hay_pct": 52.6486305910127,
+     "imp_se": 0.18342703608694014,
+     "mse_present": 10.66342750200652,
+     "mse_empty": 8.092420326390984,
+     "mse_internal": 15.64826708636952
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_060N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 177,
+    "empty": 3044,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 4.42891490422588,
+     "mse_std": 0.20065815650178762,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 4.577916776444271,
+     "mse_empty": 4.425617225170807,
+     "mse_internal": 4.1207036525463465
+    },
+    "Scalar": {
+     "mse_mean": 4.03745818487349,
+     "mse_std": 0.17307054659211119,
+     "improve_over_hay_pct": 8.838659757921265,
+     "imp_se": 0.1529239233668225,
+     "mse_present": 3.859533127098782,
+     "mse_empty": 3.6733488155803222,
+     "mse_internal": 25.543904512317383
+    },
+    "Level": {
+     "mse_mean": 0.4433114280259523,
+     "mse_std": 0.02052048324958035,
+     "improve_over_hay_pct": 89.99051827338197,
+     "imp_se": 0.07963905215950387,
+     "mse_present": 5.574563395720941,
+     "mse_empty": 0.08198712470191706,
+     "mse_internal": 4.059152579655199
+    },
+    "Node": {
+     "mse_mean": 2.1652875475236075,
+     "mse_std": 0.16883525139438002,
+     "improve_over_hay_pct": 51.110202061963676,
+     "imp_se": 0.25196456857842664,
+     "mse_present": 3.791395246578184,
+     "mse_empty": 2.0427753592946454,
+     "mse_internal": 3.7710618538688787
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_060N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 177,
+    "empty": 3044,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.708592508336507,
+     "mse_std": 0.02752978329376771,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.679364533326231,
+     "mse_empty": 0.711011995602043,
+     "mse_internal": 0.6672421751388924
+    },
+    "Scalar": {
+     "mse_mean": 0.698675428925573,
+     "mse_std": 0.02697798352066737,
+     "improve_over_hay_pct": 1.399546184056526,
+     "imp_se": 0.058118872357404046,
+     "mse_present": 0.6609478174668973,
+     "mse_empty": 0.6892651930833766,
+     "mse_internal": 1.365138544620497
+    },
+    "Level": {
+     "mse_mean": 0.2683127652932371,
+     "mse_std": 0.0072685201785662144,
+     "improve_over_hay_pct": 62.13440558056017,
+     "imp_se": 0.1515416910347777,
+     "mse_present": 2.573931897714424,
+     "mse_empty": 0.12677259650970854,
+     "mse_internal": 0.6976276207368357
+    },
+    "Node": {
+     "mse_mean": 0.35880881330978626,
+     "mse_std": 0.023441443253846176,
+     "improve_over_hay_pct": 49.36316584095329,
+     "imp_se": 0.22832110371000547,
+     "mse_present": 0.7805618070851337,
+     "mse_empty": 0.32953416185789713,
+     "mse_internal": 0.6316721929572228
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 0.74,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_060N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 177,
+    "empty": 3044,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.1788179391130499,
+     "mse_std": 0.007956908559841826,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.18646366191603583,
+     "mse_empty": 0.1785135729597151,
+     "mse_internal": 0.1707650642946081
+    },
+    "Scalar": {
+     "mse_mean": 0.17821515927171794,
+     "mse_std": 0.0078095040585868586,
+     "improve_over_hay_pct": 0.3370913703187758,
+     "imp_se": 0.030018617886552603,
+     "mse_present": 0.18510851052037083,
+     "mse_empty": 0.17712557795640838,
+     "mse_internal": 0.21777293951305285
+    },
+    "Level": {
+     "mse_mean": 0.12576306131239656,
+     "mse_std": 0.00424784024624116,
+     "improve_over_hay_pct": 29.669773661305705,
+     "imp_se": 0.20637088887945684,
+     "mse_present": 0.607329755374124,
+     "mse_empty": 0.09687411133447474,
+     "mse_internal": 0.17671888930991086
+    },
+    "Node": {
+     "mse_mean": 0.09166856359944987,
+     "mse_std": 0.007036781289772036,
+     "improve_over_hay_pct": 48.73637172303144,
+     "imp_se": 0.2584104048122629,
+     "mse_present": 0.2224803228792265,
+     "mse_empty": 0.0828465610321166,
+     "mse_internal": 0.16148921307948783
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_058N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 452,
+    "empty": 2769,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 177686.7146895902,
+     "mse_std": 6574.294184977693,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 177470.7912577236,
+     "mse_empty": 177893.3454833612,
+     "mse_internal": 168732.69060000387
+    },
+    "Scalar": {
+     "mse_mean": 966.3434153041848,
+     "mse_std": 285.01657357981617,
+     "improve_over_hay_pct": 99.456153254343,
+     "imp_se": 0.019578765906020368,
+     "mse_present": 251.2882652906821,
+     "mse_empty": 162.6791916735077,
+     "mse_internal": 49052.21441604849
+    },
+    "Level": {
+     "mse_mean": 291.898451813477,
+     "mse_std": 378.31622254809764,
+     "improve_over_hay_pct": 99.83572297325469,
+     "imp_se": 0.028095249942864622,
+     "mse_present": 219.95255913879544,
+     "mse_empty": 136.2698476875215,
+     "mse_internal": 9036.335212449832
+    },
+    "Node": {
+     "mse_mean": 81758.89050455659,
+     "mse_std": 5356.081737959499,
+     "improve_over_hay_pct": 53.98705488624444,
+     "imp_se": 0.20267981350465622,
+     "mse_present": 81965.93895789038,
+     "mse_empty": 81771.83043889169,
+     "mse_internal": 79317.06825775109
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": false,
+    "choice_majority": "SCALAR",
+    "correct_majority": false,
+    "single_draw_accuracy": 0.46,
+    "regret_pct": 231.05465592591696
+   }
+  },
+  {
+   "column": "P1_058N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 452,
+    "empty": 2769,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 1768.9320332526916,
+     "mse_std": 77.71947621183503,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 1760.413651215847,
+     "mse_empty": 1773.7698480221484,
+     "mse_internal": 1588.8263650268113
+    },
+    "Scalar": {
+     "mse_mean": 567.420806879599,
+     "mse_std": 13.402355500765191,
+     "improve_over_hay_pct": 67.92297294564607,
+     "imp_se": 0.17065348734143718,
+     "mse_present": 220.98445849215318,
+     "mse_empty": 179.6229620860594,
+     "mse_internal": 23782.542725831227
+    },
+    "Level": {
+     "mse_mean": 29.69450786329839,
+     "mse_std": 5.674734537302924,
+     "improve_over_hay_pct": 98.32133132844586,
+     "imp_se": 0.04097838596392159,
+     "mse_present": 68.26181483369975,
+     "mse_empty": 3.073754974596176,
+     "mse_internal": 1091.589639904714
+    },
+    "Node": {
+     "mse_mean": 819.606659939667,
+     "mse_std": 62.81648535246765,
+     "improve_over_hay_pct": 53.6665827441327,
+     "imp_se": 0.2343745999124799,
+     "mse_present": 828.1205071929605,
+     "mse_empty": 814.7670285753059,
+     "mse_internal": 999.8459106835663
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_058N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 452,
+    "empty": 2769,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 70.67857524395882,
+     "mse_std": 2.729713601594294,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 69.37153279456656,
+     "mse_empty": 70.90210824352545,
+     "mse_internal": 70.14688300481338
+    },
+    "Scalar": {
+     "mse_mean": 65.2404448269369,
+     "mse_std": 2.439892380921095,
+     "improve_over_hay_pct": 7.694170968007369,
+     "imp_se": 0.1312400966370092,
+     "mse_present": 59.31667810689224,
+     "mse_empty": 60.04837188749229,
+     "mse_internal": 387.02143589830223
+    },
+    "Level": {
+     "mse_mean": 9.689790084782961,
+     "mse_std": 0.4989083011422319,
+     "improve_over_hay_pct": 86.29034321739361,
+     "imp_se": 0.07673084053087306,
+     "mse_present": 45.98636388534712,
+     "mse_empty": 2.270696283049392,
+     "mse_internal": 87.75430667242915
+    },
+    "Node": {
+     "mse_mean": 34.24722829930933,
+     "mse_std": 2.254802474267148,
+     "improve_over_hay_pct": 51.54510658838362,
+     "imp_se": 0.20000438093859102,
+     "mse_present": 38.51880051513218,
+     "mse_empty": 32.97407516076627,
+     "mse_internal": 64.33421696107936
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_058N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 452,
+    "empty": 2769,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 17.74446604781515,
+     "mse_std": 0.5716687822736372,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 18.054363145801563,
+     "mse_empty": 17.684152384050215,
+     "mse_internal": 18.252674475650046
+    },
+    "Scalar": {
+     "mse_mean": 17.358654224608863,
+     "mse_std": 0.5436820031202108,
+     "improve_over_hay_pct": 2.174265611411791,
+     "imp_se": 0.08594461344337086,
+     "mse_present": 17.33286949180312,
+     "mse_empty": 16.944306285858154,
+     "mse_internal": 39.22627953836193
+    },
+    "Level": {
+     "mse_mean": 6.561104280040637,
+     "mse_std": 0.1683664474063615,
+     "improve_over_hay_pct": 63.02450430257665,
+     "imp_se": 0.12321488937560997,
+     "mse_present": 23.877887107427743,
+     "mse_empty": 3.352705237160312,
+     "mse_internal": 26.502068652807612
+    },
+    "Node": {
+     "mse_mean": 8.90875850552739,
+     "mse_std": 0.4582204383021035,
+     "improve_over_hay_pct": 49.794158463143425,
+     "imp_se": 0.16060285281705983,
+     "mse_present": 12.414620190703031,
+     "mse_empty": 8.164257338659134,
+     "mse_internal": 17.90638585192008
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": false,
+    "single_draw_accuracy": 0.02,
+    "regret_pct": 35.78138870050411
+   }
+  },
+  {
+   "column": "P1_058N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 452,
+    "empty": 2769,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 4.4139515543359025,
+     "mse_std": 0.15926860694498018,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 4.370171938768899,
+     "mse_empty": 4.423195786189913,
+     "mse_internal": 4.304349822874232
+    },
+    "Scalar": {
+     "mse_mean": 4.389840261151228,
+     "mse_std": 0.1597131278996716,
+     "improve_over_hay_pct": 0.5462518763032042,
+     "imp_se": 0.03066707672607136,
+     "mse_present": 4.325731499514907,
+     "mse_empty": 4.37577357136849,
+     "mse_internal": 5.671497322811996
+    },
+    "Level": {
+     "mse_mean": 3.090120467739542,
+     "mse_std": 0.10577860973975711,
+     "improve_over_hay_pct": 29.991971373041867,
+     "imp_se": 0.13201538043333216,
+     "mse_present": 6.517244382527057,
+     "mse_empty": 2.47508268548757,
+     "mse_internal": 5.995396120036827
+    },
+    "Node": {
+     "mse_mean": 2.329099308895765,
+     "mse_std": 0.1324025061954737,
+     "improve_over_hay_pct": 47.233238058359525,
+     "imp_se": 0.17890095958245497,
+     "mse_present": 3.80622340970895,
+     "mse_empty": 2.0475860336775584,
+     "mse_internal": 4.439479790247771
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_058N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 452,
+    "empty": 2769,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.7125908851590901,
+     "mse_std": 0.027583039174323032,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.7112612934048372,
+     "mse_empty": 0.7139727068314986,
+     "mse_internal": 0.651736380668974
+    },
+    "Scalar": {
+     "mse_mean": 0.7119539548280883,
+     "mse_std": 0.02762803452188993,
+     "improve_over_hay_pct": 0.08938232922521358,
+     "imp_se": 0.016168383461547135,
+     "mse_present": 0.7102150853665019,
+     "mse_empty": 0.7127394714663557,
+     "mse_internal": 0.6857440194559156
+    },
+    "Level": {
+     "mse_mean": 0.6676785346490131,
+     "mse_std": 0.02511063607006614,
+     "improve_over_hay_pct": 6.30268383239986,
+     "imp_se": 0.09802497985957416,
+     "mse_present": 0.8168362480049274,
+     "mse_empty": 0.6423414840297562,
+     "mse_internal": 0.7193579068725782
+    },
+    "Node": {
+     "mse_mean": 0.4038868473839238,
+     "mse_std": 0.02164445033744642,
+     "improve_over_hay_pct": 43.32135650405441,
+     "imp_se": 0.1587894541728693,
+     "mse_present": 0.7955539454866235,
+     "mse_empty": 0.3350774324615638,
+     "mse_internal": 0.6585989526215537
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_058N",
+   "label": "Total: Population of two or more races: Population of four races: Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 452,
+    "empty": 2769,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.17661343729669898,
+     "mse_std": 0.006092175319324526,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.17548730436074103,
+     "mse_empty": 0.1769430085049986,
+     "mse_internal": 0.16899889788672445
+    },
+    "Scalar": {
+     "mse_mean": 0.17656331778750645,
+     "mse_std": 0.0060675391436607,
+     "improve_over_hay_pct": 0.02837808377419161,
+     "imp_se": 0.005614278415151495,
+     "mse_present": 0.17542685509170308,
+     "mse_empty": 0.17686652877593884,
+     "mse_internal": 0.1704140708353149
+    },
+    "Level": {
+     "mse_mean": 0.1737498805674586,
+     "mse_std": 0.00600242604576708,
+     "improve_over_hay_pct": 1.6213696834572062,
+     "imp_se": 0.041243601576546024,
+     "mse_present": 0.18306757408864147,
+     "mse_empty": 0.17221565366534897,
+     "mse_internal": 0.17444189604607946
+    },
+    "Node": {
+     "mse_mean": 0.10017174905640643,
+     "mse_std": 0.0053294867087976296,
+     "improve_over_hay_pct": 43.28192090609478,
+     "imp_se": 0.17604163296411998,
+     "mse_present": 0.20408872838157785,
+     "mse_empty": 0.08191338230233716,
+     "mse_internal": 0.1678499167364131
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_068N",
+   "label": "Total: Population of two or more races: Population of five races: White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 325,
+    "empty": 2896,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 176438.5049221404,
+     "mse_std": 7017.354656211714,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 175853.12499642602,
+     "mse_empty": 176755.64337515936,
+     "mse_internal": 162699.17503372897
+    },
+    "Scalar": {
+     "mse_mean": 781.7747183871095,
+     "mse_std": 423.609905942548,
+     "improve_over_hay_pct": 99.55691377075989,
+     "imp_se": 0.029197810306357326,
+     "mse_present": 482.084891750045,
+     "mse_empty": 153.63172433756162,
+     "mse_internal": 36942.176688661384
+    },
+    "Level": {
+     "mse_mean": 350.8177837444925,
+     "mse_std": 460.6855837794032,
+     "improve_over_hay_pct": 99.80116710697628,
+     "imp_se": 0.033423513601309116,
+     "mse_present": 457.32845886464185,
+     "mse_empty": 142.888520082699,
+     "mse_internal": 11059.255107338933
+    },
+    "Node": {
+     "mse_mean": 80991.55445889551,
+     "mse_std": 5746.75524776449,
+     "improve_over_hay_pct": 54.09644028969989,
+     "imp_se": 0.21833956047877592,
+     "mse_present": 80767.40630259519,
+     "mse_empty": 81101.51209318204,
+     "mse_internal": 76357.79675896635
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": false,
+    "choice_majority": "SCALAR",
+    "correct_majority": false,
+    "single_draw_accuracy": 0.3,
+    "regret_pct": 122.84352578787497
+   }
+  },
+  {
+   "column": "P1_068N",
+   "label": "Total: Population of two or more races: Population of five races: White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 325,
+    "empty": 2896,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 1762.3855178965769,
+     "mse_std": 65.2074955417684,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 1747.5198200749448,
+     "mse_empty": 1762.5975716591531,
+     "mse_internal": 1841.9561612099837
+    },
+    "Scalar": {
+     "mse_mean": 476.21254255351147,
+     "mse_std": 8.8618411948743,
+     "improve_over_hay_pct": 72.97909352308595,
+     "imp_se": 0.13036565102043238,
+     "mse_present": 303.05733140855426,
+     "mse_empty": 119.41592875601053,
+     "mse_internal": 21033.918904434144
+    },
+    "Level": {
+     "mse_mean": 50.54527278419319,
+     "mse_std": 6.123925576203823,
+     "improve_over_hay_pct": 97.1319968150601,
+     "imp_se": 0.04494436374981468,
+     "mse_present": 224.93166344203772,
+     "mse_empty": 3.132069797885019,
+     "mse_internal": 1571.9237423039854
+    },
+    "Node": {
+     "mse_mean": 810.7913897885088,
+     "mse_std": 53.77442930710506,
+     "improve_over_hay_pct": 53.99466339486291,
+     "imp_se": 0.21187069757065324,
+     "mse_present": 815.8230493472483,
+     "mse_empty": 805.1365182788826,
+     "mse_internal": 1088.9275885675177
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_068N",
+   "label": "Total: Population of two or more races: Population of five races: White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 325,
+    "empty": 2896,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 70.79083921766619,
+     "mse_std": 3.100318614784791,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 70.03351476985291,
+     "mse_empty": 70.91628976291207,
+     "mse_internal": 68.58000273667098
+    },
+    "Scalar": {
+     "mse_mean": 63.75632905200089,
+     "mse_std": 2.6848308635960594,
+     "improve_over_hay_pct": 9.937034570300447,
+     "imp_se": 0.1703710245118416,
+     "mse_present": 59.96920785690461,
+     "mse_empty": 57.437395587359724,
+     "mse_internal": 432.2553045615693
+    },
+    "Level": {
+     "mse_mean": 19.52653900564842,
+     "mse_std": 0.6929700475087406,
+     "improve_over_hay_pct": 72.41657363941029,
+     "imp_se": 0.09468387669949702,
+     "mse_present": 105.89266357362604,
+     "mse_empty": 8.152002864072161,
+     "mse_internal": 111.44476884361289
+    },
+    "Node": {
+     "mse_mean": 33.54528633364471,
+     "mse_std": 2.574705698913846,
+     "improve_over_hay_pct": 52.6135207544293,
+     "imp_se": 0.2310807545367093,
+     "mse_present": 38.36993469212418,
+     "mse_empty": 32.608278623659864,
+     "mse_internal": 55.15969409987646
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_068N",
+   "label": "Total: Population of two or more races: Population of five races: White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 325,
+    "empty": 2896,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 17.59427924056709,
+     "mse_std": 0.6431650045407283,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 17.884324989592486,
+     "mse_empty": 17.580054569220735,
+     "mse_internal": 16.59295433086505
+    },
+    "Scalar": {
+     "mse_mean": 17.13294696557923,
+     "mse_std": 0.6158382847601427,
+     "improve_over_hay_pct": 2.622058390003086,
+     "imp_se": 0.06970927841025516,
+     "mse_present": 17.217077318529185,
+     "mse_empty": 16.640975333429704,
+     "mse_internal": 43.499125871169596
+    },
+    "Level": {
+     "mse_mean": 10.591250952204268,
+     "mse_std": 0.3601930881400201,
+     "improve_over_hay_pct": 39.80287110719463,
+     "imp_se": 0.15734438214600815,
+     "mse_present": 34.02836911705501,
+     "mse_empty": 7.649683006116061,
+     "mse_internal": 27.60478620305249
+    },
+    "Node": {
+     "mse_mean": 8.537926482153928,
+     "mse_std": 0.5247867025221197,
+     "improve_over_hay_pct": 51.47328080102281,
+     "imp_se": 0.19526016675519856,
+     "mse_present": 11.8483626185488,
+     "mse_empty": 8.046140946630443,
+     "mse_internal": 15.109986228336636
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_068N",
+   "label": "Total: Population of two or more races: Population of five races: White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 325,
+    "empty": 2896,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 4.455805168605054,
+     "mse_std": 0.1518820644419722,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 4.292192273214098,
+     "mse_empty": 4.474746622159286,
+     "mse_internal": 4.424102178208913
+    },
+    "Scalar": {
+     "mse_mean": 4.4261345012676365,
+     "mse_std": 0.15019795240976702,
+     "improve_over_hay_pct": 0.6658878971296317,
+     "imp_se": 0.02937881784383036,
+     "mse_present": 4.256333283722872,
+     "mse_empty": 4.413144867885918,
+     "mse_internal": 6.177141557409255
+    },
+    "Level": {
+     "mse_mean": 3.8287525935000475,
+     "mse_std": 0.12572012067386873,
+     "improve_over_hay_pct": 14.072710798109545,
+     "imp_se": 0.12560147042072678,
+     "mse_present": 6.426156712331566,
+     "mse_empty": 3.503744753838963,
+     "mse_internal": 5.660193443278466
+    },
+    "Node": {
+     "mse_mean": 2.2773060200303985,
+     "mse_std": 0.12720255731539692,
+     "improve_over_hay_pct": 48.89125682433423,
+     "imp_se": 0.17849018831340624,
+     "mse_present": 3.6136978114566984,
+     "mse_empty": 2.087559230531074,
+     "mse_internal": 4.450501683737881
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_068N",
+   "label": "Total: Population of two or more races: Population of five races: White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 325,
+    "empty": 2896,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.709157559935088,
+     "mse_std": 0.0244953141774122,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.7114463598810271,
+     "mse_empty": 0.7098718976741312,
+     "mse_internal": 0.6560899736199857
+    },
+    "Scalar": {
+     "mse_mean": 0.708361058004789,
+     "mse_std": 0.02433154361718751,
+     "improve_over_hay_pct": 0.11231663812085942,
+     "imp_se": 0.017002211060550783,
+     "mse_present": 0.7101355782052515,
+     "mse_empty": 0.7082948533587708,
+     "mse_internal": 0.7010970879994771
+    },
+    "Level": {
+     "mse_mean": 0.690528647545729,
+     "mse_std": 0.023845929812279364,
+     "improve_over_hay_pct": 2.6269073957364597,
+     "imp_se": 0.04696188857768915,
+     "mse_present": 0.7740455298857395,
+     "mse_empty": 0.6811379175250387,
+     "mse_internal": 0.6915204848932013
+    },
+    "Node": {
+     "mse_mean": 0.3820547321904034,
+     "mse_std": 0.02185341161217546,
+     "improve_over_hay_pct": 46.12555040301984,
+     "imp_se": 0.20882823667756797,
+     "mse_present": 0.8073601930204177,
+     "mse_empty": 0.3289378616841042,
+     "mse_internal": 0.6764355287279079
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_068N",
+   "label": "Total: Population of two or more races: Population of five races: White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 325,
+    "empty": 2896,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.17675713390579684,
+     "mse_std": 0.007020147652045365,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.17739904403077325,
+     "mse_empty": 0.17686898283652341,
+     "mse_internal": 0.16670929816992155
+    },
+    "Scalar": {
+     "mse_mean": 0.17670591067794955,
+     "mse_std": 0.007006914005501484,
+     "improve_over_hay_pct": 0.028979440159165103,
+     "imp_se": 0.006452442682597679,
+     "mse_present": 0.1772968004272059,
+     "mse_empty": 0.17677062532392226,
+     "mse_internal": 0.16954642420161994
+    },
+    "Level": {
+     "mse_mean": 0.1755377832036783,
+     "mse_std": 0.006905856570732183,
+     "improve_over_hay_pct": 0.6898452555631469,
+     "imp_se": 0.03553646729238333,
+     "mse_present": 0.18110486593496541,
+     "mse_empty": 0.175032937767003,
+     "mse_internal": 0.1689855284290239
+    },
+    "Node": {
+     "mse_mean": 0.09519462485480078,
+     "mse_std": 0.005761016574092599,
+     "improve_over_hay_pct": 46.143828681033604,
+     "imp_se": 0.1809980680740648,
+     "mse_present": 0.20683460495731776,
+     "mse_empty": 0.08135215773975685,
+     "mse_internal": 0.1669831386632754
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_044N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Some Other Race",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 604,
+    "empty": 2617,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 177236.9452259149,
+     "mse_std": 7099.672170698735,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 177304.2538864395,
+     "mse_empty": 177426.38991444602,
+     "mse_internal": 167115.60219114585
+    },
+    "Scalar": {
+     "mse_mean": 6051.752140605552,
+     "mse_std": 220.0834470648752,
+     "improve_over_hay_pct": 96.58550189245717,
+     "imp_se": 0.01775235889468622,
+     "mse_present": 853.4199361198998,
+     "mse_empty": 410.714425168161,
+     "mse_internal": 343832.6644577562
+    },
+    "Level": {
+     "mse_mean": 992.2317541702538,
+     "mse_std": 375.8616521007557,
+     "improve_over_hay_pct": 99.44016652233229,
+     "imp_se": 0.027654151127254965,
+     "mse_present": 582.2125545733277,
+     "mse_empty": 149.94326247631088,
+     "mse_internal": 47254.88419416255
+    },
+    "Node": {
+     "mse_mean": 81846.35808285828,
+     "mse_std": 5625.982388292577,
+     "improve_over_hay_pct": 53.82093841747673,
+     "imp_se": 0.20552530155189006,
+     "mse_present": 82677.35712444395,
+     "mse_empty": 81563.47821670111,
+     "mse_internal": 86343.96541522696
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 0.74,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_044N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Some Other Race",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 604,
+    "empty": 2617,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 1794.204281821111,
+     "mse_std": 70.43934150968212,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 1776.4013117035045,
+     "mse_empty": 1800.7117321283513,
+     "mse_internal": 1675.7702534623336
+    },
+    "Scalar": {
+     "mse_mean": 1380.405045457978,
+     "mse_std": 50.31269356798092,
+     "improve_over_hay_pct": 23.063106055188328,
+     "imp_se": 0.14754495491439099,
+     "mse_present": 1083.118943783208,
+     "mse_empty": 1073.43447188951,
+     "mse_internal": 19925.740827349313
+    },
+    "Level": {
+     "mse_mean": 101.88753493704152,
+     "mse_std": 8.619925756665069,
+     "improve_over_hay_pct": 94.32129685736643,
+     "imp_se": 0.059987403392336644,
+     "mse_present": 352.6184888796984,
+     "mse_empty": 12.73954974875818,
+     "mse_internal": 1646.392837887471
+    },
+    "Node": {
+     "mse_mean": 852.1697208869695,
+     "mse_std": 58.151041658032085,
+     "improve_over_hay_pct": 52.50430903988144,
+     "imp_se": 0.20990275902977198,
+     "mse_present": 884.8965424618895,
+     "mse_empty": 837.2248753047134,
+     "mse_internal": 1217.1444502739926
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_044N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Some Other Race",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 604,
+    "empty": 2617,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 70.90737073038444,
+     "mse_std": 2.799666129322334,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 70.19758368354003,
+     "mse_empty": 71.21833134779767,
+     "mse_internal": 63.641850740264225
+    },
+    "Scalar": {
+     "mse_mean": 70.14366158763876,
+     "mse_std": 2.6945839437754304,
+     "improve_over_hay_pct": 1.0770518422542865,
+     "imp_se": 0.07476743476294496,
+     "mse_present": 68.63292801872777,
+     "mse_empty": 69.5521006943798,
+     "mse_internal": 116.57003768727868
+    },
+    "Level": {
+     "mse_mean": 37.36887078225595,
+     "mse_std": 1.1774807513772254,
+     "improve_over_hay_pct": 47.299031966160534,
+     "imp_se": 0.19273366215979762,
+     "mse_present": 98.237899285315,
+     "mse_empty": 22.742273636292616,
+     "mse_internal": 65.91437106788521
+    },
+    "Node": {
+     "mse_mean": 35.41535149224815,
+     "mse_std": 2.314070647436604,
+     "improve_over_hay_pct": 50.054061901533245,
+     "imp_se": 0.20201378846358187,
+     "mse_present": 43.18483238111649,
+     "mse_empty": 33.11752720954037,
+     "mse_internal": 60.333081510545796
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_044N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Some Other Race",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 604,
+    "empty": 2617,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 17.728002082742563,
+     "mse_std": 0.6855666224960425,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 17.48382000480385,
+     "mse_empty": 17.799392782545823,
+     "mse_internal": 16.98567215236223
+    },
+    "Scalar": {
+     "mse_mean": 17.679039059068714,
+     "mse_std": 0.6854701475328528,
+     "improve_over_hay_pct": 0.2761903086728118,
+     "imp_se": 0.028363623731736717,
+     "mse_present": 17.38896498674093,
+     "mse_empty": 17.693952870846548,
+     "mse_internal": 20.24838423384969
+    },
+    "Level": {
+     "mse_mean": 14.497466267213301,
+     "mse_std": 0.515665384910434,
+     "improve_over_hay_pct": 18.22278562723121,
+     "imp_se": 0.1318145605303431,
+     "mse_present": 23.095160419134086,
+     "mse_empty": 12.461184656039618,
+     "mse_internal": 17.062404166862056
+    },
+    "Node": {
+     "mse_mean": 9.221591818965933,
+     "mse_std": 0.5910182868760676,
+     "improve_over_hay_pct": 47.98290424422529,
+     "imp_se": 0.19786187080030837,
+     "mse_present": 12.626392476432345,
+     "mse_empty": 8.277747213936888,
+     "mse_internal": 17.024266050122538
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_044N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Some Other Race",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 604,
+    "empty": 2617,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 4.404892788347179,
+     "mse_std": 0.18332632707050434,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 4.326580764918989,
+     "mse_empty": 4.428792642060563,
+     "mse_internal": 4.117242693681199
+    },
+    "Scalar": {
+     "mse_mean": 4.400916082049441,
+     "mse_std": 0.18282825510414885,
+     "improve_over_hay_pct": 0.09027929824440586,
+     "imp_se": 0.010989685954177942,
+     "mse_present": 4.321046591587321,
+     "mse_empty": 4.422214016955102,
+     "mse_internal": 4.259491112068402
+    },
+    "Level": {
+     "mse_mean": 4.17709765792888,
+     "mse_std": 0.16078181143821027,
+     "improve_over_hay_pct": 5.171411459114604,
+     "imp_se": 0.09696816378931811,
+     "mse_present": 4.84337995822155,
+     "mse_empty": 4.023917132512176,
+     "mse_internal": 4.14764342469762
+    },
+    "Node": {
+     "mse_mean": 2.4279913185547515,
+     "mse_std": 0.1542494176584755,
+     "improve_over_hay_pct": 44.87967278164353,
+     "imp_se": 0.20398360886051276,
+     "mse_present": 3.848194574915009,
+     "mse_empty": 2.064041790465371,
+     "mse_internal": 4.2138997745606845
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_044N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Some Other Race",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 604,
+    "empty": 2617,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.7067892623987854,
+     "mse_std": 0.019777240373273657,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.6891717653728259,
+     "mse_empty": 0.710279676261421,
+     "mse_internal": 0.7352148307980692
+    },
+    "Scalar": {
+     "mse_mean": 0.7066525624389176,
+     "mse_std": 0.019786314086819218,
+     "improve_over_hay_pct": 0.019340978583037634,
+     "imp_se": 0.00650741445705612,
+     "mse_present": 0.689042505046811,
+     "mse_empty": 0.7101106910130547,
+     "mse_internal": 0.7365875093505387
+    },
+    "Level": {
+     "mse_mean": 0.7008207152329048,
+     "mse_std": 0.019306943909944668,
+     "improve_over_hay_pct": 0.8444592304110299,
+     "imp_se": 0.04228940100350864,
+     "mse_present": 0.704537556756495,
+     "mse_empty": 0.6992662645293922,
+     "mse_internal": 0.7352174173242979
+    },
+    "Node": {
+     "mse_mean": 0.419285293536896,
+     "mse_std": 0.01832297048834935,
+     "improve_over_hay_pct": 40.67746698444799,
+     "imp_se": 0.174450614726683,
+     "mse_present": 0.7718140738706323,
+     "mse_empty": 0.33154586715860007,
+     "mse_internal": 0.7341286050543188
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_044N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Some Other Race",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 604,
+    "empty": 2617,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.1753847269322171,
+     "mse_std": 0.007582676677508382,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.17381947545591003,
+     "mse_empty": 0.17583537484452383,
+     "mse_internal": 0.1709708836337801
+    },
+    "Scalar": {
+     "mse_mean": 0.17538191290236538,
+     "mse_std": 0.007580528657228167,
+     "improve_over_hay_pct": 0.001604489684446495,
+     "imp_se": 0.002763530926818827,
+     "mse_present": 0.17380972192385313,
+     "mse_empty": 0.1758249141330199,
+     "mse_internal": 0.17142472668346717
+    },
+    "Level": {
+     "mse_mean": 0.1749940534229491,
+     "mse_std": 0.00754853711836465,
+     "improve_over_hay_pct": 0.22275229782065625,
+     "imp_se": 0.021198734750548162,
+     "mse_present": 0.17467462167676776,
+     "mse_empty": 0.17515155292539192,
+     "mse_internal": 0.17085746053239576
+    },
+    "Node": {
+     "mse_mean": 0.10391761679517422,
+     "mse_std": 0.006379995959001429,
+     "improve_over_hay_pct": 40.748764950703816,
+     "imp_se": 0.1980994546381033,
+     "mse_present": 0.19846318649592107,
+     "mse_empty": 0.08075116017521147,
+     "mse_internal": 0.17035333142142822
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_043N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 608,
+    "empty": 2613,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 178239.18865904238,
+     "mse_std": 6940.854094482225,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 179325.53961532775,
+     "mse_empty": 178258.82322746876,
+     "mse_internal": 164808.87717376364
+    },
+    "Scalar": {
+     "mse_mean": 5923.224525628861,
+     "mse_std": 316.5827667792372,
+     "improve_over_hay_pct": 96.67681132853475,
+     "imp_se": 0.019766000994587703,
+     "mse_present": 1450.4772225499148,
+     "mse_empty": 485.87210485362766,
+     "mse_internal": 325304.9648229437
+    },
+    "Level": {
+     "mse_mean": 1080.1571139837224,
+     "mse_std": 397.82875549389456,
+     "improve_over_hay_pct": 99.3939844979602,
+     "imp_se": 0.028925642047264256,
+     "mse_present": 1044.109231242165,
+     "mse_empty": 188.20356821077058,
+     "mse_internal": 45468.68028024013
+    },
+    "Node": {
+     "mse_mean": 82548.36510737888,
+     "mse_std": 5637.014204618721,
+     "improve_over_hay_pct": 53.68674771893882,
+     "imp_se": 0.2080532683432379,
+     "mse_present": 84479.82142206532,
+     "mse_empty": 82093.76761929264,
+     "mse_internal": 82803.7952402074
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 0.82,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_043N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 608,
+    "empty": 2613,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 1759.9914285151356,
+     "mse_std": 65.22624333270564,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 1775.3462156383844,
+     "mse_empty": 1759.9741012480042,
+     "mse_internal": 1584.7002130071878
+    },
+    "Scalar": {
+     "mse_mean": 1356.4862846772799,
+     "mse_std": 45.17140158615633,
+     "improve_over_hay_pct": 22.926540283112843,
+     "imp_se": 0.19434219400962705,
+     "mse_present": 1097.1751762164977,
+     "mse_empty": 1031.5433768813175,
+     "mse_internal": 20351.523492507557
+    },
+    "Level": {
+     "mse_mean": 142.75031684340038,
+     "mse_std": 8.990345167551206,
+     "improve_over_hay_pct": 91.88914704182193,
+     "imp_se": 0.05651973579949516,
+     "mse_present": 437.28284629501627,
+     "mse_empty": 30.957732893136434,
+     "mse_internal": 2275.5473726067453
+    },
+    "Node": {
+     "mse_mean": 822.5087912830055,
+     "mse_std": 55.582749692386415,
+     "improve_over_hay_pct": 53.266318349235526,
+     "imp_se": 0.22032247510137126,
+     "mse_present": 863.3671377075149,
+     "mse_empty": 807.3967738387884,
+     "mse_internal": 1098.8451489365484
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_043N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 608,
+    "empty": 2613,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 71.570224693167,
+     "mse_std": 2.7817214197087,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 71.30717943307255,
+     "mse_empty": 71.81710044287071,
+     "mse_internal": 62.416360243386904
+    },
+    "Scalar": {
+     "mse_mean": 70.72425189079016,
+     "mse_std": 2.781616980762976,
+     "improve_over_hay_pct": 1.1820178097856613,
+     "imp_se": 0.05176274475750334,
+     "mse_present": 69.72936142713192,
+     "mse_empty": 70.0934348996642,
+     "mse_internal": 113.23780282883392
+    },
+    "Level": {
+     "mse_mean": 47.373213344414026,
+     "mse_std": 1.646548323099112,
+     "improve_over_hay_pct": 33.8087681748792,
+     "imp_se": 0.11863456181564722,
+     "mse_present": 73.51039512775915,
+     "mse_empty": 39.87845922586786,
+     "mse_internal": 117.04087348568349
+    },
+    "Node": {
+     "mse_mean": 35.394571197308395,
+     "mse_std": 2.4240038695464827,
+     "improve_over_hay_pct": 50.54567545505051,
+     "imp_se": 0.22894031948584145,
+     "mse_present": 41.42872118705142,
+     "mse_empty": 33.49594391583714,
+     "mse_internal": 59.77853143731991
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_043N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 608,
+    "empty": 2613,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 17.726465323225533,
+     "mse_std": 0.7142585873326932,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 17.90190158441908,
+     "mse_empty": 17.719988569762467,
+     "mse_internal": 16.033229662722174
+    },
+    "Scalar": {
+     "mse_mean": 17.670774054876134,
+     "mse_std": 0.7093959775737512,
+     "improve_over_hay_pct": 0.31417018189425155,
+     "imp_se": 0.02695919627511118,
+     "mse_present": 17.802257457435836,
+     "mse_empty": 17.612229438727805,
+     "mse_internal": 19.048796191466568
+    },
+    "Level": {
+     "mse_mean": 15.754783073943013,
+     "mse_std": 0.6117216087394403,
+     "improve_over_hay_pct": 11.122816722514816,
+     "imp_se": 0.09391941470427181,
+     "mse_present": 18.471589631230046,
+     "mse_empty": 15.006761172624326,
+     "mse_internal": 21.467289513852766
+    },
+    "Node": {
+     "mse_mean": 9.122800079068957,
+     "mse_std": 0.5379090394112482,
+     "improve_over_hay_pct": 48.53570685005035,
+     "imp_se": 0.1605979684115077,
+     "mse_present": 12.419930156479246,
+     "mse_empty": 8.208661929969532,
+     "mse_internal": 16.367854730603703
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_043N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 608,
+    "empty": 2613,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 4.446393658745308,
+     "mse_std": 0.15574806471000735,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 4.386581692361264,
+     "mse_empty": 4.466489647265051,
+     "mse_internal": 4.141768329677613
+    },
+    "Scalar": {
+     "mse_mean": 4.442192578043981,
+     "mse_std": 0.1561790544738875,
+     "improve_over_hay_pct": 0.09448287811997512,
+     "imp_se": 0.013454976294642111,
+     "mse_present": 4.380298637269621,
+     "mse_empty": 4.459676120158626,
+     "mse_internal": 4.2902495675768835
+    },
+    "Level": {
+     "mse_mean": 4.310951371076593,
+     "mse_std": 0.1503001250240259,
+     "improve_over_hay_pct": 3.0461155278575647,
+     "imp_se": 0.04415437962815361,
+     "mse_present": 4.443841706438938,
+     "mse_empty": 4.277532879328188,
+     "mse_internal": 4.434068258591217
+    },
+    "Node": {
+     "mse_mean": 2.449242880908616,
+     "mse_std": 0.1416591977489378,
+     "improve_over_hay_pct": 44.91619346183243,
+     "imp_se": 0.21242298156395054,
+     "mse_present": 3.816292370872383,
+     "mse_empty": 2.092087982237506,
+     "mse_internal": 4.375274207882976
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_043N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 608,
+    "empty": 2613,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.706959297964335,
+     "mse_std": 0.027976959446517412,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.694943611545684,
+     "mse_empty": 0.7104913645551031,
+     "mse_internal": 0.6706620779806126
+    },
+    "Scalar": {
+     "mse_mean": 0.7068711589809525,
+     "mse_std": 0.027992751313816212,
+     "improve_over_hay_pct": 0.012467334913939117,
+     "imp_se": 0.004894193731338208,
+     "mse_present": 0.6948149337223947,
+     "mse_empty": 0.7103177526516621,
+     "mse_internal": 0.675252964559045
+    },
+    "Level": {
+     "mse_mean": 0.7036119757429549,
+     "mse_std": 0.027623198807590756,
+     "improve_over_hay_pct": 0.47348160368194064,
+     "imp_se": 0.02396713936456436,
+     "mse_present": 0.6971913891801477,
+     "mse_empty": 0.7055647178625213,
+     "mse_internal": 0.6809931355874772
+    },
+    "Node": {
+     "mse_mean": 0.4222983002958033,
+     "mse_std": 0.02478024225644835,
+     "improve_over_hay_pct": 40.26554265404009,
+     "imp_se": 0.19205029295251286,
+     "mse_present": 0.782605898221905,
+     "mse_empty": 0.333060192907583,
+     "mse_internal": 0.6885653770193874
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_043N",
+   "label": "Total: Population of two or more races: Population of three races: American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 608,
+    "empty": 2613,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.1756967433169339,
+     "mse_std": 0.007514218203721042,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.1699868774294412,
+     "mse_empty": 0.17716187638862343,
+     "mse_internal": 0.1689647762088349
+    },
+    "Scalar": {
+     "mse_mean": 0.17568758233417772,
+     "mse_std": 0.007520495572736237,
+     "improve_over_hay_pct": 0.005214087969556059,
+     "imp_se": 0.002497870955590602,
+     "mse_present": 0.1699788127714012,
+     "mse_empty": 0.1771510524978559,
+     "mse_internal": 0.1690250230224234
+    },
+    "Level": {
+     "mse_mean": 0.17548712620553059,
+     "mse_std": 0.007517722459787616,
+     "improve_over_hay_pct": 0.11930620195116791,
+     "imp_se": 0.01129210967860165,
+     "mse_present": 0.17018017773596814,
+     "mse_empty": 0.1768524613386282,
+     "mse_internal": 0.16905323878496423
+    },
+    "Node": {
+     "mse_mean": 0.10461737031902228,
+     "mse_std": 0.006337851127486263,
+     "improve_over_hay_pct": 40.45571457730082,
+     "imp_se": 0.19789065333572173,
+     "mse_present": 0.19689640982486828,
+     "mse_empty": 0.08183891118213033,
+     "mse_internal": 0.16904110060476316
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_057N",
+   "label": "Total: Population of two or more races: Population of four races: White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.01,
+   "sigma2": 180000.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 776,
+    "empty": 2445,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 177910.62434789457,
+     "mse_std": 7223.742401466529,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 178094.34771516736,
+     "mse_empty": 177964.80998900637,
+     "mse_internal": 172720.94084747863
+    },
+    "Scalar": {
+     "mse_mean": 26071.525470172717,
+     "mse_std": 415.26583000174855,
+     "improve_over_hay_pct": 85.34571751083776,
+     "imp_se": 0.07948020264768445,
+     "mse_present": 8820.89495680792,
+     "mse_empty": 4155.021481121885,
+     "mse_internal": 1289700.6109720662
+    },
+    "Level": {
+     "mse_mean": 3165.6245080513618,
+     "mse_std": 533.3916632886194,
+     "improve_over_hay_pct": 98.22066584294528,
+     "imp_se": 0.03676595554832131,
+     "mse_present": 4559.423282787552,
+     "mse_empty": 246.30471325201233,
+     "mse_internal": 117432.5876984122
+    },
+    "Node": {
+     "mse_mean": 82687.5270004917,
+     "mse_std": 5863.534429825075,
+     "improve_over_hay_pct": 53.52299655876609,
+     "imp_se": 0.2206282187540072,
+     "mse_present": 83154.0101660409,
+     "mse_empty": 82356.82588191901,
+     "mse_internal": 91113.43829188954
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "LEVEL",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_057N",
+   "label": "Total: Population of two or more races: Population of four races: White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.1,
+   "sigma2": 1800.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 776,
+    "empty": 2445,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 1770.9699329381363,
+     "mse_std": 76.99741010845051,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 1763.3438014986095,
+     "mse_empty": 1775.5183805757777,
+     "mse_internal": 1672.7986786558647
+    },
+    "Scalar": {
+     "mse_mean": 1673.418438482994,
+     "mse_std": 70.50179027813063,
+     "improve_over_hay_pct": 5.508365367519203,
+     "imp_se": 0.10911548372201939,
+     "mse_present": 1591.215235111048,
+     "mse_empty": 1581.983395959286,
+     "mse_internal": 7095.085698616844
+    },
+    "Level": {
+     "mse_mean": 700.5804660257754,
+     "mse_std": 24.410326209433386,
+     "improve_over_hay_pct": 60.44086051401934,
+     "imp_se": 0.11303751241318664,
+     "mse_present": 1514.0147009682887,
+     "mse_empty": 388.33253564107713,
+     "mse_internal": 3195.320531595526
+    },
+    "Node": {
+     "mse_mean": 842.2752564962766,
+     "mse_std": 66.06154929241805,
+     "improve_over_hay_pct": 52.43988952997662,
+     "imp_se": 0.25363566136565296,
+     "mse_present": 879.3135897129605,
+     "mse_empty": 819.8794556125056,
+     "mse_internal": 1333.1429279052222
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "LEVEL",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": false,
+    "single_draw_accuracy": 0.0,
+    "regret_pct": 20.2253413193636
+   }
+  },
+  {
+   "column": "P1_057N",
+   "label": "Total: Population of two or more races: Population of four races: White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 0.5,
+   "sigma2": 72.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 776,
+    "empty": 2445,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 70.63585365281826,
+     "mse_std": 2.4486573013338764,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 70.66939919064983,
+     "mse_empty": 70.71357632433677,
+     "mse_internal": 66.55918819583523
+    },
+    "Scalar": {
+     "mse_mean": 70.47965936484464,
+     "mse_std": 2.4462540229505527,
+     "improve_over_hay_pct": 0.2211260711045253,
+     "imp_se": 0.02863458388458612,
+     "mse_present": 70.40512044380574,
+     "mse_empty": 70.3786812086809,
+     "mse_internal": 76.22935360157093
+    },
+    "Level": {
+     "mse_mean": 66.78309259893874,
+     "mse_std": 2.3229603171571984,
+     "improve_over_hay_pct": 5.454398658245422,
+     "imp_se": 0.08583238096676139,
+     "mse_present": 72.83764364778642,
+     "mse_empty": 64.63977861616348,
+     "mse_internal": 77.0108487117625
+    },
+    "Node": {
+     "mse_mean": 35.93002451101311,
+     "mse_std": 2.148802520794271,
+     "improve_over_hay_pct": 49.133446184974986,
+     "imp_se": 0.20829449212218465,
+     "mse_present": 43.98454365509195,
+     "mse_empty": 32.73241017535689,
+     "mse_internal": 65.51229233882898
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_057N",
+   "label": "Total: Population of two or more races: Population of four races: White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 1.0,
+   "sigma2": 18.0,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 776,
+    "empty": 2445,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 17.679502027716254,
+     "mse_std": 0.5639729628794268,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 17.709620352041437,
+     "mse_empty": 17.702881844964182,
+     "mse_internal": 16.159964804177836
+    },
+    "Scalar": {
+     "mse_mean": 17.665463189543853,
+     "mse_std": 0.5620311944634051,
+     "improve_over_hay_pct": 0.07940742986081499,
+     "imp_se": 0.010801219204252909,
+     "mse_present": 17.690571849102916,
+     "mse_empty": 17.68187300310123,
+     "mse_internal": 16.540815756230188
+    },
+    "Level": {
+     "mse_mean": 17.417089235998535,
+     "mse_std": 0.5544175504037312,
+     "improve_over_hay_pct": 1.4842770532016816,
+     "imp_se": 0.034162006664280396,
+     "mse_present": 17.818719140717263,
+     "mse_empty": 17.305125553573607,
+     "mse_internal": 16.701738244813924
+    },
+    "Node": {
+     "mse_mean": 9.589488789140985,
+     "mse_std": 0.49499585459986695,
+     "improve_over_hay_pct": 45.75928228008069,
+     "imp_se": 0.17670081756316092,
+     "mse_present": 13.387443056749062,
+     "mse_empty": 8.241211659209325,
+     "mse_internal": 16.180527864971953
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_057N",
+   "label": "Total: Population of two or more races: Population of four races: White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 2.0,
+   "sigma2": 4.5,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 776,
+    "empty": 2445,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 4.433634062055915,
+     "mse_std": 0.1561656016466834,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 4.416137187158623,
+     "mse_empty": 4.439296672465754,
+     "mse_internal": 4.4285867501360086
+    },
+    "Scalar": {
+     "mse_mean": 4.433427353125319,
+     "mse_std": 0.15611252259491068,
+     "improve_over_hay_pct": 0.0046622911972946345,
+     "imp_se": 0.006443773818556843,
+     "mse_present": 4.415206223888828,
+     "mse_empty": 4.437978303280366,
+     "mse_internal": 4.4902674127182545
+    },
+    "Level": {
+     "mse_mean": 4.4181943133150305,
+     "mse_std": 0.1549069457262973,
+     "improve_over_hay_pct": 0.3482413867445934,
+     "imp_se": 0.02186596082358575,
+     "mse_present": 4.427698115581193,
+     "mse_empty": 4.414028290939069,
+     "mse_internal": 4.471231561441105
+    },
+    "Node": {
+     "mse_mean": 2.594789855332283,
+     "mse_std": 0.13465257911820794,
+     "improve_over_hay_pct": 41.47487548557275,
+     "imp_se": 0.18137312997245467,
+     "mse_present": 4.057470458248185,
+     "mse_empty": 2.0875507453878694,
+     "mse_internal": 4.578930911018184
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_057N",
+   "label": "Total: Population of two or more races: Population of four races: White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 5.0,
+   "sigma2": 0.72,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 776,
+    "empty": 2445,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.7047745715436134,
+     "mse_std": 0.0257741707215061,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.6942290269233234,
+     "mse_empty": 0.7078768260302847,
+     "mse_internal": 0.7160638244763278
+    },
+    "Scalar": {
+     "mse_mean": 0.7047613253850852,
+     "mse_std": 0.0258057417811735,
+     "improve_over_hay_pct": 0.001879488713569268,
+     "imp_se": 0.002320512358032339,
+     "mse_present": 0.6942021949620562,
+     "mse_empty": 0.7078431871120431,
+     "mse_internal": 0.7171902553069424
+    },
+    "Level": {
+     "mse_mean": 0.7043658535831583,
+     "mse_std": 0.025855289450064687,
+     "improve_over_hay_pct": 0.057992722348080644,
+     "imp_se": 0.008255714432958102,
+     "mse_present": 0.6946274591414461,
+     "mse_empty": 0.7072240069580852,
+     "mse_internal": 0.715098100471309
+    },
+    "Node": {
+     "mse_mean": 0.44129066027334035,
+     "mse_std": 0.022172416340615765,
+     "improve_over_hay_pct": 37.38555871747538,
+     "imp_se": 0.15615093744917727,
+     "mse_present": 0.7695412157735827,
+     "mse_empty": 0.3310884307147136,
+     "mse_internal": 0.7190646263611546
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  },
+  {
+   "column": "P1_057N",
+   "label": "Total: Population of two or more races: Population of four races: White; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race",
+   "epsilon": 10.0,
+   "sigma2": 0.18,
+   "num_trials": 50,
+   "num_nodes": 3274,
+   "projection": "exact_ls",
+   "strata_counts": {
+    "present": 776,
+    "empty": 2445,
+    "internal": 53
+   },
+   "methods": {
+    "Hay": {
+     "mse_mean": 0.17662156451202946,
+     "mse_std": 0.006974734300913004,
+     "improve_over_hay_pct": 0.0,
+     "imp_se": 0.0,
+     "mse_present": 0.17673997449555529,
+     "mse_empty": 0.17684704808763865,
+     "mse_internal": 0.16448583829352897
+    },
+    "Scalar": {
+     "mse_mean": 0.17661610452668533,
+     "mse_std": 0.006975789540555442,
+     "improve_over_hay_pct": 0.0030913469480410983,
+     "imp_se": 0.0016387878471384543,
+     "mse_present": 0.17673882848277278,
+     "mse_empty": 0.1768449471118431,
+     "mse_internal": 0.16426225715622056
+    },
+    "Level": {
+     "mse_mean": 0.17659840214454092,
+     "mse_std": 0.006978797635298719,
+     "improve_over_hay_pct": 0.013114122022713306,
+     "imp_se": 0.006264673858202438,
+     "mse_present": 0.17676859258738964,
+     "mse_empty": 0.17680835481070697,
+     "mse_internal": 0.16442100492894393
+    },
+    "Node": {
+     "mse_mean": 0.11100807329779033,
+     "mse_std": 0.005947670132355336,
+     "improve_over_hay_pct": 37.149196020042204,
+     "imp_se": 0.1686747873287825,
+     "mse_present": 0.1986697461197014,
+     "mse_empty": 0.08208228378539946,
+     "mse_internal": 0.16191556854293665
+    }
+   },
+   "diagnostic": {
+    "kappa": 0.25,
+    "empirical_best": "NODE",
+    "decisive": true,
+    "choice_majority": "NODE",
+    "correct_majority": true,
+    "single_draw_accuracy": 1.0,
+    "regret_pct": 0.0
+   }
+  }
+ ]
+}
